@@ -80,13 +80,13 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
                 オーストラリアへ渡航する際には、渡航者の国籍、渡航目的、滞在期間に応じて、ビザの取得が必要です。観光や短期商用など、比較的短期間の滞在を目的とする一部の国・地域の渡航者については、Subclass 601 ETA（Electronic Travel Authority）を利用できる場合があります。ETAは、オーストラリア政府が提供する公式アプリを通じてのみ申請が可能であり、ウェブサイトから申請することはできません。承認されたETAは、渡航者のパスポート情報と電子的に紐づけられます。
               </p>
-              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-2">
                 一方、就労、留学、長期滞在を目的とする場合や、ETAの対象外となる国籍の渡航者は、渡航目的に応じた別のビザを取得する必要があります。
               </p>
-              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-2">
                 ビザの種類によって申請条件、必要書類、審査期間は異なるため、渡航計画に合わせて事前に制度内容を確認することが重要です。なお、入国の可否や条件の最終的な判断は、オーストラリア政府当局によって行われます。
               </p>
-              <Link href="/australia" className="inline-block bg-gray-800 text-white px-6 py-2.5 rounded text-sm hover:bg-gray-700 transition w-fit">詳しく見る</Link>
+              <Link href="/australia" className="inline-block bg-green-700 text-white px-6 py-2.5 rounded text-sm hover:bg-green-600 transition w-fit">詳しく見る</Link>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
                 アメリカへ渡航する場合、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ESTA）の取得が必要となります。観光や短期商用を目的とする一部の国・地域の渡航者は、ビザ免除プログラムに基づきESTAを取得することで渡航できる場合があります。ESTAはオンラインで申請する事前渡航認証制度であり、承認後はパスポート情報と電子的に紐づけられます。一方、就労や留学、長期滞在などの場合や、ESTAの対象外となる国籍の渡航者は、目的に応じたビザを取得する必要があります。ビザの種類によって申請条件や審査期間が異なるため、余裕をもって準備を進めることが重要です。なお、入国可否の最終判断は、アメリカ政府当局によって行われます。
               </p>
-              <Link href="/america" className="inline-block bg-gray-800 text-white px-6 py-2.5 rounded text-sm hover:bg-gray-700 transition w-fit">詳しく見る</Link>
+              <Link href="/america" className="inline-block bg-blue-900 text-white px-6 py-2.5 rounded text-sm hover:bg-blue-800 transition w-fit">詳しく見る</Link>
             </div>
             <div className="h-64 md:h-auto min-h-[300px] order-1 md:order-2">
               <img src={`${basePath}/images/usa-section.jpg`} alt="United States" className="w-full h-full object-cover" />
@@ -114,7 +114,7 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
                 韓国へ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（K-ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、K-ETA（韓国電子渡航認証）を利用できる制度が設けられています。K-ETAはオンラインで申請する事前渡航認証制度であり、承認されると渡航前の手続きが簡略化されます。一方、就労、留学、長期滞在などを目的とする場合や、K-ETAの対象外となる国籍の渡航者は、目的に応じたビザの取得が必要です。制度の内容や要件は変更されることがあるため、渡航前に最新の入国条件を確認することが重要です。なお、最終的な入国の可否は韓国政府当局によって判断されます。
               </p>
-              <Link href="/south-korea" className="inline-block bg-gray-800 text-white px-6 py-2.5 rounded text-sm hover:bg-gray-700 transition w-fit">詳しく見る</Link>
+              <Link href="/south-korea" className="inline-block bg-red-700 text-white px-6 py-2.5 rounded text-sm hover:bg-red-600 transition w-fit">詳しく見る</Link>
             </div>
           </div>
 
@@ -125,7 +125,7 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
                 イギリスへ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、ETA（電子渡航認証）の対象となります。ETAはオンラインで申請する制度で、承認後は渡航前の事前確認として利用されます。一方、就労や留学、長期滞在を目的とする場合や、ETAの対象外となる国籍の渡航者は、該当するビザの取得が必要です。制度の内容や要件は随時変更される可能性があるため、渡航前に最新情報を確認することが重要です。なお、入国の最終判断はイギリス政府当局によって行われます。
               </p>
-              <Link href="/united-kingdom" className="inline-block bg-gray-800 text-white px-6 py-2.5 rounded text-sm hover:bg-gray-700 transition w-fit">詳しく見る</Link>
+              <Link href="/united-kingdom" className="inline-block bg-blue-600 text-white px-6 py-2.5 rounded text-sm hover:bg-blue-500 transition w-fit">詳しく見る</Link>
             </div>
             <div className="h-64 md:h-auto min-h-[300px] order-1 md:order-2">
               <img src={`${basePath}/images/uk-section.jpg`} alt="United Kingdom" className="w-full h-full object-cover" />
