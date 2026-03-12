@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: Georgia, 'Times New Roman', serif;
+}
+
+body {
+  color: #374151;
+  background: #ffffff;
+}
+
+.font-serif-country {
+  font-family: Georgia, 'Times New Roman', serif;
+}

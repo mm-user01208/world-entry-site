@@ -1,0 +1,58 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = { title: '利用規約' };
+
+export default function TermsOfService() {
+  return (
+    <>
+      <section className="bg-gray-800 text-white py-12">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-3xl font-bold mb-2">利用規約</h1>
+          <p className="text-gray-400">Terms of Service</p>
+        </div>
+      </section>
+      <article className="max-w-4xl mx-auto px-4 py-12 space-y-8 text-gray-700 leading-relaxed">
+        <Section title="第1条（適用範囲・総則）">
+          <p>本利用規約（以下「本規約」）は、Global Travel Center（以下「当サイト」）が提供する、アメリカ、韓国、イギリス、オーストラリアに関するビザおよび電子渡航認証（ESTA、K-ETA、UK ETA、ETA 等）についての一般的な情報提供サービス（以下「本サービス」）の利用条件を定めるものです。</p>
+        </Section>
+        <Section title="第2条（当サイトの提供内容）">
+          <p>当サイトは、各国政府機関が公表する公式情報や資料を基に、渡航制度の概要や申請に関する一般情報を提供することを目的とした情報提供専用のウェブサイトです。ビザまたは電子渡航認証の申請代行、審査の仲介、取得可否の判断、取得結果の保証、行政手続きの代理等は一切行っておりません。</p>
+        </Section>
+        <Section title="第3条（オーストラリア関連情報の監修について）">
+          <p>当サイトに掲載している情報のうち、オーストラリアに関するビザおよび電子渡航認証の情報については、OMARA（Office of the Migration Agents Registration Authority）に登録された移民エージェント（以下「監修者」）による内容監修を予定しています。</p>
+          <p className="mt-3">ただし、監修は情報内容の正確性・一般性の確認を目的とするものであり、個別の申請判断、取得可能性の保証、助言行為を行うものではありません。</p>
+          <p className="mt-3">監修者への問い合わせや相談は、当サイトとは独立した契約関係のもとで行われるものであり、当サイトは当該相談内容および結果について一切関与せず、責任を負いません。</p>
+        </Section>
+        <Section title="第4条（情報の性質および免責事項）">
+          <p>当サイトに掲載される情報は、制度理解の補助を目的とするものであり、法的助言、専門的な移民・ビザコンサルティング、行政書類作成支援を提供するものではありません。実際の申請条件、審査基準、必要書類、手数料等については、必ず各国政府が運営する公式サイトの情報が優先されます。</p>
+          <p className="mt-3">当サイトには、第三者が運営する外部ウェブサイト（各国政府公式サイトまたは民間運営サイト）へのリンクが含まれます。リンク先サイトで行われる申請手続き、個人情報の入力、料金の支払、サービス内容等について、当サイトおよび監修者は一切関与せず、責任を負いません。</p>
+          <p className="mt-3">利用者が当サイトの情報を基に外部サイトを利用したこと、または本サービスの利用により生じたいかなる損害についても、当サイトおよび監修者は責任を負わないものとします。ただし、法令により免責が認められない場合はこの限りではありません。</p>
+        </Section>
+        <Section title="第5条（著作権）">
+          <p>当サイトに掲載されている文章、画像、構成、プログラム等に関する著作権は、当サイトまたは正当な権利者に帰属します。無断での転載、複製、転用、再配布を禁止します。</p>
+        </Section>
+        <Section title="第6条（規約の変更）">
+          <p>本規約は、必要に応じて予告なく変更されることがあります。変更後の規約は、当サイト上に掲載した時点で効力を生じるものとします。</p>
+        </Section>
+        <Section title="第7条（運営者情報）">
+          <p>当サイトは、以下の運営者により管理・運営されています。</p>
+          <div className="mt-3 space-y-1">
+            <p>サイト名：Global Travel Center</p>
+            <p>運営者：M2Agency Inc.</p>
+            <p>所在地：4-8-25, Nakameguro, Meguro-ku, Tokyo, 153-0061, Japan</p>
+            <p>お問い合わせ：info@m2-agency.net</p>
+          </div>
+        </Section>
+      </article>
+    </>
+  );
+}
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section>
+      <h2 className="text-xl font-bold text-gray-800 mb-4">{title}</h2>
+      <div>{children}</div>
+    </section>
+  );
+}

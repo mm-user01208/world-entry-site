@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/america/page": "app/america/page.js",
+  "/australia/page": "app/australia/page.js",
+  "/legal-information/page": "app/legal-information/page.js",
+  "/page": "app/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/south-korea/page": "app/south-korea/page.js",
+  "/terms-of-service/page": "app/terms-of-service/page.js",
+  "/united-kingdom/page": "app/united-kingdom/page.js"
+}
