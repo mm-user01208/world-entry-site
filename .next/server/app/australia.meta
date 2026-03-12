@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/australia/layout,_N_T_/australia/page,_N_T_/australia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/australia/__PAGE__",
+    "/australia",
+    "/_index",
+    "/_head"
+  ]
+}
