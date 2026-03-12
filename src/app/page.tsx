@@ -1,27 +1,13 @@
 import Link from 'next/link';
 import CountryNav from '@/components/CountryNav';
+import HeroSlider from '@/components/HeroSlider';
 
 const basePath = '/world-entry-site';
 
 export default function Home() {
   return (
     <>
-      {/* Hero with background image */}
-      <section className="relative min-h-[420px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={`${basePath}/images/hero.jpg`} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white py-20">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-            ビザ・電子渡航認証<br className="hidden md:block" />
-            （ETA・ESTA等）総合案内
-          </h1>
-          <p className="text-gray-200 text-base md:text-lg mt-4">
-            オーストラリア・アメリカ・韓国・イギリスの渡航要件を分かりやすく紹介
-          </p>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Country Cards */}
       <section className="py-16 bg-gray-50">

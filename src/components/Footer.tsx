@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo & description */}
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <img src={`${basePath}/images/footer-logo.png`} alt="" className="h-10 w-auto" />
+            <img src={`${basePath}/images/logo.png`} alt="" className="h-10 w-auto" />
             <h3 className="font-bold text-xl">Global Travel Center</h3>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mx-auto mb-4">
