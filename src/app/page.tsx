@@ -1,43 +1,76 @@
 import Link from 'next/link';
 import CountryNav from '@/components/CountryNav';
 
+const basePath = '/world-entry-site';
+
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gray-800 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">ビザ・電子渡航認証（ETA・ESTA等）総合案内</h1>
-          <p className="text-gray-300 text-lg">オーストラリア・アメリカ・韓国・イギリスの渡航要件を分かりやすく紹介</p>
+      {/* Hero with background image */}
+      <section className="relative min-h-[420px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={`${basePath}/images/hero.jpg`} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white py-20">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            ビザ・電子渡航認証<br className="hidden md:block" />
+            （ETA・ESTA等）総合案内
+          </h1>
+          <p className="text-gray-200 text-base md:text-lg mt-4">
+            オーストラリア・アメリカ・韓国・イギリスの渡航要件を分かりやすく紹介
+          </p>
         </div>
       </section>
 
-      {/* Country Nav */}
-      <CountryNav />
+      {/* Country Cards */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 text-center">国別のビザ・電子渡航認証</h2>
+          <p className="text-gray-500 text-center mb-10">各国のビザまたは電子渡航認証の要件についてご確認ください。</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'Australia', href: '/australia', img: `${basePath}/images/australia-card.jpg` },
+              { name: 'United States of America', href: '/america', img: `${basePath}/images/usa-card.jpg` },
+              { name: 'South Korea', href: '/south-korea', img: `${basePath}/images/korea-card.jpg` },
+              { name: 'United Kingdom', href: '/united-kingdom', img: `${basePath}/images/uk-card.jpg` },
+            ].map((c) => (
+              <Link key={c.href} href={c.href} className="group block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <div className="h-40 overflow-hidden">
+                  <img src={c.img} alt={c.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="p-4 bg-white">
+                  <h3 className="font-serif-country text-lg font-bold text-gray-800">{c.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ビザと電子渡航認証の違い */}
-      <section className="py-12">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">ビザと電子渡航認証の違いとは</h2>
-          <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">ビザと電子渡航認証の違いとは</h2>
+          <p className="text-gray-700 leading-relaxed text-[15px]">
             ビザと電子渡航認証はいずれも入国に関する制度ですが、その目的や取得方法が異なります。
           </p>
-          <p className="text-gray-700 leading-relaxed mt-4">
-            ビザは、滞在期間や渡航目的（観光、商用、就労など）に応じて取得が求められる入国許可であり、事前審査に一定の時間を要します。一方、電子渡航認証は、観光や短期商用などを目的とする短期渡航者を対象とした制度で、オンライン上で申請できる点が特徴です。必要となる制度は、渡航先の国や渡航者の国籍、渡航目的などによって異なるため、事前に正確な情報を確認することが重要です。
+          <p className="text-gray-700 leading-relaxed mt-4 text-[15px]">
+            ビザは、滞在期間や渡航目的（観光、商用、就労など）に応じて取得が求められる入国許可であり、事前審査に一定の時間を要します。一方、電子渡航認証は、観光や短期商用などを目的とする短期渡航者を対象とした制度で、オンライン上で申請できる点が特徴です。必要となる制度は、渡航先の国や渡航者の国籍、渡航目的などによって異なるため、事前に正確な情報を確認することが重要です
           </p>
         </div>
       </section>
 
       {/* チェックポイント */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">渡航前のチェックポイント</h2>
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">渡航前のチェックポイント</h2>
+          <p className="text-gray-700 leading-relaxed mb-8 text-[15px]">
             渡航前には、航空券や宿泊先の手配だけでなく、入国要件を事前に確認しておくことが重要です。国や地域によっては、出発前に電子渡航認証やビザの取得が必要となり、条件を満たしていない場合は搭乗や入国を拒否されることもあります。また、入国制度や必要書類は予告なく変更されることがあるため、直前の情報確認も欠かせません。安心して出発するためにも、以下のポイントを一つずつ確認し、余裕をもって準備を進めましょう。
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
             {['パスポートの有効期限', '渡航目的（観光・短期商用など）', '電子渡航認証やビザの要否', '最新の入国条件・制度変更'].map((item) => (
-              <li key={item} className="flex items-center gap-3 text-gray-700">
+              <li key={item} className="flex items-center gap-3 text-gray-700 text-[15px]">
                 <span className="w-2 h-2 bg-gray-800 rounded-full shrink-0" />
                 {item}
               </li>
@@ -46,41 +79,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Per-country sections */}
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 space-y-12">
-          <CountrySection
-            name="Australia"
-            href="/australia"
-            text="オーストラリアへ渡航する際には、渡航者の国籍、渡航目的、滞在期間に応じて、ビザの取得が必要です。観光や短期商用など、比較的短期間の滞在を目的とする一部の国・地域の渡航者については、Subclass 601 ETA（Electronic Travel Authority）を利用できる場合があります。"
-          />
-          <CountrySection
-            name="United States of America"
-            href="/america"
-            text="アメリカへ渡航する場合、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ESTA）の取得が必要となります。観光や短期商用を目的とする一部の国・地域の渡航者は、ビザ免除プログラムに基づきESTAを取得することで渡航できる場合があります。"
-          />
-          <CountrySection
-            name="South Korea"
-            href="/south-korea"
-            text="韓国へ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（K-ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、K-ETA（韓国電子渡航認証）を利用できる制度が設けられています。"
-          />
-          <CountrySection
-            name="United Kingdom"
-            href="/united-kingdom"
-            text="イギリスへ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、ETA（電子渡航認証）の対象となります。"
-          />
+      {/* Per-country sections with images - alternating layout */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 space-y-0">
+          {/* Australia - image left */}
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="h-64 md:h-auto">
+              <img src={`${basePath}/images/australia-section.jpg`} alt="Australia" className="w-full h-full object-cover" />
+            </div>
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <h3 className="font-serif-country text-2xl md:text-3xl font-bold text-gray-800 mb-4">Australia</h3>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                オーストラリアへ渡航する際には、渡航者の国籍、渡航目的、滞在期間に応じて、ビザの取得が必要です。観光や短期商用など、比較的短期間の滞在を目的とする一部の国・地域の渡航者については、Subclass 601 ETA（Electronic Travel Authority）を利用できる場合があります。ETAは、オーストラリア政府が提供する公式アプリを通じてのみ申請が可能であり、ウェブサイトから申請することはできません。承認されたETAは、渡航者のパスポート情報と電子的に紐づけられます。
+              </p>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                一方、就労、留学、長期滞在を目的とする場合や、ETAの対象外となる国籍の渡航者は、渡航目的に応じた別のビザを取得する必要があります。
+              </p>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                ビザの種類によって申請条件、必要書類、審査期間は異なるため、渡航計画に合わせて事前に制度内容を確認することが重要です。なお、入国の可否や条件の最終的な判断は、オーストラリア政府当局によって行われます。
+              </p>
+              <Link href="/australia" className="inline-block bg-gray-800 text-white px-6 py-2 rounded text-sm hover:bg-gray-700 transition w-fit">会社情報</Link>
+            </div>
+          </div>
+
+          {/* USA - image right */}
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+              <h3 className="font-serif-country text-2xl md:text-3xl font-bold text-gray-800 mb-4">United States of America</h3>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                アメリカへ渡航する場合、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ESTA）の取得が必要となります。観光や短期商用を目的とする一部の国・地域の渡航者は、ビザ免除プログラムに基づきESTAを取得することで渡航できる場合があります。ESTAはオンラインで申請する事前渡航認証制度であり、承認後はパスポート情報と電子的に紐づけられます。一方、就労や留学、長期滞在などの場合や、ESTAの対象外となる国籍の渡航者は、目的に応じたビザを取得する必要があります。ビザの種類によって申請条件や審査期間が異なるため、余裕をもって準備を進めることが重要です。なお、入国可否の最終判断は、アメリカ政府当局によって行われます。
+              </p>
+              <Link href="/america" className="inline-block bg-gray-800 text-white px-6 py-2 rounded text-sm hover:bg-gray-700 transition w-fit">会社情報</Link>
+            </div>
+            <div className="h-64 md:h-auto order-1 md:order-2">
+              <img src={`${basePath}/images/usa-section.jpg`} alt="United States" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          {/* South Korea - image left */}
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="h-64 md:h-auto">
+              <img src={`${basePath}/images/korea-section.jpg`} alt="South Korea" className="w-full h-full object-cover" />
+            </div>
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <h3 className="font-serif-country text-2xl md:text-3xl font-bold text-gray-800 mb-4">South Korea</h3>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                韓国へ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（K-ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、K-ETA（韓国電子渡航認証）を利用できる制度が設けられています。K-ETAはオンラインで申請する事前渡航認証制度であり、承認されると渡航前の手続きが簡略化されます。一方、就労、留学、長期滞在などを目的とする場合や、K-ETAの対象外となる国籍の渡航者は、目的に応じたビザの取得が必要です。制度の内容や要件は変更されることがあるため、渡航前に最新の入国条件を確認することが重要です。なお、最終的な入国の可否は韓国政府当局によって判断されます。
+              </p>
+              <Link href="/south-korea" className="inline-block bg-gray-800 text-white px-6 py-2 rounded text-sm hover:bg-gray-700 transition w-fit">会社情報</Link>
+            </div>
+          </div>
+
+          {/* UK - image right */}
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+              <h3 className="font-serif-country text-2xl md:text-3xl font-bold text-gray-800 mb-4">United Kingdom</h3>
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
+                イギリスへ渡航する際は、渡航者の国籍や渡航目的、滞在期間に応じて、ビザまたは電子渡航認証（ETA）の取得が必要となる場合があります。観光や短期商用などを目的とする一部の国・地域の渡航者は、ETA（電子渡航認証）の対象となります。ETAはオンラインで申請する制度で、承認後は渡航前の事前確認として利用されます。一方、就労や留学、長期滞在を目的とする場合や、ETAの対象外となる国籍の渡航者は、該当するビザの取得が必要です。制度の内容や要件は随時変更される可能性があるため、渡航前に最新情報を確認することが重要です。なお、入国の最終判断はイギリス政府当局によって行われます。
+              </p>
+              <Link href="/united-kingdom" className="inline-block bg-gray-800 text-white px-6 py-2 rounded text-sm hover:bg-gray-700 transition w-fit">会社情報</Link>
+            </div>
+            <div className="h-64 md:h-auto order-1 md:order-2">
+              <img src={`${basePath}/images/uk-section.jpg`} alt="United Kingdom" className="w-full h-full object-cover" />
+            </div>
+          </div>
         </div>
       </section>
-    </>
-  );
-}
 
-function CountrySection({ name, href, text }: { name: string; href: string; text: string }) {
-  return (
-    <div className="border-l-4 border-gray-800 pl-6">
-      <h3 className="font-serif-country text-xl font-bold text-gray-800 mb-3">{name}</h3>
-      <p className="text-gray-700 leading-relaxed mb-3">{text}</p>
-      <Link href={href} className="text-blue-600 hover:underline text-sm font-medium">会社情報 →</Link>
-    </div>
+      {/* Bottom Country Nav */}
+      <CountryNav />
+    </>
   );
 }

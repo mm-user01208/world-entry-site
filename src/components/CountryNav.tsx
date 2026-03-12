@@ -1,21 +1,28 @@
 import Link from 'next/link';
 
+const basePath = '/world-entry-site';
+
 const countries = [
-  { href: '/australia', name: 'Australia', color: 'from-blue-600 to-blue-800' },
-  { href: '/america', name: 'United States of America', color: 'from-red-600 to-red-800' },
-  { href: '/south-korea', name: 'South Korea', color: 'from-green-600 to-green-800' },
-  { href: '/united-kingdom', name: 'United Kingdom', color: 'from-purple-600 to-purple-800' },
+  { name: 'Australia', href: '/australia', img: `${basePath}/images/australia-card.jpg` },
+  { name: 'United States of America', href: '/america', img: `${basePath}/images/usa-card.jpg` },
+  { name: 'South Korea', href: '/south-korea', img: `${basePath}/images/korea-card.jpg` },
+  { name: 'United Kingdom', href: '/united-kingdom', img: `${basePath}/images/uk-card.jpg` },
 ];
 
 export default function CountryNav() {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">国別のビザ・電子渡航認証</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {countries.map((c) => (
-            <Link key={c.href} href={c.href} className={`block bg-gradient-to-br ${c.color} text-white rounded-lg p-6 hover:opacity-90 transition`}>
-              <h3 className="font-serif-country text-lg font-bold">{c.name}</h3>
+            <Link key={c.href} href={c.href} className="group block rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-white">
+              <div className="h-40 overflow-hidden">
+                <img src={c.img} alt={c.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-4">
+                <h3 className="font-serif-country text-base font-bold text-gray-800">{c.name}</h3>
+              </div>
             </Link>
           ))}
         </div>
