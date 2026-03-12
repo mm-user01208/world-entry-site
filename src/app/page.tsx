@@ -80,13 +80,13 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed text-[15px] mb-6">
                 オーストラリアへ渡航する際には、渡航者の国籍、渡航目的、滞在期間に応じて、ビザの取得が必要です。観光や短期商用など、比較的短期間の滞在を目的とする一部の国・地域の渡航者については、Subclass 601 ETA（Electronic Travel Authority）を利用できる場合があります。ETAは、オーストラリア政府が提供する公式アプリを通じてのみ申請が可能であり、ウェブサイトから申請することはできません。承認されたETAは、渡航者のパスポート情報と電子的に紐づけられます。
               </p>
-              <p className="text-gray-700 leading-relaxed text-[15px] mb-1">
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-0">
                 一方、就労、留学、長期滞在を目的とする場合や、ETAの対象外となる国籍の渡航者は、渡航目的に応じた別のビザを取得する必要があります。
               </p>
-              <p className="text-gray-700 leading-relaxed text-[15px] mb-2">
+              <p className="text-gray-700 leading-relaxed text-[15px] mb-0">
                 ビザの種類によって申請条件、必要書類、審査期間は異なるため、渡航計画に合わせて事前に制度内容を確認することが重要です。なお、入国の可否や条件の最終的な判断は、オーストラリア政府当局によって行われます。
               </p>
-              <Link href="/australia" className="inline-block bg-green-700 text-white px-6 py-2.5 rounded text-sm hover:bg-green-600 transition w-fit">詳しく見る</Link>
+              <div className="mt-6"><Link href="/australia" className="inline-block bg-green-700 text-white px-6 py-2.5 rounded text-sm hover:bg-green-600 transition w-fit">詳しく見る</Link></div>
             </div>
           </div>
 

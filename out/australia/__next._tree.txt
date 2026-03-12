@@ -1,4 +1,4 @@
-:HL["/world-entry-site/_next/static/chunks/27bd3e9fb508373d.css","style"]
+:HL["/world-entry-site/_next/static/chunks/3c08d86fd6300aa4.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap","style"]
 :HL["/world-entry-site/images/logo.png","image"]
 :HL["/world-entry-site/images/hero-1.jpg","image"]
@@ -6,4 +6,4 @@
 :HL["/world-entry-site/images/usa-card.jpg","image"]
 :HL["/world-entry-site/images/korea-card.jpg","image"]
 :HL["/world-entry-site/images/uk-card.jpg","image"]
-0:{"buildId":"myH0ynHXRfj_hN2qcuaL2","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"australia","paramType":null,"paramKey":"australia","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"9mjw3SLVcDOcWLp5haMzD","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"australia","paramType":null,"paramKey":"australia","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
