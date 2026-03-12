@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --font-serif: Georgia, 'Times New Roman', serif;
+@theme {
+  --font-serif-country: Georgia, 'Times New Roman', serif;
 }
 
 body {
-  color: #374151;
-  background: #ffffff;
+  font-family: 'Noto Serif JP', serif;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif JP', serif;
 }
 
 .font-serif-country {
   font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Red accent line under headings */
+.heading-accent::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #c41e3a;
+  margin-top: 12px;
 }

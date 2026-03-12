@@ -5,36 +5,44 @@ const basePath = '/world-entry-site';
 export default function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <img src={`${basePath}/images/footer-logo.png`} alt="" className="h-8 w-auto" />
-              <h3 className="font-bold text-lg">Global Travel Center</h3>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              ビザ・電子渡航認証（ETA・ESTA等）に関する総合情報サイト
-            </p>
+      <div className="max-w-5xl mx-auto px-4 py-14">
+        {/* Logo & description */}
+        <div className="text-center mb-10">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <img src={`${basePath}/images/footer-logo.png`} alt="" className="h-10 w-auto" />
+            <h3 className="font-bold text-xl">Global Travel Center</h3>
           </div>
-          <div>
-            <h4 className="font-bold mb-3 text-sm">運営者情報</h4>
-            <div className="text-gray-400 text-sm space-y-1">
-              <p>M2Agency Inc.</p>
-              <p>4-8-25, Nakameguro, Meguro-ku, Tokyo, 153-0061, Japan</p>
-              <p>info@m2-agency.net</p>
-            </div>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mx-auto mb-4">
+            本サイトは、各国のビザや電子渡航認証（ETA・ESTA・K-ETA）に関する制度を分かりやすく解説する情報提供サイトです。本サイトは情報提供を目的としており、ビザや電子渡航認証の申請代行業務は行っていません。外部サービスへのリンクは、利用を推奨または保証するものではありません。
+          </p>
+          <p className="text-gray-500 text-xs leading-relaxed max-w-3xl mx-auto mb-4">
+            Global Travel Centerは民間企業による運営であり、いかなる政府機関とも提携または関係はありません。<br />
+            電子渡航認証やビザは、本サービスを利用せず公式サイトから直接申請することも可能です。
+          </p>
+          <p className="text-gray-500 text-xs leading-relaxed max-w-3xl mx-auto">
+            This site is supervised by a registered Australian Migration Agent<br />
+            ★★★★★★★★★★（OMARA Registration No. 0000000）
+          </p>
+        </div>
+
+        {/* Links row */}
+        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-start gap-8">
+          <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+            <Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+            <Link href="/legal-information" className="hover:text-white">Legal Information (Act on Specified Commercial Transactions)</Link>
           </div>
-          <div>
-            <h4 className="font-bold mb-3 text-sm">リンク</h4>
-            <div className="flex flex-col gap-2 text-sm">
-              <Link href="/terms-of-service" className="text-gray-400 hover:text-white">利用規約</Link>
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white">個人情報保護方針</Link>
-              <Link href="/legal-information" className="text-gray-400 hover:text-white">特定商取引法に関する表記</Link>
-            </div>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+            <a href="#top" className="hover:text-white">TOP</a>
+            <Link href="/australia" className="hover:text-white">Australia</Link>
+            <Link href="/america" className="hover:text-white">United States of America</Link>
+            <Link href="/south-korea" className="hover:text-white">South Korea</Link>
+            <Link href="/united-kingdom" className="hover:text-white">United Kingdom</Link>
           </div>
         </div>
+
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-xs">
-          <p>Copyright © All Rights reserved by Global Travel Center</p>
+          <p>Copyright© – All rights reserved by Global Travel Center</p>
         </div>
       </div>
     </footer>
