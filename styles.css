@@ -60,7 +60,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* Bullet list */
 .bullet-list { list-style: none; }
-.bullet-list li { display: flex; align-items: center; gap: .75rem; color: #374151; font-size: 15px; padding: .5rem 0; }
+.bullet-list li { display: flex; align-items: center; gap: .75rem; color: #374151; font-size: 15px; padding: .1rem 0; }
 .bullet-dot { width: .5rem; height: .5rem; background: #1f2937; border-radius: 50%; flex-shrink: 0; }
 
 /* Country section (alternating image+text) */
