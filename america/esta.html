@@ -1,458 +1,508 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>ESTA(エスタ)申請｜アメリカ電子渡航認証システム</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>ESTA(エスタ)申請｜米国公式の電子渡航認証を日本語でご案内</title>
 <link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #0a3161;
-  --navy-light: #0d3d7a;
-  --navy-dark: #072347;
-  --gray-bg: #f9fafb;
-  --white: #ffffff;
-  --text: #333333;
-  --text-light: #666666;
-  --border: #e5e7eb;
+:root{--red:#c41e3a;--navy:#102e6c;--text:#333;--bg:#f7f7f5;--max:980px;--gap:60px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Serif JP',serif;color:var(--text);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased;padding-bottom:60px}
+a{color:var(--navy);text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+ul{list-style:disc;padding-left:1.5em}ol{padding-left:1.5em}
+.inner{max-width:var(--max);margin:0 auto;padding:0 20px}
+.sp-only{display:none}
+/* HEADER */
+.site-header{background:#fff;border-bottom:1px solid #e0e0e0;position:sticky;top:0;z-index:100}
+.header-top{max-width:var(--max);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.header-logo img{height:40px;width:auto}
+.header-nav{display:flex;gap:24px;align-items:center}
+.header-nav a{text-decoration:none;color:var(--text);font-size:14px;font-weight:500;white-space:nowrap}
+.header-nav a:hover{color:var(--navy)}
+.mob-btn{display:none;background:none;border:none;font-size:24px;cursor:pointer}
+/* HERO */
+.hero{position:relative;width:100%;min-height:420px;overflow:hidden}
+.hero-bg{width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0}
+.hero-ov{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:60px 20px;display:flex;align-items:center;min-height:420px}
+.hero-box{background:rgba(255,255,255,.92);padding:40px 44px;max-width:520px;border-radius:2px}
+.hero-title{font-size:28px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.4}
+.hero-sub{font-size:15px;color:#555;margin-bottom:24px;line-height:1.7}
+.cta{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;padding:14px 32px;font-size:16px;font-weight:600;border-radius:4px;transition:opacity .2s}
+.cta:hover{opacity:.85}.cta img{height:20px;width:auto;filter:brightness(0) invert(1)}
+.cta-note{display:block;text-align:left;font-size:12px;color:#888;margin-top:8px}
+/* SECTIONS */
+.sec{padding:var(--gap) 0}
+.sec-bg{background:var(--bg)}
+.sec h2{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--navy);line-height:1.5;text-align:left}
+.sec p{margin-bottom:16px;text-align:left}
+.sec li{margin-bottom:8px;text-align:left}
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:30px}
+.step{text-align:center}
+.step img{width:64px;height:64px;margin:0 auto 12px}
+.step-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.step-d{font-size:13px;line-height:1.7;color:#555;text-align:left}
+.step-d a{color:var(--navy)}
+/* CONTENT ROW */
+.cr{display:flex;gap:30px;align-items:flex-start;margin-top:20px}
+.cr.rev{flex-direction:row-reverse}
+.cr-img{flex:0 0 320px;border-radius:4px;overflow:hidden}
+.cr-img img{width:100%}
+.cr-txt{flex:1;text-align:left}
+.cr-txt p{margin-bottom:14px}.cr-txt ul{margin-bottom:14px}.cr-txt li{margin-bottom:6px}
+/* NEWS */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:30px}
+.news-card{background:#fff;border-radius:4px;overflow:hidden;display:flex;gap:16px;padding:16px;text-decoration:none;color:var(--text);transition:box-shadow .2s}
+.news-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.nc-img{flex:0 0 140px;border-radius:4px;overflow:hidden}
+.nc-img img{width:100%;height:100%;object-fit:cover}
+.nc-body{flex:1}
+.nc-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.nc-tag{font-size:11px;color:var(--navy);background:#eef2f8;padding:2px 8px;border-radius:2px}
+.nc-date{font-size:12px;color:#999;margin-bottom:4px}
+.nc-title{font-size:14px;font-weight:600;margin-bottom:6px;line-height:1.5}
+.nc-ex{font-size:12px;color:#666;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.news-update{font-size:13px;color:#888;margin-bottom:24px}
+.nm-link{display:inline-block;padding:10px 24px;border:1px solid var(--navy);color:var(--navy);text-decoration:none;font-size:14px;border-radius:4px}
+/* ARTICLE GRIDS */
+.ag{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:40px}
+.ac{display:block;padding:16px 20px;border:1px solid #e0e0e0;border-radius:4px;text-decoration:none;color:var(--text);transition:background .2s}
+.ac:hover{background:#fafafa}
+.ac-t{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.ac-d{font-size:13px;color:#666;line-height:1.6}
+/* FAQ */
+.faq-item{border-bottom:1px solid #ddd}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;cursor:pointer;font-size:15px;font-weight:600;color:var(--text);gap:16px;text-align:left}
+.faq-toggle{flex-shrink:0;width:28px;height:28px;border:1px solid #ccc;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#666;line-height:1}
+.faq-a{display:none;padding:0 0 20px;font-size:14px;line-height:1.8;color:#555}
+.faq-a a{color:var(--navy)}.faq-a ol{margin:16px 0}
+/* PAYMENT */
+.pay-t{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px}
+.last-upd{font-size:13px;color:#888;margin-top:20px;padding-top:12px;border-top:1px solid #eee}
+/* FOOTER */
+.site-footer{background:var(--navy);color:#ccc;padding:40px 0 20px;font-size:13px}
+.ft-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:30px}
+.ft-col h3{color:#fff;font-size:14px;margin-bottom:12px;font-weight:600}
+.ft-col a{display:block;color:#bbb;text-decoration:none;font-size:12px;line-height:2}
+.ft-col a:hover{color:#fff}
+.ft-copy{text-align:center;font-size:12px;color:#888;padding-top:20px;border-top:1px solid rgba(255,255,255,.15)}
+/* FLOATING */
+.float-cta{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);box-shadow:0 -2px 8px rgba(0,0,0,.1);padding:10px 20px;z-index:99;display:flex;justify-content:center;align-items:center;gap:16px}
+.float-cta .cta{padding:12px 28px;font-size:15px}
+.float-cta .cta-note{margin-top:0}
+/* RESPONSIVE */
+@media(max-width:768px){
+.sp-only{display:inline}
+.header-nav{display:none}
+.mob-btn{display:block}
+.hero{min-height:320px}.hero-ov{min-height:320px;padding:30px 16px}
+.hero-box{padding:24px;max-width:100%}.hero-title{font-size:22px}
+.steps{grid-template-columns:repeat(2,1fr);gap:16px}
+.cr,.cr.rev{flex-direction:column}
+.cr-img{flex:none;width:100%}
+.news-grid{grid-template-columns:1fr}
+.news-card{flex-direction:column}
+.nc-img{flex:none;width:100%;height:180px}
+.ag{grid-template-columns:1fr}
+.ft-grid{grid-template-columns:repeat(2,1fr)}
+.sec h2{font-size:19px}
 }
-body { font-family: 'Noto Serif JP', serif; color: var(--text); line-height: 1.8; margin: 0; padding: 0; }
-
-.esta-nav { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
-.esta-nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-.esta-nav-logo { padding: 0.75rem 0; font-size: 0.85rem; font-weight: 600; text-align: center; border-bottom: 1px solid rgba(255,255,255,.15); }
-.esta-nav-logo a { color: #fff; text-decoration: none; }
-.esta-nav-links { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
-.esta-nav-links a { color: rgba(255,255,255,.9); text-decoration: none; font-size: 0.8rem; padding: 0.6rem 1.2rem; transition: background .2s; white-space: nowrap; }
-.esta-nav-links a:hover { background: rgba(255,255,255,.1); color: #fff; }
-.esta-hamburger { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; }
-.esta-nav-top { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; }
-.esta-nav-top .logo-text { font-size: 0.85rem; font-weight: 600; }
-.esta-nav-top .logo-text a { color: #fff; text-decoration: none; }
-@media (max-width: 768px) {
-  .esta-hamburger { display: block; }
-  .esta-nav-links { display: none; flex-direction: column; border-top: 1px solid rgba(255,255,255,.15); }
-  .esta-nav-links.open { display: flex; }
-  .esta-nav-links a { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .esta-nav-logo { display: none; }
-}
-@media (min-width: 769px) { .esta-nav-top { display: none; } }
-
-.esta-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: #fff; text-align: center; padding: 4rem 1rem; }
-.esta-hero h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
-.esta-hero p { font-size: 1rem; opacity: 0.9; margin-bottom: 2rem; }
-.btn-cta { display: inline-block; background: #fff; color: var(--navy); font-weight: 700; font-size: 1rem; padding: 0.9rem 2.5rem; border-radius: 4px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
-.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.3); }
-
-.esta-section { padding: 3.5rem 1rem; }
-.esta-section.gray { background: var(--gray-bg); }
-.esta-section.white { background: var(--white); }
-.section-inner { max-width: 900px; margin: 0 auto; }
-.section-title { text-align: center; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 2rem; position: relative; padding-bottom: 1rem; }
-.section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--navy); border-radius: 2px; }
-.section-text { font-size: 0.95rem; line-height: 2; }
-.section-text a { color: var(--navy); text-decoration: underline; }
-.section-text a:hover { opacity: 0.8; }
-
-.esta-bullets { list-style: none; padding: 0; margin: 1.5rem 0; }
-.esta-bullets li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; font-size: 0.95rem; line-height: 1.8; }
-.esta-bullets li::before { content: '●'; position: absolute; left: 0; color: var(--navy); font-size: 0.6rem; top: 0.5rem; }
-
-.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.step-card { text-align: center; padding: 1.5rem 1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-.step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 1.2rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
-.step-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; }
-.step-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
-
-.cta-banner { text-align: center; margin-top: 2rem; }
-.btn-navy { display: inline-block; background: var(--navy); color: #fff; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; transition: background .2s, transform .2s; }
-.btn-navy:hover { background: var(--navy-dark); transform: translateY(-1px); }
-
-.news-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem; }
-.news-card { background: #fff; border-radius: 8px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,.06); border-left: 4px solid var(--navy); transition: box-shadow .2s; }
-.news-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,.1); }
-.news-card a { text-decoration: none; color: inherit; display: block; }
-.news-date { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.3rem; }
-.news-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
-.news-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-.card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
-@media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
-.info-card { background: #fff; border-radius: 8px; padding: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,.06); border: 1px solid var(--border); transition: box-shadow .2s, transform .2s; }
-.info-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.1); transform: translateY(-2px); }
-.info-card a { text-decoration: none; color: inherit; display: block; }
-.info-card h4 { font-size: 0.9rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
-.info-card p { font-size: 0.8rem; color: var(--text-light); line-height: 1.6; }
-
-.faq-list { margin-top: 1.5rem; }
-.faq-item { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 0.75rem; overflow: hidden; }
-.faq-question { width: 100%; text-align: left; padding: 1rem 1.25rem; font-size: 0.9rem; font-weight: 600; color: var(--text); background: #fff; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Noto Serif JP', serif; transition: background .2s; }
-.faq-question:hover { background: var(--gray-bg); }
-.faq-question .arrow { transition: transform .3s; font-size: 0.8rem; color: var(--navy); }
-.faq-question.active .arrow { transform: rotate(180deg); }
-.faq-answer { display: none; padding: 0 1.25rem 1rem; font-size: 0.85rem; line-height: 1.8; color: var(--text-light); background: #fff; }
-.faq-answer.open { display: block; }
-.faq-answer a { color: var(--navy); text-decoration: underline; }
-
-.payment-logos { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-.payment-logo { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 1rem; font-weight: 600; font-size: 0.8rem; }
-
-.esta-footer { background: var(--navy-dark); color: rgba(255,255,255,.8); padding: 2.5rem 1rem; font-size: 0.8rem; line-height: 1.8; }
-.esta-footer .footer-inner { max-width: 900px; margin: 0 auto; }
-.esta-footer ul { list-style: disc; padding-left: 1.2rem; margin-bottom: 1.5rem; }
-.esta-footer li { margin-bottom: 0.5rem; }
-.esta-footer a { color: rgba(255,255,255,.9); text-decoration: underline; }
-.esta-footer a:hover { color: #fff; }
-.footer-links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.15); }
-.footer-links a { font-size: 0.75rem; color: rgba(255,255,255,.7); }
-.footer-copyright { text-align: center; margin-top: 1.5rem; font-size: 0.75rem; color: rgba(255,255,255,.5); }
-.disclaimer-box { background: rgba(255,255,255,.05); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: 0.78rem; }
 </style>
 </head>
 <body>
 
-<nav class="esta-nav">
-  <div class="esta-nav-inner">
-    <div class="esta-nav-logo">
-      <a href="https://esta-usapply.com/">ESTA(エスタ)申請はこちらから：アメリカ電子渡航認証システム</a>
-    </div>
-    <div class="esta-nav-links" id="navLinks">
-      <a href="https://apply.esta-usapply.com/form/entry">ESTA(エスタ)申請</a>
-      <a href="https://esta-usapply.com/page_cat/esta%E5%9F%BA%E6%9C%AC%E6%83%85%E5%A0%B1/">ESTA基本情報</a>
-      <a href="https://esta-usapply.com/page_cat/esta%E7%94%B3%E8%AB%8B%E3%82%AC%E3%82%A4%E3%83%89/">ESTA申請ガイド</a>
-      <a href="https://apply.esta-usapply.com/form/contact">お問い合わせ</a>
-      <a href="https://esta-usapply.com/sitemap/index.html">FAQ</a>
-    </div>
-    <div class="esta-nav-top">
-      <div class="logo-text"><a href="https://esta-usapply.com/">ESTA(エスタ)申請</a></div>
-      <button class="esta-hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="メニュー">☰</button>
-    </div>
-  </div>
+<header class="site-header">
+<div class="header-top">
+<a href="https://esta-usapply.com/" class="header-logo"><img src="images/esta-logo.svg" alt="ESTA(エスタ)申請代行サイト" height="40"></a>
+<nav class="header-nav">
+<a href="https://apply.esta-usapply.com/form/entry">ESTA申請</a>
+<a href="https://esta-usapply.com/service/index.html">ESTA基本情報</a>
+<a href="https://esta-usapply.com/flow/index.html">ESTA申請ガイド</a>
+<a href="https://esta-usapply.com/contact/index.html">お問い合わせ</a>
+<a href="https://esta-usapply.com/faq/index.html">FAQ</a>
 </nav>
+<button class="mob-btn" onclick="var n=document.querySelector('.header-nav');n.style.display=n.style.display==='flex'?'none':'flex'">☰</button>
+</div>
+</header>
 
-<section class="esta-hero">
-  <h1>ESTA申請は出発の3日前までに</h1>
-  <p>申請には一定の時間がかかります。早めに手続きを済ませましょう。</p>
-  <a href="https://apply.esta-usapply.com/form/entry" class="btn-cta">ESTA申請はこちら</a>
+<section class="hero">
+<img class="hero-bg" src="images/kv-hero.jpg" alt="アメリカ合衆国議事堂と国旗">
+<div class="hero-ov">
+<div class="hero-box">
+<p class="hero-title">ESTA申請は<br class="sp-only">出発の3日前までに</p>
+<p class="hero-sub">申請には一定の時間がかかります。<br class="sp-only">早めに手続きを済ませましょう。</p>
+<a href="https://apply.esta-usapply.com/form/entry" class="cta"><img src="images/icon-entry.svg" alt="">ESTA申請はこちら</a>
+<span class="cta-note">出発の72時間前までにお願いします</span>
+</div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">アメリカ入国には「ESTA」の申請が必要です</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)とは、短期のアメリカ渡航に必須となる電子渡航認証システムです。正式名称は"Electronic System for Travel Authorization"と表記し、DHS(アメリカ国土安全保障省)の管轄により2009年1月に導入されました。ESTA(エスタ)はビザを取得せず渡米する全ての外国籍の方を対象にオンラインでの事前申請が義務付けられ、手続き時には<a href="https://esta-usapply.com/fee/index.html">申請料金</a>を支払う必要があります。</p>
-      <br>
-      <p>アメリカは日本などの同盟国を<a href="https://esta-usapply.com/vwp/index.html">VWP(Visa Waiver Program：ビザ免除プログラム)の対象国</a>に指定。VWP対象国の市民は観光や短期商用を目的としてハワイを含むアメリカへ渡航する場合、最長90日間の滞在に限りビザ取得が免除されます。渡米する際はオンラインでのESTA(エスタ)申請が必須となり、事前に「渡航認証許可」を取得する必要があります。ただし、以下に該当するVWP対象者は、ESTA(エスタ)を利用しての渡米は認められません。詳細は<a href="https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html">米国国務省のウェブサイト</a>をご確認ください。</p>
-      <ul class="esta-bullets">
-        <li>2011年3月1日以降にイラン、イラク、北朝鮮、スーダン、シリア、リビア、ソマリア、イエメン、キューバへの渡航・滞在歴がある方(VWP対象国の軍または政府職員の公務遂行を目的として、これらの国へ渡航した場合を除く)</li>
-        <li>VWP対象国の国籍と、イラン、イラク、北朝鮮、スーダン、シリアいずれかの国籍を有する二重国籍者の方</li>
-      </ul>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2>アメリカ入国には「ESTA」の申請が必要です</h2>
+<p>ESTA(エスタ)とは、米国政府が定めた公式の電子渡航認証システムです。正式名称は"Electronic System for Travel Authorization"と表記し、DHS(アメリカ国土安全保障省)の管轄により2009年1月に導入されました。ESTA(エスタ)はビザを取得せず渡米する全ての外国籍の方を対象にオンラインでの事前申請が義務付けられ、手続き時には<a href="https://esta-usapply.com/fee/index.html">申請料金</a>を支払う必要があります。</p>
+<p>アメリカは日本などの同盟国を<a href="https://esta-usapply.com/vwp/index.html">VWP(Visa Waiver Program：ビザ免除プログラム)の対象国</a>に指定。VWP対象国の市民は観光や短期商用を目的としてハワイを含むアメリカへ渡航する場合、最長90日間の滞在に限りビザ取得が免除されます。渡米する際はオンラインでのESTA(エスタ)申請が必須となり、事前に「渡航認証許可」を取得する必要があります。ただし、以下に該当するVWP対象者は、ESTA(エスタ)を利用しての渡米は認められません。詳細は<a href="https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html" target="_blank" rel="noreferrer noopener">米国国務省のウェブサイト</a>をご確認ください。</p>
+<ul>
+<li>2011年3月1日以降にイラン、イラク、北朝鮮、スーダン、シリア、リビア、ソマリア、イエメン、キューバへの渡航・滞在歴がある方(VWP対象国の軍または政府職員の公務遂行を目的として、これらの国へ渡航した場合を除く)</li>
+<li>VWP対象国の国籍と、イラン、イラク、北朝鮮、スーダン、シリアいずれかの国籍を有する二重国籍者の方</li>
+</ul>
+<h2>ESTA(エスタ)の申請対象・必要な方とは</h2>
+<p>DHS(アメリカ国土安全保障省)は少なくとも渡航3日前までにESTA(エスタ)を申請し、「渡航認証許可」を取得するよう推奨しています。ESTA(エスタ)は年齢を問わずハワイを含むアメリカへ渡航する全ての方が必須となりますので、早めの申請手続きをお勧めします。<br>なお、ESTA(エスタ)は<a href="https://www.dhs.gov/" target="_blank" rel="noreferrer noopener">DHS(アメリカ国土安全保障省)</a>および<a href="https://www.cbp.gov/" target="_blank" rel="noreferrer noopener">CBP(アメリカ合衆国税関・国境警備局)</a>の管轄となります。<a href="https://www.mofa.go.jp/mofaj/toko/passport/us_esta.html" target="_blank" rel="noreferrer noopener">外務省</a>や<a href="https://jp.usembassy.gov/ja/" target="_blank" rel="noreferrer noopener">在日アメリカ大使館・総領事館</a>では質問や問い合わせに対応しておりませんのでご了承ください。</p>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)の申請対象・必要な方とは</h2>
-    <div class="section-text">
-      <p>DHS(アメリカ国土安全保障省)は少なくとも渡航3日前までにESTA(エスタ)を申請し、「渡航認証許可」を取得するよう推奨しています。ESTA(エスタ)は年齢を問わずハワイを含むアメリカへ渡航する全ての方が必須となりますので、早めの申請手続きをお勧めします。</p>
-      <br>
-      <p>なお、ESTA(エスタ)は<a href="https://www.dhs.gov/">DHS(アメリカ国土安全保障省)</a>および<a href="https://www.cbp.gov/">CBP(アメリカ合衆国税関・国境警備局)</a>の管轄となります。<a href="https://www.mofa.go.jp/mofaj/toko/passport/us_esta.html">外務省</a>や<a href="https://jp.usembassy.gov/ja/">在日アメリカ大使館・総領事館</a>では質問や問い合わせに対応しておりませんのでご了承ください。</p>
-    </div>
-  </div>
+<section class="sec sec-bg">
+<div class="inner">
+<h2>ESTA(エスタ)申請の手順</h2>
+<div class="steps">
+<div class="step"><img src="images/flow-1.svg" alt="ステップ1"><div class="step-t">申請者情報の入力</div><p class="step-d">申請フォームの案内に沿って「ESTAお申込みに関する同意事項」を確認のうえ入力を完了してください。<a href="https://esta-usapply.com/flow/index.html">申請方法の詳細はこちら</a>。</p></div>
+<div class="step"><img src="images/flow-2.svg" alt="ステップ2"><div class="step-t">申請料お支払い</div><p class="step-d">申請情報の入力後は「お支払いページ」へ遷移します。クレジットカード情報を入力し、決済手続きを行ってください。</p></div>
+<div class="step"><img src="images/flow-3.svg" alt="ステップ3"><div class="step-t">審査</div><p class="step-d">登録のメールアドレスに「申請受付完了」の通知が届きます。審査に最長72時間を要するため、しばらくお待ちください。</p></div>
+<div class="step"><img src="images/flow-4.svg" alt="ステップ4"><div class="step-t">申請完了</div><p class="step-d">「渡航認証許可」の通知をもって申請は完了です。認証情報は大切に保管しましょう。<a href="https://esta-usapply.com/status-check/index.html">申請内容や審査状況はこちら</a>より確認いただけます。</p></div>
+</div>
+<div><a href="https://apply.esta-usapply.com/form/entry" class="cta"><img src="images/icon-entry.svg" alt="">ESTA申請はこちら</a><span class="cta-note">出発の72時間前までにお願いします</span></div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)申請の手順</h2>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <h4>申請者情報の入力</h4>
-        <p><a href="https://apply.esta-usapply.com/form/entry">申請フォーム</a>の案内に沿って「ESTAお申込みに関する同意事項」を確認のうえ入力を完了してください。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <h4>申請料お支払い</h4>
-        <p>申請情報の入力後は「お支払いページ」へ遷移します。クレジットカード情報を入力し、決済手続きを行ってください。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <h4>審査</h4>
-        <p>登録のメールアドレスに「申請受付完了」の通知が届きます。審査に最長72時間を要するため、しばらくお待ちください。</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">4</div>
-        <h4>申請完了</h4>
-        <p>「渡航認証許可」の通知をもって申請は完了です。認証情報は大切に保管しましょう。</p>
-      </div>
-    </div>
-    <div class="cta-banner">
-      <a href="https://apply.esta-usapply.com/form/entry" class="btn-navy">ESTA申請はこちら — 出発の72時間前までにお願いします</a>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="requirements-eligibility">ESTA(エスタ)の申請条件・資格</h2>
+<div class="cr">
+<div class="cr-img"><img src="images/requirements.jpg" alt="ESTA(エスタ)の申請条件・資格" loading="lazy"></div>
+<div class="cr-txt">
+<p>ESTA(エスタ)を申請する場合、下記の条件を満たす必要があります。</p>
+<ul>
+<li><a href="https://esta-usapply.com/vwp/index.html">ビザ免除プログラム(VWP)対象国</a>の市民であり、期限が有効なパスポートを所持している</li>
+<li>渡航目的が90日以内の短期観光または商用で、就労や留学に該当しない</li>
+<li>米国が定める伝染病や病気に罹患していない</li>
+<li>米国のビザを所持していない</li>
+<li>過去に重大な犯罪歴や米国で入国拒否を受けていない</li>
+</ul>
+<p>申請時に渡航者の適格性を判断するため、犯罪歴や健康状態などに関する質問への回答が求められます。いずれかの質問に該当する方は、申請条件を満たしていてもESTA(エスタ)を利用した渡米は認められません。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)の申請条件・資格</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)を申請する場合、下記の条件を満たす必要があります。</p>
-      <ul class="esta-bullets">
-        <li><a href="https://esta-usapply.com/vwp/index.html">ビザ免除プログラム(VWP)対象国</a>の市民であり、期限が有効なパスポートを所持している</li>
-        <li>渡航目的が90日以内の短期観光または商用で、就労や留学に該当しない</li>
-        <li>米国が定める伝染病や病気に罹患していない</li>
-        <li>米国のビザを所持していない</li>
-        <li>過去に重大な犯罪歴や米国で入国拒否を受けていない</li>
-      </ul>
-      <p>申請時に渡航者の適格性を判断するため、犯罪歴や健康状態などに関する質問への回答が求められます。いずれかの質問に該当する方は、申請条件を満たしていてもESTA(エスタ)を利用した渡米は認められません。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="attention">ESTA(エスタ)申請の時期・期限に関する注意点</h2>
+<div class="cr rev">
+<div class="cr-img"><img src="images/attention.jpg" alt="ESTA(エスタ)申請の時期・期限に関する注意点" loading="lazy"></div>
+<div class="cr-txt">
+<p>ESTA(エスタ)はビザとは制度や要件が異なり、申請から数日以内での取得が可能なため短期のアメリカ旅行や出張などに便利な電子渡航認証制度です。米国CBP(アメリカ合衆国税関・国境警備局)や各航空会社では、出発72時間前までにESTA(エスタ)申請を済ませるよう推奨しています。出発の際にESTA(エスタ)申請を済ませていない方は、原則として航空機への搭乗ができませんのでご注意ください。また、米国CBPサイトでは定期的にシステムメンテナンスを行っています。当該の期間やアクセスが集中した際は、審査結果に時間がかかる場合もあるため渡航が決まった段階で手続きを行いましょう。家族やグループの代表者が同行者全員のESTA(エスタ)申請を行う際の注意点は<a href="https://esta-usapply.com/group/index.html">こちら</a>をご確認ください。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)申請の時期・期限に関する注意点</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)はビザとは制度や要件が異なり、申請から数日以内での取得が可能なため短期のアメリカ旅行や出張などに便利な電子渡航認証制度です。米国CBP(アメリカ合衆国税関・国境警備局)や各航空会社では、出発72時間前までにESTA(エスタ)申請を済ませるよう推奨しています。出発の際にESTA(エスタ)申請を済ませていない方は、原則として航空機への搭乗ができませんのでご注意ください。</p>
-      <br>
-      <p>また、米国CBPサイトでは定期的にシステムメンテナンスを行っています。当該の期間やアクセスが集中した際は、審査結果に時間がかかる場合もあるため渡航が決まった段階で手続きを行いましょう。家族やグループの代表者が同行者全員のESTA(エスタ)申請を行う際の注意点は<a href="https://esta-usapply.com/group/index.html">こちら</a>をご確認ください。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="about-esta">ESTA(エスタ)申請に必要な物とは？</h2>
+<div class="cr">
+<div class="cr-img"><img src="images/how-to.jpg" alt="ESTA(エスタ)申請に必要な物とは？" loading="lazy"></div>
+<div class="cr-txt">
+<p>ESTA(エスタ)申請時は、氏名・生年月日・パスポート番号などの入力が求められます。入力の所要時間は約10分で、期限が有効なパスポートとクレジットカード、スムーズな送受信が可能なEメールアドレスが必要です。スマートフォンやタブレット端末は画面が小さく入力ミスが起こりやすいため、パソコンでの申請をお勧めします。パソコン以外で申請を行う際の注意点は<a href="https://esta-usapply.com/smartphone/index.html">こちら</a>をご確認ください。なお、決済に使用するクレジットカードは申請者ご本人の名義以外でも審査に影響はありません。ESTA(エスタ)の申請方法に関する詳細は<a href="https://esta-usapply.com/flow/index.html">こちら</a>をご確認ください。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)申請に必要な物とは？</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)申請時は、氏名・生年月日・パスポート番号などの入力が求められます。入力の所要時間は約10分で、期限が有効なパスポートとクレジットカード、スムーズな送受信が可能なEメールアドレスが必要です。スマートフォンやタブレット端末は画面が小さく入力ミスが起こりやすいため、パソコンでの申請をお勧めします。パソコン以外で申請を行う際の注意点は<a href="https://esta-usapply.com/smartphone/index.html">こちら</a>をご確認ください。</p>
-      <br>
-      <p>なお、決済に使用するクレジットカードは申請者ご本人の名義以外でも審査に影響はありません。ESTA(エスタ)の申請方法に関する詳細は<a href="https://esta-usapply.com/flow/index.html">こちら</a>をご確認ください。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="how-apply-by-app">アプリでのESTA(エスタ)申請方法について</h2>
+<div class="cr rev">
+<div class="cr-img"><img src="images/app.jpg" alt="アプリでのESTA(エスタ)申請方法について" loading="lazy"></div>
+<div class="cr-txt">
+<p>ESTA(エスタ)は、スマートフォンやタブレット端末を利用したアプリでも申請手続きが行えます。アプリではパスポートをスキャンして申請手続きを進めるため、申請情報の入力を簡略化できます。App StoreまたはGoogle playより"ESTA Mobile(エスタ モバイル)"をダウンロードした後、「<a href="https://esta-usapply.com/esta-application/index.html">アプリでのESTA (エスタ)申請方法を解説</a>」の手順に従って申請手続きを進めてください。申請後のステータスはTOP画面の「ESTAを取得済みの場合」を選択し、個人申請の検索画面に必要情報(パスポート番号、生年月日、渡航申請番号)を入力する事で確認できます。また、モバイル端末に紐づいた言語に自動設定されるため、ダウンロード後に言語を変更する必要はありません。当サイトにて申請された方のステータス確認方法は、<a href="https://esta-usapply.com/status-check/index.html/">こちら</a>をご確認ください。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">アプリでのESTA(エスタ)申請方法について</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)は、スマートフォンやタブレット端末を利用したアプリでも申請手続きが行えます。アプリではパスポートをスキャンして申請手続きを進めるため、申請情報の入力を簡略化できます。App StoreまたはGoogle playより"ESTA Mobile(エスタ モバイル)"をダウンロードした後、「<a href="https://esta-usapply.com/esta-application/index.html">アプリでのESTA(エスタ)申請方法を解説</a>」の手順に従って申請手続きを進めてください。</p>
-      <br>
-      <p>申請後のステータスはTOP画面の「ESTAを取得済みの場合」を選択し、個人申請の検索画面に必要情報(パスポート番号、生年月日、渡航申請番号)を入力する事で確認できます。また、モバイル端末に紐づいた言語に自動設定されるため、ダウンロード後に言語を変更する必要はありません。当サイトにて申請された方のステータス確認方法は、<a href="https://esta-usapply.com/status-check/index.html/">こちら</a>をご確認ください。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="expiration">ESTA(エスタ)の有効期限について</h2>
+<div class="cr">
+<div class="cr-img"><img src="images/expiration.jpg" alt="ESTA(エスタ)の有効期限について" loading="lazy"></div>
+<div class="cr-txt">
+<p>ESTA(エスタ)は「渡航認証許可」の承認から2年間有効です。申請時に使用したパスポートの有効期限が2年以内の場合は、パスポートの有効期限日を以てESTA(エスタ)も失効となりますのでご注意ください。また、ESTA(エスタ)には更新の制度がないため、失効した際はあらためて申請を行う必要があります。パスポートの有効期限が残り1年未満の方は、パスポート更新後にESTA(エスタ)申請を行うことをお勧めします。ESTA(エスタ)の有効期限に関する詳細は、「<a href="https://esta-usapply.com/reapplication/index.html">ESTA(エスタ)の有効期限と再申請について</a>」をご確認ください。<br>※ハンガリーとブルネイのパスポート保持者に限り、ESTAの有効期限が2年から1年に短縮されました。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)の有効期限について</h2>
-    <div class="section-text">
-      <p>ESTA(エスタ)は「渡航認証許可」の承認から2年間有効です。申請時に使用したパスポートの有効期限が2年以内の場合は、パスポートの有効期限日を以てESTA(エスタ)も失効となりますのでご注意ください。また、ESTA(エスタ)には更新の制度がないため、失効した際はあらためて申請を行う必要があります。</p>
-      <br>
-      <p>パスポートの有効期限が残り1年未満の方は、パスポート更新後にESTA(エスタ)申請を行うことをお勧めします。ESTA(エスタ)の有効期限に関する詳細は、「<a href="https://esta-usapply.com/reapplication/index.html">ESTA(エスタ)の有効期限と再申請について</a>」をご確認ください。</p>
-      <br>
-      <p style="font-size:0.85rem; color:var(--text-light);">※ハンガリーとブルネイのパスポート保持者に限り、ESTAの有効期限が2年から1年に短縮されました。</p>
-    </div>
-  </div>
+<section class="sec sec-bg">
+<div class="inner">
+<h2>ESTA(エスタ)とアメリカ入国の最新情報</h2>
+<p class="news-update">最終更新日: 2026年03月30日</p>
+<div class="news-grid">
+<a href="https://esta-usapply.com/news/detail/990200.html" class="news-card">
+<div class="nc-img"><img src="images/news-1.jpg" alt="" loading="lazy"></div>
+<div class="nc-body">
+<div class="nc-tags"><span class="nc-tag">ハワイ</span><span class="nc-tag">ホノルル</span><span class="nc-tag">オアフ島</span><span class="nc-tag">渡航情報</span><span class="nc-tag">観光</span><span class="nc-tag">航空会社</span></div>
+<div class="nc-date">更新日 : 2026年03月30日</div>
+<div class="nc-title">ハワイの入国に関する最新情報【2026年3月最新】</div>
+<p class="nc-ex">ハワイ入国時の必要書類について  ハワイ渡航では以下の3点が必須となり、入国審査時に提示が求められます。以下の条件や詳細をご確認ください。・期限が有効なICチップ搭載のパスポート・航空券またはeチケット・税関申告書...</p>
+</div>
+</a>
+<a href="https://esta-usapply.com/la-original-farmers-market/index.html/" class="news-card">
+<div class="nc-img"><img src="images/news-2.jpg" alt="" loading="lazy"></div>
+<div class="nc-body">
+<div class="nc-tags"><span class="nc-tag">アメリカ</span><span class="nc-tag">ロサンゼルス</span><span class="nc-tag">グルメ</span><span class="nc-tag">観光</span></div>
+<div class="nc-date">更新日 : 2026年01月16日</div>
+<div class="nc-title">オリジナルファーマーズマーケットの見どころは？おすすめを紹介</div>
+<p class="nc-ex">ロサンゼルス観光で訪れるべき人気スポット"オリジナル・ファーマーズ・マーケット(The Original Farmers Market)"。1934年から続く歴史あるこのマーケットは、世界各国の料理を食べられるレストランやグルメスポットが100店舗以上集結しています。...</p>
+</div>
+</a>
+<a href="https://esta-usapply.com/la-with-children/index.html/" class="news-card">
+<div class="nc-img"><img src="images/news-3.jpg" alt="" loading="lazy"></div>
+<div class="nc-body">
+<div class="nc-tags"><span class="nc-tag">アメリカ</span><span class="nc-tag">ロサンゼルス</span><span class="nc-tag">観光</span><span class="nc-tag">テーマパーク</span><span class="nc-tag">子連れ</span></div>
+<div class="nc-date">更新日 : 2025年11月30日</div>
+<div class="nc-title">子連れで楽しめる ロサンゼルスのおすすめ観光スポット</div>
+<p class="nc-ex">エンターテインメントの都、ロサンゼルスは子連れ旅行にもおすすめです。ロサンゼルスの街には、ファミリー向けの設備が充実しており、ベビーカーでも移動しやすいため、小さい子供連れでも安心して楽しめるでしょう。...</p>
+</div>
+</a>
+<a href="https://esta-usapply.com/news/detail/085800.html/" class="news-card">
+<div class="nc-img"><img src="images/news-4.jpg" alt="" loading="lazy"></div>
+<div class="nc-body">
+<div class="nc-tags"><span class="nc-tag">アメリカ</span><span class="nc-tag">観光</span><span class="nc-tag">入場料改定</span><span class="nc-tag">イエローストーン国立公園</span><span class="nc-tag">グランドキャニオン国立公園</span></div>
+<div class="nc-date">更新日 : 2025年11月26日</div>
+<div class="nc-title">アメリカの国立公園、外国人観光客の入場料を大幅値上げへ　2026年1月より導入</div>
+<p class="nc-ex">アメリカのトランプ政権は26日、2026年1月1日より外国人観光客を対象に国立公園の入場料を大幅に値上げすると発表しました。...</p>
+</div>
+</a>
+</div>
+<div><a href="https://esta-usapply.com/news/" class="nm-link">ニュース一覧を見る</a></div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)とアメリカ入国の最新情報</h2>
-    <p style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:1rem;">最終更新日: 2026年03月25日</p>
-    <div class="news-list">
-      <div class="news-card">
-        <a href="https://esta-usapply.com/news/detail/990200.html">
-          <div class="news-date">更新日 : 2026年03月25日</div>
-          <h4>ハワイの入国に関する最新情報【2026年3月最新】</h4>
-          <p>ハワイ入国時の必要書類について ハワイ渡航では以下の3点が必須となり、入国審査時に提示が求められます。期限が有効なICチップ搭載のパスポート・航空券またはeチケット・税関申告書...</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://esta-usapply.com/la-original-farmers-market/index.html/">
-          <div class="news-date">更新日 : 2026年01月16日</div>
-          <h4>オリジナルファーマーズマーケットの見どころは？おすすめを紹介</h4>
-          <p>ロサンゼルス観光で訪れるべき人気スポット"オリジナル・ファーマーズ・マーケット"。1934年から続く歴史あるこのマーケットは、世界各国の料理を食べられるレストランやグルメスポットが100店舗以上集結しています。...</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://esta-usapply.com/la-with-children/index.html/">
-          <div class="news-date">更新日 : 2025年11月30日</div>
-          <h4>子連れで楽しめる ロサンゼルスのおすすめ観光スポット</h4>
-          <p>エンターテインメントの都、ロサンゼルスは子連れ旅行にもおすすめです。ファミリー向けの設備が充実しており、ベビーカーでも移動しやすいため、小さい子供連れでも安心して楽しめるでしょう。...</p>
-        </a>
-      </div>
-      <div class="news-card">
-        <a href="https://esta-usapply.com/news/detail/085800.html/">
-          <div class="news-date">更新日 : 2025年11月26日</div>
-          <h4>アメリカの国立公園、外国人観光客の入場料を大幅値上げへ 2026年1月より導入</h4>
-          <p>2026年1月1日より外国人観光客を対象に国立公園の入場料を大幅に値上げすると発表。年間パス"アメリカ・ザ・ビューティフル"が非居住者は250ドルに引き上げられます。...</p>
-        </a>
-      </div>
-    </div>
-    <div class="cta-banner" style="margin-top:1.5rem;">
-      <a href="https://esta-usapply.com/news/" class="btn-navy">最新情報をもっと見る</a>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="how-apply-visit-to-hawaii">ハワイ渡航のESTA(エスタ)申請について</h2>
+<div class="cr">
+<div class="cr-img"><img src="images/hawaii.jpg" alt="ハワイ渡航のESTA(エスタ)申請について" loading="lazy"></div>
+<div class="cr-txt">
+<p>日本国籍者がハワイへ90日以内の観光、短期商用を目的として訪問する場合は、事前にESTA(エスタ)の申請が必要です。アメリカ政府が定めるビザ免除プログラム(VWP)制度により、ESTAを申請し「渡航認証許可」を取得された方のみハワイへの渡航が認められます。ただし、過去にアメリカで入国拒否や犯罪歴がある方は、「渡航認証拒否」となる事が予想されます。当該の方はESTA申請の対象外となるため、アメリカ大使館または領事館にてビザの取得をご検討ください。なお、ESTAは年齢を問わず取得が必要なため、家族やグループで渡航する際は早めに全員分の申請を済ませましょう。ハワイ入国時の流れやESTA申請方法についての詳細は、「<a href="https://esta-usapply.com/hawaii/index.html">ハワイのESTA(エスタ)申請方法・入国審査を徹底解説 必要なものから注意点まで</a>」で確認できます。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ハワイ渡航のESTA(エスタ)申請について</h2>
-    <div class="section-text">
-      <p>日本国籍者がハワイへ90日以内の観光、短期商用を目的として訪問する場合は、事前にESTA(エスタ)の申請が必要です。アメリカ政府が定めるビザ免除プログラム(VWP)制度により、ESTAを申請し「渡航認証許可」を取得された方のみハワイへの渡航が認められます。ただし、過去にアメリカで入国拒否や犯罪歴がある方は、「渡航認証拒否」となる事が予想されます。当該の方はESTA申請の対象外となるため、アメリカ大使館または領事館にてビザの取得をご検討ください。</p>
-      <br>
-      <p>なお、ESTAは年齢を問わず取得が必要なため、家族やグループで渡航する際は早めに全員分の申請を済ませましょう。ハワイ入国時の流れやESTA申請方法についての詳細は、「<a href="https://esta-usapply.com/hawaii/index.html">ハワイのESTA(エスタ)申請方法・入国審査を徹底解説 必要なものから注意点まで</a>」で確認できます。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="how-apply-visit-to-guam">グアム渡航のESTA(エスタ)申請について</h2>
+<div class="cr rev">
+<div class="cr-img"><img src="images/guam.jpg" alt="グアム渡航のESTA(エスタ)申請について" loading="lazy"></div>
+<div class="cr-txt">
+<p>日本国籍者がグアムを訪れる場合は、グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)の利用が可能です。このプログラムは日本を含むG-CNMI VWP参加国の市民に対して、45日以内の観光や短期商用を目的としたグアムまたは北マリアナ諸島への滞在を認める制度です。ビザやESTA(エスタ)を取得せずにG-CNMI VWPを利用する場合は、2024年11月30日よりオンラインでの「G-CNMI ETA(グアム－北マリアナ諸島連邦電子渡航認証)」の事前取得が義務付けられました。それに伴い「I-736フォーム」書面は廃止となったため、現在はご利用いただけません。グアム渡航におけるESTAの申請方法は、「<a href="https://esta-usapply.com/guam/index.html">グアムのESTA(エスタ)申請方法・入国審査を徹底解説 必要なものから注意点まで</a>」にてご確認ください。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">グアム渡航のESTA(エスタ)申請について</h2>
-    <div class="section-text">
-      <p>日本国籍者がグアムを訪れる場合は、グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)の利用が可能です。このプログラムは日本を含むG-CNMI VWP参加国の市民に対して、45日以内の観光や短期商用を目的としたグアムまたは北マリアナ諸島への滞在を認める制度です。</p>
-      <br>
-      <p>ビザやESTA(エスタ)を取得せずにG-CNMI VWPを利用する場合は、2024年11月30日よりオンラインでの「G-CNMI ETA(グアム－北マリアナ諸島連邦電子渡航認証)」の事前取得が義務付けられました。それに伴い「I-736フォーム」書面は廃止となったため、現在はご利用いただけません。グアム渡航におけるESTAの申請方法は、「<a href="https://esta-usapply.com/guam/index.html">グアムのESTA(エスタ)申請方法・入国審査を徹底解説 必要なものから注意点まで</a>」にてご確認ください。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2 id="how-apply-visit-to-saipan">サイパン渡航のESTA(エスタ)申請について</h2>
+<div class="cr">
+<div class="cr-img"><img src="images/saipan.jpg" alt="サイパン渡航のESTA(エスタ)申請について" loading="lazy"></div>
+<div class="cr-txt">
+<p>ビザやESTA(エスタ)を取得せずにサイパンへ渡航する際は、事前に「G-CNMI ETA(グアム－北マリアナ諸島連邦電子渡航認証)」を申請する必要があります。G-CNMI ETAは日本を含む「グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)」対象国の市民が利用できる渡航認証制度で、渡航前の申請が義務付けられています。オンラインでG-CNMI ETAの申請手続きを行い、事前に渡航認証を取得することで最長45日間のサイパン滞在が可能です。また、45日以上の滞在を希望する方はESTA(エスタ)の申請が必要で、認証が承認された方は最長90日間のサイパン滞在が認められます。どちらの制度も観光や短期商用を目的とした渡航のみに限定され、就労や留学は認められませんのでご注意ください。サイパンでの入国手続きやESTAの申請方法については、「<a href="https://esta-usapply.com/saipan/index.html">サイパンのESTA(エスタ)申請方法・入国手続きを徹底解説 必要なものから注意点まで</a>」をご確認ください。</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">サイパン渡航のESTA(エスタ)申請について</h2>
-    <div class="section-text">
-      <p>ビザやESTA(エスタ)を取得せずにサイパンへ渡航する際は、事前に「G-CNMI ETA(グアム－北マリアナ諸島連邦電子渡航認証)」を申請する必要があります。G-CNMI ETAは日本を含む「グアム-北マリアナ諸島連邦ビザ免除プログラム(Guam-CNMI VWP)」対象国の市民が利用できる渡航認証制度で、渡航前の申請が義務付けられています。</p>
-      <br>
-      <p>オンラインでG-CNMI ETAの申請手続きを行い、事前に渡航認証を取得することで最長45日間のサイパン滞在が可能です。また、45日以上の滞在を希望する方はESTA(エスタ)の申請が必要で、認証が承認された方は最長90日間のサイパン滞在が認められます。どちらの制度も観光や短期商用を目的とした渡航のみに限定され、就労や留学は認められませんのでご注意ください。サイパンでの入国手続きやESTAの申請方法については、「<a href="https://esta-usapply.com/saipan/index.html">サイパンのESTA(エスタ)申請方法・入国手続きを徹底解説 必要なものから注意点まで</a>」をご確認ください。</p>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<h2>ESTA申請関連情報</h2>
+<div class="ag">
+<a href="https://esta-usapply.com/service/index.html" class="ac"><div class="ac-t">ESTA(電子渡航認証システム)とは</div><div class="ac-d">ESTA(エスタ)とはアメリカ入国の適格性を事前に審査する制度です。日本国籍者がハワイを含む米国へ旅行をする際はESTAの申請が必要です。</div></a>
+<a href="https://esta-usapply.com/flow/index.html" class="ac"><div class="ac-t">ESTAの申請方法・記入例</div><div class="ac-d">ESTA(エスタ)の申請方法について、申請フォーム画面と記入例をもとに申請方法を紹介します。申請時はこちらの解説ページをご参照ください。</div></a>
+<a href="https://esta-usapply.com/group/index.html" class="ac"><div class="ac-t">グループ・家族申請の方法</div><div class="ac-d">CBPサイトでは個人申請だけでなく、グループ申請を行うことが可能です。当該ページではグループ申請の解説をします。</div></a>
+<a href="https://esta-usapply.com/accommodation/index.html" class="ac"><div class="ac-t">米国連絡先情報の記入方法</div><div class="ac-d">ESTA申請時における米国内の連絡先情報(住所・電話番号)の記入方法・記入例について参考情報を記載しております。</div></a>
+<a href="https://esta-usapply.com/reapplication/index.html" class="ac"><div class="ac-t">ESTAの再申請と有効期限</div><div class="ac-d">このページではESTA申請完了後にご登録内容を確認し、お間違いに気づいた際の修正手順・再申請の方法について解説をします。</div></a>
+<a href="https://esta-usapply.com/deadline/index.html" class="ac"><div class="ac-t">申請はいつまでに必要？</div><div class="ac-d">ESTA申請は年中24時間いつでもオンラインにて申請が可能です。米国への渡航が決まりましたら早めのESTA申請をお勧めします。</div></a>
+<a href="https://esta-usapply.com/hawaii/index.html" class="ac"><div class="ac-t">ハワイ旅行(入国審査とESTA)</div><div class="ac-d">ハワイの国際空港に到着後から入国までの流れと入国審査、入国に必要な持ち物やESTA(エスタ)申請に関する最新情報を解説します。</div></a>
+<a href="https://esta-usapply.com/guam/index.html" class="ac"><div class="ac-t">グアム旅行(入国審査とESTA)</div><div class="ac-d">グアムおよび北マリアナ諸島へ渡航する際にESTA(エスタ)を申請するメリットや入国時に必要な書類のほか、入国審査などに関する詳細を解説します。</div></a>
+</div>
+
+<h2>ビザ関連情報</h2>
+<div class="ag">
+<a href="https://esta-usapply.com/lengthofstay/index.html" class="ac"><div class="ac-t">エスタとビザの違い</div><div class="ac-d">短期の米国滞在でも報酬が伴う就労の予定がある方はESTAではなくビザ申請が必要となります。ESTAとビザの違いをご確認ください。</div></a>
+<a href="https://esta-usapply.com/interview/index.html" class="ac"><div class="ac-t">ビザ面接(大使館予約)の攻略法</div><div class="ac-d">米国ビザ申請の中で最も需要の高いBビザ取得の際に必要となる書類や米国大使館・領事館での面接について詳しく説明いたします。</div></a>
+<a href="https://esta-usapply.com/nonimmigrant/index.html" class="ac"><div class="ac-t">米国ビザ申請について</div><div class="ac-d">ESTAの利用要件を超えて渡米する予定がある方は、永住か一時滞在かにより移民ビザまたは非移民ビザを事前に取得する必要があります。</div></a>
+<a href="https://esta-usapply.com/visasns/index.html" class="ac"><div class="ac-t">米国ビザ申請とSNSについて</div><div class="ac-d">ビザ申請書に「SNSアカウントを申告する項目」が追加されました。導入に至った背景や理由について詳しく解説いたします。</div></a>
+<a href="https://esta-usapply.com/visa/index.html" class="ac"><div class="ac-t">ビザとパスポートの違いとは</div><div class="ac-d">パスポートは所有者の国籍や身分を証明するもので、ビザは渡航先の入国を許可する入国許可証の役割を果たします。パスポートとビザの違いを解説します。</div></a>
+<a href="https://esta-usapply.com/getpass/index.html" class="ac"><div class="ac-t">最寄りのパスポート申請窓口</div><div class="ac-d">パスポート申請の窓口を都道府県別にご案内しております。パスポートの有効期限が切れてしまった方は再申請をお願いします。</div></a>
+<a href="https://esta-usapply.com/bonebtwo/index.html" class="ac"><div class="ac-t">B1・B2ビザについて</div><div class="ac-d">アメリカが発給するビザの中では一般的であり、利用範囲が広いビザです。B1ビザは短期商用、B2ビザは主に観光を目的としたものです。</div></a>
+<a href="https://esta-usapply.com/eonevisa/index.html" class="ac"><div class="ac-t">E-1ビザとは？</div><div class="ac-d">駐在員など米国間の貿易を目的とした渡米をご希望される場合はE1ビザを取得することを求められます。各種ビザについて解説をします。</div></a>
+</div>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA申請関連情報</h2>
-    <div class="card-grid">
-      <div class="info-card"><a href="https://esta-usapply.com/service/index.html"><h4>ESTA(電子渡航認証システム)とは</h4><p>ESTA(エスタ)とはアメリカ入国の適格性を事前に審査する制度です。日本国籍者がハワイを含む米国へ旅行をする際はESTAの申請が必要です。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/flow/index.html"><h4>ESTAの申請方法・記入例</h4><p>ESTA(エスタ)の申請方法について、申請フォーム画面と記入例をもとに申請方法を紹介します。申請時はこちらの解説ページをご参照ください。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/group/index.html"><h4>グループ・家族申請の方法</h4><p>CBPサイトでは個人申請だけでなく、グループ申請を行うことが可能です。当該ページではグループ申請の解説をします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/accommodation/index.html"><h4>米国連絡先情報の記入方法</h4><p>ESTA申請時における米国内の連絡先情報(住所・電話番号)の記入方法・記入例について参考情報を記載しております。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/reapplication/index.html"><h4>ESTAの再申請と有効期限</h4><p>ESTA申請完了後にご登録内容を確認し、お間違いに気づいた際の修正手順・再申請の方法について解説をします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/deadline/index.html"><h4>申請はいつまでに必要？</h4><p>ESTA申請は年中24時間いつでもオンラインにて申請が可能です。米国への渡航が決まりましたら早めのESTA申請をお勧めします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/hawaii/index.html"><h4>ハワイ旅行(入国審査とESTA)</h4><p>ハワイの国際空港に到着後から入国までの流れと入国審査、入国に必要な持ち物やESTA申請に関する最新情報を解説します。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/guam/index.html"><h4>グアム旅行(入国審査とESTA)</h4><p>グアムおよび北マリアナ諸島へ渡航する際にESTAを申請するメリットや入国時に必要な書類のほか、入国審査などに関する詳細を解説します。</p></a></div>
-    </div>
-  </div>
+<section class="sec sec-bg">
+<div class="inner">
+<h2>ESTA(エスタ)に関するよくある質問</h2>
+<div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>どのような場合にESTA申請が必要となるのでしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAは観光などの目的でアメリカへ渡航する際に必要となる電子渡航認証制度です。ハワイを含むアメリカへの渡航を希望する日本国籍の方は、年齢を問わず事前にESTA申請が必須となります。ESTAによるアメリカでの滞在期間は最長90日と定められています。また、ESTAを利用して渡米した場合、アメリカ国内での就労は認められません。90日以上の滞在やアルバイトを含む就労・留学を目的として渡米を希望する方は、ESTA申請の対象外となります。目的に合ったビザの取得をご検討ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAの申請時期・期日はいつまでですか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAは申請から審査結果の通知までに最長72時間ほどかかる場合があります。外務省やCBP(アメリカ合衆国税関・国境警備局)では、遅くとも出発3日前までにESTA申請を済ませることを強く推奨しています。ESTAは渡米の日程や滞在先が未定でも申請が可能です。グループやご家族でアメリカへ旅行する際に、同行者がESTA申請を済ませていなかったため直前でフライトをキャンセルしたケースも報告されています。スムーズな渡航のためにも、同行者全員が出発3日前までにESTA申請を済ませているか必ず確認しましょう。ESTA申請の適切なタイミングについては<a href="https://esta-usapply.com/deadline/index.html">「ESTA(エスタ)はいつまでに申請が必要？」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAは申請から取得や審査時間はどのくらいですか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">当サイトでESTAを申請した場合、慣例として24時間以内に審査結果を通知します。ESTA申請後の結果は以下の2種類となります。<ol style="margin:16px 0"><li>「渡航認証許可」の通知を受けた方は、ESTAでのアメリカ渡航が許可されました。</li><li>「渡航認証拒否」の通知を受けた方は、何らかの理由によりESTAでのアメリカ渡航が認められません。</li></ol>審査中の方は「渡航認証保留」となり、結果通知までに最大72時間ほどかかる場合があります。渡航認証拒否となった方は結果通知から24時間以上空けてから再度申請を行えますが、ESTAによる渡米が認められないことが予想されます。当該の際は在日米国大使館・領事館にてビザの申請をご検討ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAの有効期限はどのくらいですか？期限が切れた場合、再申請は必要でしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAの有効期限は「渡航認証許可」の取得日から2年間です。ESTAが失効となっても今後渡米する予定がない方は、再びESTAを申請する必要はありません。アメリカへの渡航が決まった段階で、あらためてESTA申請を行いましょう。なお、ESTAには「更新」の制度はありません。ESTAの有効期限が切れた場合は「再申請」が必要となり、あらためて申請フォームへの入力と申請費用の支払いが求められます。詳細は<a href="https://esta-usapply.com/reapplication/index.html">「ESTA(エスタ)の有効期限と再申請について」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAを取得することで、アメリカへの入国が必ず認められるのでしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAはアメリカ渡航の際に必要となる「電子渡航認証」で、必ずしも入国を保証するものではありません。アメリカ入国の可否は到着した空港のCBP(アメリカ合衆国税関・国境警備局)の入国審査官に委ねられます。入国審査官にESTAの渡航申請番号を提示する必要はありませんが、手帳などに番号を控えておくことをお勧めします。なお、すでにアメリカ滞在が認められる有効なビザを所有している方は、渡航の際にESTAを申請する必要はありません。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>アメリカの有効なビザを取得していますが、渡米の際はESTAも必要でしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">すでにアメリカ滞在に有効なビザを取得している方は、ESTAを申請する必要はありません。ハワイを含むアメリカでの就労や留学など長期滞在を目的としてビザを取得した方は、渡米した際にビザでの入国が認められます。なお、目的を問わずアメリカに90日以上の滞在を希望する場合は、ESTAの対象外となります。観光やビジネス目的で90日以上滞在する方は、Bビザ(一般的な非移民ビザ)の取得が必要です。Bビザに関する詳細は<a href="https://esta-usapply.com/bonebtwo/index.html">「B1・B2ビザ(アメリカでの非移民ビザ・商用観光ビザ)について」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTA(エスタ)を印刷・コピーする必要がありますか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAは承認後に認証情報(渡航申請番号やパスポートの有効期限など)がオンライン上で管理されるため、入国審査時にコピーを提出する必要はありません。ただし、申請内容に誤りがあった場合や入国審査時の質問に回答する際は、認証情報をスムーズに確認できるようコピーの持参が推奨されています。また、空港で搭乗手続きを行う際にESTAが確認できない場合は、渡航申請番号の提示を求められるため予め控えておきましょう。ESTAの認証情報は渡航認証可否メールにて確認できます。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAを利用してアメリカで働くことは可能ですか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAを利用しての渡米は、一般的な観光か商談などを目的とした90日以内の短期滞在に限定されます。現地でアルバイトや就労を希望する方は、ESTA申請の対象外となりますのでご注意ください。なお、90日以内の滞在でもアルバイトや就労を行う方は、ESTAではなくビザの取得が必須となります。ESTAは渡米に必要な「電子渡航認証」で、ビザ(査証)とは性質や要件が異なります。ESTAとビザの違いに関する詳細は<a href="https://esta-usapply.com/lengthofstay/index.html">「ESTA(エスタ)とビザの違いについて」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ハワイ旅行を予定していますが、ESTAを取得しなければ入国できないのでしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">日本国籍の方がハワイへ渡航する際は、アメリカ本土と同様に事前にESTAの取得が必要です。ビザとは性質が異なり、90日以下のハワイ旅行であればESTAを取得することでスムーズな渡航が可能です。ESTAはハワイを含むアメリカへ渡航する際に必要となる電子渡航認証で、必ずしも入国を保証するものではありません。入国可否については空港の入国審査官の判断に委ねられます。入国審査の際は渡航目的や滞在期間などをしっかり伝えるようにしましょう。また、ESTAは年齢を問わず申請が必須となります。ご家族やグループでハワイ旅行を予定している方は、同行者全員のESTA申請をお願いします。ハワイ渡航に関する詳細は<a href="https://esta-usapply.com/hawaii/index.html">「ハワイの入国審査とESTA申請について解説」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTA(エスタ)とビザの違いとは？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTA(エスタ)は観光や短期商用を目的として渡米する際に必要となる電子渡航認証制度です。アメリカが定めるVWP(ビザ免除プログラム)対象国の市民が利用可能で、出発の3日前までに申請を済ませてください。ESTAを申請し認証が承認された方は、ビザを取得せずに最長90日間のアメリカ滞在が認められます。また、ESTAの有効期限は取得日から2年間で、期限内であれば複数回の渡米が可能です。<br>一方の米国ビザは、留学や就労など90日以上の長期滞在を希望する方が対象となる入国制度です。ビザは渡航目的により様々な種類に分かれ、取得条件や滞在期間も異なります。特に学生ビザは通う学校や同行者の有無により種類が細かく分類されているため、間違いが無いか確認した上で目的にあったビザを取得しましょう。<br>なお、ESTAを取得したにも関わらず入国を拒否された場合は、今後渡米する際の入国審査が一層厳しくなるため注意が必要です。そのため頻繁に渡航する予定がある方や、年間の米国滞在が累計180日ほどになる方はESTAではなくビザの申請をご検討ください。<br>渡米する際にESTAまたはビザのどちらが必要かについては、「<a href="https://esta-usapply.com/lengthofstay/index.html">ESTA(エスタ)とビザの違いについて</a>」で詳細を確認できます。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ビザ免除プログラム(VWP)とはどんな制度ですか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ビザ免除プログラム(Visa Waiver Program：通称VWP)とは、米国と良好な関係にある特定国の市民に限り条件付きでビザの取得が免除される制度です。日本はVWPの対象国で、ESTA(電子渡航認証)はビザ免除プログラムの一環として2009年に導入されました。短期の観光やビジネスを目的としてハワイを含むアメリカへ渡航するVWP対象国の市民は、ビザを取得せずにESTA申請のみで渡米が認められます。ただし、VWP対象国の市民が渡米する際は、以下の条件を満たす必要があります。<ol style="margin:16px 0"><li>期限が有効なパスポートを所有していること</li><li>渡航目的が観光または出張などの短期ビジネスであること</li><li>ハワイを含むアメリカでの滞在期間が90日以内であること</li><li>往復または次の目的地までの航空券か乗船券を所持していること</li></ol>ビザ免除プログラム(VWP)の詳細は<a href="https://esta-usapply.com/vwp/index.html">「ビザ免除プログラム(VWP)とは」</a>をご確認ください。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>パソコンに不慣れなため家族や知人にESTA申請を依頼しても問題ないでしょうか？</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAの申請は、ご家族や知人など代理の方による申請も可能です。ご家族や知人にESTA申請を依頼する際は、ご自身のパスポート情報・生年月日・住所・出生地などの個人情報が必要となりますので正確にお伝えください。なお、アメリカでの滞在先が未定でも申請することができます。ESTAは米国CBP(アメリカ合衆国税関・国境警備局)にて審査が行われるため、全て英語(ローマ字)での入力が必須です。英語に不慣れな方は、個人情報の共有が可能なご家族や知人に申請をご相談ください。なお、申請費用の決済で使用するクレジットカードは申請者と名義が異なっていても審査に影響はありません。</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q" onclick="var a=this.nextElementSibling;if(a.style.display==='block'){a.style.display='none';this.querySelector('.faq-toggle').textContent='+';}else{a.style.display='block';this.querySelector('.faq-toggle').textContent='-';}"><span>ESTAの公式サイトについて</span><span class="faq-toggle">+</span></div>
+<div class="faq-a">ESTAを管轄するCBP(アメリカ合衆国税関・国境警備局)公式サイトにて申請を希望される方は、<a href="https://esta.cbp.dhs.gov/" target="_blank" rel="noopener">こちら</a>よりお手続きください。CBP公式サイトは日本語表示を選択する事は可能ですが、申請フォームの入力は全て英語で行う必要があります。また、お問い合わせは英語での受付のみとなります。<br>新規の申請を行う際は、「新しいアプリケーションを作成する」を選択し案内に従ってご入力ください。申請にはICチップ搭載の期限が有効なパスポート、メールアドレス、クレジットカードが必要となるため事前に準備しておきましょう。申請後の審査結果やステータスは、「既存のアプリケーションを続行する」より確認いただけます。</div>
+</div>
+
+</div>
+</div>
 </section>
 
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">ビザ関連情報</h2>
-    <div class="card-grid">
-      <div class="info-card"><a href="https://esta-usapply.com/lengthofstay/index.html"><h4>エスタとビザの違い</h4><p>短期の米国滞在でも報酬が伴う就労の予定がある方はESTAではなくビザ申請が必要となります。ESTAとビザの違いをご確認ください。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/interview/index.html"><h4>ビザ面接(大使館予約)の攻略法</h4><p>米国ビザ申請の中で最も需要の高いBビザ取得の際に必要となる書類や米国大使館・領事館での面接について詳しく説明いたします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/nonimmigrant/index.html"><h4>米国ビザ申請について</h4><p>ESTAの利用要件を超えて渡米する予定がある方は、永住か一時滞在かにより移民ビザまたは非移民ビザを事前に取得する必要があります。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/visasns/index.html"><h4>米国ビザ申請とSNSについて</h4><p>ビザ申請書に「SNSアカウントを申告する項目」が追加されました。導入に至った背景や理由について詳しく解説いたします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/visa/index.html"><h4>ビザとパスポートの違いとは</h4><p>パスポートは所有者の国籍や身分を証明するもので、ビザは渡航先の入国を許可する入国許可証の役割を果たします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/getpass/index.html"><h4>最寄りのパスポート申請窓口</h4><p>パスポート申請の窓口を都道府県別にご案内しております。パスポートの有効期限が切れてしまった方は再申請をお願いします。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/bonebtwo/index.html"><h4>B1・B2ビザについて</h4><p>アメリカが発給するビザの中では一般的であり、利用範囲が広いビザです。B1ビザは短期商用、B2ビザは主に観光を目的としたものです。</p></a></div>
-      <div class="info-card"><a href="https://esta-usapply.com/eonevisa/index.html"><h4>E-1ビザとは？</h4><p>駐在員など米国間の貿易を目的とした渡米をご希望される場合はE1ビザを取得することを求められます。各種ビザについて解説をします。</p></a></div>
-    </div>
-  </div>
+<section class="sec">
+<div class="inner">
+<p class="pay-t">お支払い方法</p>
+<p>ESTA(エスタ)申請料金のお支払いはクレジットカード(VISA、MasterCard、JCB、AmericanExpress、Diners Club)の利用が可能です。クレジットカード番号を含む個人情報は最新のSSL技術により全て暗号化され、安全なクレジットカード決済が行われます。</p>
+<ul>
+<li>US ESTA Online Siteでは、日本語での問い合わせや分かりづらい入力のフォローなどお客様のESTA申請(申し込み)を日本語にてサポート致します。</li>
+<li>ESTA(エスタ)の登録審査は最長で72時間を要する場合がございますので、早めに申請いただく事をお勧めします。</li>
+<li>アメリカ合衆国税関・国境警備局公式サイト(米国CBP)ではお問い合わせは英語のみの対応となりますが、当サイトでは日本語でのお問い合わせが可能です。</li>
+<li>ESTAに関する一般的な質問は、<a href="https://www.cbp.gov/" target="_blank" rel="noreferrer noopener">CBP(アメリカ合衆国税関・国境警備局)</a>と<a href="https://www.dhs.gov/" target="_blank" rel="noreferrer noopener">DHS(米国国土安全保障省)</a>のウェブサイトを参照ください。<br>質問等は電話による24時間対応の"Travel Communications Center"(1-202-325-5120)または、"<a href="https://help.cbp.gov/s/?language=en_US" target="_blank" rel="noreferrer noopener">CBP Info Center</a>"のオンラインフォームよりお問合せが可能です。<br><a href="https://jp.usembassy.gov/ja/visas-ja/esta-information-ja/" target="_blank" rel="noreferrer noopener">在日米国大使館・領事館サイト</a>　<a href="https://help.cbp.gov/s/global-search/ESTA?language=en_US" target="_blank" rel="noreferrer noopener">米国CBPよくある質問一覧</a></li>
+<li><a href="https://www.cbp.gov/sites/default/files/assets/documents/2017-Dec/Six-Month%20Club%20Update122017.pdf" target="_blank" rel="noreferrer noopener">国別協定</a>により定められている国籍(日本含む)の方は、米国滞在にあたりパスポートの有効期限に制限はございません。</li>
+<li>米国ビザやパスポートの盗難・紛失に関してのお問い合わせ：<a href="https://jp.usembassy.gov/ja/" target="_blank">米国大使館</a>〒107-8420 東京都港区赤坂1-10-5 電話番号：03-3224-5000</li>
+<li>ESTA(エスタ)に関する最新情報は<a href="https://esta-usapply.com/links/index.html">「ESTA(エスタ)申請時の情報サイト一覧」</a>をご確認ください。</li>
+<li>US ESTA Online Site は、米国政府のいかなる機関や部署とも提携しておりません。</li>
+<li>当サイトでは複雑で面倒なESTA(エスタ)の申請を全て日本語にて対応し、お客様に代わり承っております。(別途手数料)</li>
+<li>ESTA申請サービス費用には<a href="https://www.cbp.gov/" target="_blank">アメリカ合衆国税関・国境警備局公式サイト(米国CBP)</a>の電子渡航認証費用$40.27を含みます。</li>
+</ul>
+<p class="last-upd">最終更新日: 2026年03月30日</p>
+</div>
 </section>
 
-<section class="esta-section white">
-  <div class="section-inner">
-    <h2 class="section-title">ESTA(エスタ)に関するよくある質問</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>どのような場合にESTA申請が必要となるのでしょうか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>ESTAは観光などの目的でアメリカへ渡航する際に必要となる電子渡航認証制度です。ハワイを含むアメリカへの渡航を希望する日本国籍の方は、年齢を問わず事前にESTA申請が必須となります。ESTAによるアメリカでの滞在期間は最長90日と定められています。また、ESTAを利用して渡米した場合、アメリカ国内での就労は認められません。90日以上の滞在やアルバイトを含む就労・留学を目的として渡米を希望する方は、ESTA申請の対象外となります。目的に合ったビザの取得をご検討ください。</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>ESTAの申請時期・期日はいつまでですか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>ESTAは申請から審査結果の通知までに最長72時間ほどかかる場合があります。外務省やCBP(アメリカ合衆国税関・国境警備局)では、遅くとも出発3日前までにESTA申請を済ませることを強く推奨しています。ESTAは渡米の日程や滞在先が未定でも申請が可能です。スムーズな渡航のためにも、同行者全員が出発3日前までにESTA申請を済ませているか必ず確認しましょう。ESTA申請の適切なタイミングについては<a href="https://esta-usapply.com/deadline/index.html">「ESTA(エスタ)はいつまでに申請が必要？」</a>をご確認ください。</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>ESTAは申請から取得や審査時間はどのくらいですか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>慣例として24時間以内に審査結果を通知します。「渡航認証許可」の通知を受けた方は、ESTAでのアメリカ渡航が許可されます。「渡航認証拒否」の通知を受けた方は、何らかの理由によりESTAでのアメリカ渡航が認められません。審査中の方は「渡航認証保留」となり、結果通知までに最大72時間ほどかかる場合があります。渡航認証拒否となった方は在日米国大使館・領事館にてビザの申請をご検討ください。</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>ESTAの有効期限はどのくらいですか？期限が切れた場合、再申請は必要でしょうか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>ESTAの有効期限は「渡航認証許可」の取得日から2年間です。ESTAが失効となっても今後渡米する予定がない方は、再びESTAを申請する必要はありません。アメリカへの渡航が決まった段階で、あらためてESTA申請を行いましょう。なお、ESTAには「更新」の制度はありません。ESTAの有効期限が切れた場合は「再申請」が必要となり、あらためて申請フォームへの入力と申請費用の支払いが求められます。詳細は<a href="https://esta-usapply.com/reapplication/index.html">「ESTA(エスタ)の有効期限と再申請について」</a>をご確認ください。</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>ESTAを取得することで、アメリカへの入国が必ず認められるのでしょうか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>ESTAはアメリカ渡航の際に必要となる「電子渡航認証」で、必ずしも入国を保証するものではありません。アメリカ入国の可否は到着した空港のCBP(アメリカ合衆国税関・国境警備局)の入国審査官に委ねられます。入国審査官にESTAの渡航申請番号を提示する必要はありませんが、手帳などに番号を控えておくことをお勧めします。なお、すでにアメリカ滞在が認められる有効なビザを所有している方は、渡航の際にESTAを申請する必要はありません。</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)"><span>アメリカの有効なビザを取得していますが、渡米の際はESTAも必要でしょうか？</span><span class="arrow">▼</span></button>
-        <div class="faq-answer"><p>すでにアメリカ滞在に有効なビザを取得している方は、ESTAを申請する必要はありません。ハワイを含むアメリカでの就労や留学など長期滞在を目的としてビザを取得した方は、渡米した際にビザでの入国が認められます。なお、目的を問わずアメリカに90日以上の滞在を希望する場合は、ESTAの対象外となります。観光やビジネス目的で90日以上滞在する方は、Bビザ(一般的な非移民ビザ)の取得が必要です。Bビザに関する詳細は<a href="https://esta-usapply.com/bonebtwo/index.html">「B1・B2ビザ(アメリカでの非移民ビザ・商用観光ビザ)について」</a>をご確認ください。</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="esta-section gray">
-  <div class="section-inner">
-    <h2 class="section-title">お支払い方法</h2>
-    <div class="section-text" style="text-align:center;">
-      <p>ESTA(エスタ)申請料金のお支払いはクレジットカード(VISA、MasterCard、JCB、AmericanExpress、Diners Club)の利用が可能です。クレジットカード番号を含む個人情報は最新のSSL技術により全て暗号化され、安全なクレジットカード決済が行われます。</p>
-    </div>
-    <div class="payment-logos">
-      <span class="payment-logo">VISA</span>
-      <span class="payment-logo">MasterCard</span>
-      <span class="payment-logo">JCB</span>
-      <span class="payment-logo">American Express</span>
-      <span class="payment-logo">Diners Club</span>
-    </div>
-  </div>
-</section>
-
-<footer class="esta-footer">
-  <div class="footer-inner">
-    <div class="disclaimer-box">
-      <p>Global Travel Centerは民間企業であり、いかなる政府機関とも提携・関係はありません。</p>
-    </div>
-    <ul>
-      <li>US ESTA Online Siteでは、日本語での問い合わせや分かりづらい入力のフォローなどお客様のESTA申請(申し込み)を日本語にてサポート致します。</li>
-      <li>ESTA(エスタ)の登録審査は最長で72時間を要する場合がございますので、早めに申請いただく事をお勧めします。</li>
-      <li>アメリカ合衆国税関・国境警備局公式サイト(米国CBP)ではお問い合わせは英語のみの対応となりますが、当サイトでは日本語でのお問い合わせが可能です。</li>
-      <li>ESTAに関する一般的な質問は、<a href="https://www.cbp.gov/">CBP(アメリカ合衆国税関・国境警備局)</a>と<a href="https://www.dhs.gov/">DHS(米国国土安全保障省)</a>のウェブサイトを参照ください。質問等は電話による24時間対応の"Travel Communications Center"(1-202-325-5120)または、"<a href="https://help.cbp.gov/s/?language=en_US">CBP Info Center</a>"のオンラインフォームよりお問合せが可能です。<br><a href="https://jp.usembassy.gov/ja/visas-ja/esta-information-ja/">在日米国大使館・領事館サイト</a> | <a href="https://help.cbp.gov/s/global-search/ESTA?language=en_US">米国CBPよくある質問一覧</a></li>
-      <li><a href="https://www.cbp.gov/sites/default/files/assets/documents/2017-Dec/Six-Month%20Club%20Update122017.pdf">国別協定</a>により定められている国籍(日本含む)の方は、米国滞在にあたりパスポートの有効期限に制限はございません。</li>
-      <li>米国ビザやパスポートの盗難・紛失に関してのお問い合わせ：<a href="https://jp.usembassy.gov/ja/">米国大使館</a> 〒107-8420 東京都港区赤坂1-10-5 電話番号：03-3224-5000</li>
-      <li>ESTA(エスタ)に関する最新情報は<a href="https://esta-usapply.com/links/index.html">「ESTA(エスタ)申請時の情報サイト一覧」</a>をご確認ください。</li>
-      <li>US ESTA Online Site は、米国政府のいかなる機関や部署とも提携しておりません。</li>
-      <li>当サイトでは複雑で面倒なESTA(エスタ)の申請を全て日本語にて対応し、お客様に代わり承っております。(別途手数料)</li>
-      <li>ESTA申請サービス費用には<a href="https://www.cbp.gov/">アメリカ合衆国税関・国境警備局公式サイト(米国CBP)</a>の電子渡航認証費用$40.27を含みます。</li>
-    </ul>
-    <div class="footer-links">
-      <a href="https://esta-usapply.com/privacy/index.html">個人情報保護に関する基本方針</a>
-      <a href="https://esta-usapply.com/agreement/index.html">利用規約</a>
-      <a href="https://esta-usapply.com/sitemap/index.html">サイトマップ</a>
-      <a href="https://esta-usapply.com/content-policy/index.html">コンテンツポリシー</a>
-      <a href="https://esta-usapply.com/aboutus/index.html">特定商取引法に基づく表記と会社概要</a>
-      <a href="https://apply.esta-usapply.com/form/contact/top">お問い合わせ</a>
-    </div>
-    <div class="footer-copyright">
-      <p>最終更新日: 2026年03月25日</p>
-      <p>©2024-2026 US ESTA Online Site. All Rights Reserved.</p>
-    </div>
-  </div>
+<footer class="site-footer">
+<div class="inner">
+<div class="ft-grid">
+<div class="ft-col">
+<h3>ESTA基本情報</h3>
+<a href="https://esta-usapply.com/service/index.html">ESTA(エスタ)とは</a>
+<a href="https://esta-usapply.com/lengthofstay/index.html">ESTA(エスタ)とビザの違いについて</a>
+<a href="https://esta-usapply.com/vwp/index.html">ビザ免除プログラム(VWP)とは</a>
+<a href="https://esta-usapply.com/reapplication/index.html">ESTA(エスタ)の再申請と有効期限</a>
+<a href="https://esta-usapply.com/faq/index.html">ESTA(電子渡航認証システム)と渡米に関するQ&amp;A</a>
+</div>
+<div class="ft-col">
+<h3>ESTA申請ガイド</h3>
+<a href="https://esta-usapply.com/flow/index.html">ESTA(エスタ)の申請方法・記入例</a>
+<a href="https://esta-usapply.com/smartphone/index.html">スマホでのESTA(エスタ)申請</a>
+<a href="https://esta-usapply.com/esta-application/index.html">アプリでのESTA(エスタ)申請方法を解説</a>
+<a href="https://esta-usapply.com/group/index.html">グループ・家族でのESTA(エスタ)申請方法</a>
+<a href="https://esta-usapply.com/deadline/index.html">ESTA(エスタ)はいつまでに申請が必要？</a>
+<a href="https://esta-usapply.com/merit/index.html">ESTA申請サービスのメリット</a>
+<a href="https://esta-usapply.com/fee/index.html">ESTA(エスタ)申請料金</a>
+<a href="https://esta-usapply.com/status-check/index.html">ESTA申請状況の確認方法</a>
+<a href="https://esta-usapply.com/status-check-failed/index.html">ESTAの申請状況が確認できない場合の対処法</a>
+<a href="https://esta-usapply.com/employer/index.html">ESTA(エスタ)勤務先情報の記入方法を解説</a>
+<a href="https://esta-usapply.com/birthplace-address/index.html">ESTA(エスタ)申請時の出生地や住所の書き方</a>
+<a href="https://esta-usapply.com/transit/index.html">乗り継ぎ(トランジット)時のESTA申請</a>
+<a href="https://esta-usapply.com/contact/index.html">お問い合わせ方法</a>
+</div>
+<div class="ft-col">
+<h3>渡航先別の情報</h3>
+<a href="https://esta-usapply.com/news/">アメリカ入国・渡航に関する最新情報</a>
+<a href="https://esta-usapply.com/news/hawaii/">ハワイ入国・渡航に関する最新情報</a>
+<a href="https://esta-usapply.com/los-angeles/index.html">ロサンゼルス入国審査とESTA(エスタ)申請</a>
+<a href="https://esta-usapply.com/guam/index.html">グアム渡航とESTA(エスタ)申請</a>
+<a href="https://esta-usapply.com/saipan/index.html">サイパン渡航とESTA(エスタ)申請</a>
+<a href="https://esta-usapply.com/cuba/index.html">キューバ渡航とESTA(エスタ)申請</a>
+<a href="https://esta-usapply.com/mexico/index.html">メキシコ渡航とESTA(エスタ)申請</a>
+<h3 style="margin-top:16px">その他リンク集</h3>
+<a href="https://esta-usapply.com/links/index.html">ESTA(エスタ)申請時の情報サイト一覧</a>
+<a href="https://esta-usapply.com/embassy/index.html">大使館・領事館サイト一覧</a>
+<a href="https://www.dhs.gov/" target="_blank" rel="noreferrer noopener">Official Website of the Department of Homeland Security</a>
+<a href="https://esta-usapply.com/us-basic-info/index.html">アメリカ基本情報</a>
+<a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener">アメリカ移民局(USCIS)</a>
+</div>
+<div class="ft-col">
+<h3>運営会社・方針</h3>
+<a href="https://esta-usapply.com/privacy/index.html">個人情報保護に関する基本方針</a>
+<a href="https://esta-usapply.com/content-policy/index.html">コンテンツポリシー</a>
+<a href="https://esta-usapply.com/aboutus/index.html">特定商取引法に基づく表記と会社概要</a>
+<a href="https://esta-usapply.com/terms/index.html">利用規約</a>
+<a href="https://esta-usapply.com/recommended/index.html">推奨ブラウザについて</a>
+<a href="https://esta-usapply.com/contact/index.html">お問い合わせ</a>
+<a href="https://esta-usapply.com/sitemap/index.html">サイトマップ</a>
+<a href="https://esta-usapply.com/en/top/index.html">英語TOP</a>
+</div>
+</div>
+<div class="ft-copy">©2024-2026 US ESTA Online Site. All Rights Reserved.</div>
+</div>
 </footer>
 
-<script>
-function toggleFaq(btn) {
-  var answer = btn.nextElementSibling;
-  var isOpen = answer.classList.contains('open');
-  document.querySelectorAll('.faq-answer').forEach(function(a) { a.classList.remove('open'); });
-  document.querySelectorAll('.faq-question').forEach(function(q) { q.classList.remove('active'); });
-  if (!isOpen) { answer.classList.add('open'); btn.classList.add('active'); }
-}
-</script>
+<div class="float-cta">
+<a href="https://apply.esta-usapply.com/form/entry" class="cta"><img src="images/icon-entry.svg" alt="">ESTA申請はこちら</a>
+<span class="cta-note">出発の72時間前までにお願いします</span>
+</div>
 
 </body>
 </html>
