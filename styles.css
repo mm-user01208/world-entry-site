@@ -167,6 +167,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Space between paragraphs */
 .space-y-4 > * + * { margin-top: 1rem; }
 
+/* Trust points responsive */
+.trust-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+
 /* ===== Responsive ===== */
 @media (min-width: 640px) {
   .country-cards { grid-template-columns: repeat(2, 1fr); }
