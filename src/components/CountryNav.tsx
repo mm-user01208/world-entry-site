@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 const countries = [
   { name: 'Australia', href: '/australia', img: `${basePath}/images/australia-card.jpg` },

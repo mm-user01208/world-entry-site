@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 const slides = [
   `${basePath}/images/hero-1.jpg`,

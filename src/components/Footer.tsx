@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 export default function Footer() {
   return (

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'オーストラリアのビザ・電子渡航認証（ETA）情報',
 };
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 const faqItems = [
   { q: 'ETAはビザですか？', a: 'はい。ETA（Electronic Travel Authority / Subclass 601）は、観光や短期商用を目的とした短期滞在用のビザです。一般に電子渡航認証と呼ばれることもありますが、オーストラリアではビザとして扱われています。' },

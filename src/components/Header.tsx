@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 export default function Header() {
   const [open, setOpen] = useState(false);

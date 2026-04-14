@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/world-entry-site',
+  basePath: '',
   images: {
     unoptimized: true,
   },

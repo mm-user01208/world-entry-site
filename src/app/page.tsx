@@ -2,7 +2,7 @@ import Link from 'next/link';
 import CountryNav from '@/components/CountryNav';
 import HeroSlider from '@/components/HeroSlider';
 
-const basePath = '/world-entry-site';
+const basePath = '';
 
 export default function Home() {
   return (
