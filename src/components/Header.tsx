@@ -36,7 +36,7 @@ export default function Header() {
       )}
       <div className="bg-gray-50 border-t">
         <p className="max-w-6xl mx-auto px-4 py-2 text-[11px] text-gray-400 text-center">
-          Global Travel Centerは公認移民エージェントによる監修と信頼できる情報で、渡航前の不安を解消するサイトです。
+          OMARA登録移民エージェント Kotaro Mizoguchi（Registration No. 1465274）監修 ｜ ビザ申請サポート＆電子渡航認証ガイド
         </p>
       </div>
     </header>

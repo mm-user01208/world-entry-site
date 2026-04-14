@@ -13,15 +13,10 @@ export default function Footer() {
             <h3 className="font-bold text-xl">Global Travel Center</h3>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed max-w-3xl mx-auto mb-4">
-            本サイトは、各国のビザや電子渡航認証（ETA・ESTA・K-ETA）に関する制度を分かりやすく解説する情報提供サイトです。本サイトは情報提供を目的としており、ビザや電子渡航認証の申請代行業務は行っていません。外部サービスへのリンクは、利用を推奨または保証するものではありません。
-          </p>
-          <p className="text-gray-500 text-xs leading-relaxed max-w-3xl mx-auto mb-4">
-            Global Travel Centerは民間企業による運営であり、いかなる政府機関とも提携または関係はありません。<br />
-            電子渡航認証やビザは、本サービスを利用せず公式サイトから直接申請することも可能です。
+            本サイトは、OMARA登録移民エージェント Kotaro Mizoguchi（Registration No. 1465274）の監修のもと、各国のビザ申請サポートおよび電子渡航認証（ETA・ESTA・K-ETA）に関する情報を提供しています。
           </p>
           <p className="text-gray-500 text-xs leading-relaxed max-w-3xl mx-auto">
-            This site is supervised by a registered Australian Migration Agent<br />
-            ★★★★★★★★★★（OMARA Registration No. 0000000）
+            当サイトは政府機関のウェブサイトではありません。電子渡航認証やビザは、各国政府の公式サイトから直接申請することも可能です。
           </p>
         </div>
 

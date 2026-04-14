@@ -9,11 +9,23 @@ export default function Home() {
     <>
       <HeroSlider />
 
+      {/* OMARA Badge */}
+      <section className="bg-white border-b">
+        <div className="max-w-4xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center gap-4 md:gap-6">
+          <div className="w-14 h-14 bg-green-700 rounded-full flex items-center justify-center text-white text-2xl font-bold shrink-0">&#10003;</div>
+          <div className="text-center md:text-left">
+            <p className="text-green-800 font-bold text-base">OMARA登録移民エージェント監修</p>
+            <p className="text-gray-700 text-sm mt-1">本サイトは、OMARA登録移民エージェント <strong>Kotaro Mizoguchi</strong>（Registration No. <strong>1465274</strong>）の監修のもと運営されています。</p>
+            <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" className="text-green-700 text-sm hover:underline mt-1 inline-block">OMARA公式登録情報を確認 →</a>
+          </div>
+        </div>
+      </section>
+
       {/* Country Cards */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 text-center">国別のビザ・電子渡航認証</h2>
-          <p className="text-gray-500 text-center mb-10 text-sm">各国のビザまたは電子渡航認証の要件についてご確認ください。</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 text-center">国別のビザ申請サポート・電子渡航認証</h2>
+          <p className="text-gray-500 text-center mb-10 text-sm">各国のビザ申請サポートおよび電子渡航認証の要件についてご確認ください。</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Australia', href: '#australia', img: `${basePath}/images/australia-card.jpg` },
@@ -34,16 +46,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ビザと電子渡航認証の違い */}
+      {/* サービス紹介 */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">ビザと電子渡航認証の違いとは</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">ビザ申請サポートサービス</h2>
           <div className="w-16 h-[2px] bg-red-700 mb-8" />
           <p className="text-gray-700 leading-relaxed text-[15px]">
-            ビザと電子渡航認証はいずれも入国に関する制度ですが、その目的や取得方法が異なります。
+            Global Travel Centerでは、OMARA登録移民エージェントの監修のもと、各国のビザ申請に関するサポートを提供しています。渡航目的や滞在期間に応じた適切なビザの選択から、申請手続きに関するご相談までお手伝いいたします。
           </p>
           <p className="text-gray-700 leading-relaxed mt-4 text-[15px]">
-            ビザは、滞在期間や渡航目的（観光、商用、就労など）に応じて取得が求められる入国許可であり、事前審査に一定の時間を要します。一方、電子渡航認証は、観光や短期商用などを目的とする短期渡航者を対象とした制度で、オンライン上で申請できる点が特徴です。必要となる制度は、渡航先の国や渡航者の国籍、渡航目的などによって異なるため、事前に正確な情報を確認することが重要です
+            また、観光や短期商用などを目的とする短期渡航者向けの電子渡航認証（ESTA・K-ETA・UK ETA等）に関する情報も提供しています。必要となる制度は、渡航先の国や渡航者の国籍、渡航目的などによって異なるため、事前に正確な情報を確認することが重要です。
+          </p>
+          <div className="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-5">
+            <p className="text-sm text-gray-600">
+              ビザの代理申請やご相談は、OMARA登録移民エージェント Kotaro Mizoguchi（Registration No. 1465274）が承ります。
+            </p>
+            <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-green-700 text-sm font-medium hover:underline">エージェント登録情報を確認する →</a>
+          </div>
+          <p className="mt-6 text-xs text-gray-400">
+            当サイトは政府機関のウェブサイトではありません。電子渡航認証やビザは、各国政府の公式サイトから直接申請することも可能です。
           </p>
         </div>
       </section>
