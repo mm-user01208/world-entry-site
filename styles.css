@@ -167,6 +167,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Space between paragraphs */
 .space-y-4 > * + * { margin-top: 1rem; }
 
+/* Flag grid */
+.flag-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; justify-items: center; }
+.flag-item { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+.flag-img { width: 56px; height: 38px; object-fit: cover; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.flag-name { font-size: .75rem; color: #374151; font-weight: 500; }
+@media (min-width: 768px) { .flag-grid { grid-template-columns: repeat(6, 1fr); gap: 2rem; } }
+
 /* Trust points responsive */
 .trust-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
