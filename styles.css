@@ -167,6 +167,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Space between paragraphs */
 .space-y-4 > * + * { margin-top: 1rem; }
 
+/* Visa type grid */
+.visa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.visa-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-align: center; transition: box-shadow .2s; }
+.visa-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+.visa-icon { font-size: 2rem; margin-bottom: .75rem; }
+.visa-title { font-size: .9375rem; font-weight: 700; color: #1f2937; margin-bottom: .5rem; line-height: 1.4; }
+.visa-title span { font-size: .75rem; font-weight: 400; color: #6b7280; }
+.visa-desc { font-size: .8125rem; color: #6b7280; line-height: 1.5; margin: 0; }
+@media (min-width: 768px) { .visa-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+
 /* Pricing grid */
 .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 .pricing-card { background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 2rem 1.5rem; text-align: center; transition: box-shadow .2s; }
