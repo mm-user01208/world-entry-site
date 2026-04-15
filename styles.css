@@ -167,11 +167,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Space between paragraphs */
 .space-y-4 > * + * { margin-top: 1rem; }
 
-/* Flag grid */
-.flag-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; justify-items: center; }
-.flag-item { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
-.flag-img { width: 56px; height: 38px; object-fit: cover; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
-.flag-name { font-size: .75rem; color: #374151; font-weight: 500; }
+/* Pricing grid */
+.pricing-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+.pricing-card { background: #fff; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 2rem 1.5rem; text-align: center; transition: box-shadow .2s; }
+.pricing-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.1); }
+.pricing-title { font-size: 1rem; font-weight: 700; color: #1f2937; margin-bottom: .75rem; line-height: 1.4; }
+.pricing-tag { font-size: .75rem; color: #6b7280; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .5rem; }
+.pricing-price { font-size: 1.75rem; font-weight: 700; color: #15803d; margin-bottom: 1.25rem; }
+.pricing-btn { display: inline-block; background: #15803d; color: #fff; padding: .5rem 1.5rem; border-radius: .375rem; font-size: .875rem; font-weight: 500; text-decoration: none; transition: background .2s; }
+.pricing-btn:hover { background: #166534; }
+@media (min-width: 640px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 768px) { .flag-grid { grid-template-columns: repeat(6, 1fr); gap: 2rem; } }
 
 /* Trust points responsive */
