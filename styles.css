@@ -167,6 +167,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* Space between paragraphs */
 .space-y-4 > * + * { margin-top: 1rem; }
 
+/* SP only utility */
+.sp-only { display: none; }
+@media screen and (max-width: 768px) { .sp-only { display: inline; } }
+
 /* Visa type grid */
 .visa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
 .visa-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-align: center; transition: box-shadow .2s; }
