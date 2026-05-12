@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Support | Global Travel Center</title>
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { font-family: 'Inter', system-ui, sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <div class="bg-rose-700 text-white text-center text-[11px] py-1">
+    🧪 /contact/ — Test variant.
+  </div>
+  <div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> is a private company assisting with travel visa applications. We are not part of any government or government agency.
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-700">
+        <a href="/" class="hover:text-blue-700">Home</a>
+        <a href="/#destinations" class="hover:text-blue-700">Destinations</a>
+        <a href="/contact/" class="text-blue-700 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">Contact our support team</h1>
+    <p class="text-slate-600 mb-10">
+      Send us a message and we'll get back to you within 24 hours. For urgent visa application matters, please include your reference number.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white rounded-lg p-5 border border-slate-200">
+        <div class="text-blue-700 mb-2">📧</div>
+        <p class="text-xs text-slate-500 mb-1">Email</p>
+        <p class="text-sm text-slate-900 font-medium">info@m2-agency.net</p>
+      </div>
+      <div class="bg-white rounded-lg p-5 border border-slate-200">
+        <div class="text-blue-700 mb-2">🕐</div>
+        <p class="text-xs text-slate-500 mb-1">Support hours</p>
+        <p class="text-sm text-slate-900 font-medium">24 / 7 (online)</p>
+      </div>
+      <div class="bg-white rounded-lg p-5 border border-slate-200">
+        <div class="text-blue-700 mb-2">📍</div>
+        <p class="text-xs text-slate-500 mb-1">Office</p>
+        <p class="text-sm text-slate-900 font-medium">Tokyo, Japan</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-slate-200 p-6 md:p-8">
+      <h2 class="text-lg font-bold text-slate-900 mb-6">Send us a message</h2>
+
+      <!-- Formspree integration: replace YOUR_FORMSPREE_ID with the actual form endpoint
+           Sign up at https://formspree.io with notification email info@m2-agency.net -->
+      <form id="contactForm" action="https://formspree.io/f/xaqvvboo" method="POST" class="space-y-5">
+        <input type="hidden" name="_subject" value="[world-entry.com] New contact form submission">
+        <input type="hidden" name="_next" value="https://world-entry.com/contact/?sent=1">
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1.5">Your name <span class="text-rose-600">*</span></label>
+            <input type="text" name="name" required class="w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700 mb-1.5">Email address <span class="text-rose-600">*</span></label>
+            <input type="email" name="email" required class="w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1.5">Topic <span class="text-rose-600">*</span></label>
+          <select name="topic" required class="w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm bg-white focus:ring-2 focus:ring-blue-500 outline-none">
+            <option value="">— Select —</option>
+            <option>Application status inquiry</option>
+            <option>Form edit / amendment</option>
+            <option>Refund request</option>
+            <option>Pricing question</option>
+            <option>Technical issue</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1.5">Reference number (if any)</label>
+          <input type="text" name="reference" placeholder="e.g. GTC-ESTA-202605-XXXX" class="w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none font-mono">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-slate-700 mb-1.5">Message <span class="text-rose-600">*</span></label>
+          <textarea name="message" required rows="6" class="w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full md:w-auto bg-blue-700 hover:bg-blue-600 text-white font-bold px-8 py-3 rounded-md transition shadow-md">
+          Send message →
+        </button>
+        <p class="text-xs text-slate-500">
+          By submitting this form, you consent to our <a href="/privacy/" class="text-blue-700 hover:underline">Privacy Policy</a>. We typically reply within 24 hours.
+        </p>
+      </form>
+
+      <!-- Sent banner -->
+      <div id="sentBanner" class="hidden mt-6 bg-green-50 border border-green-200 rounded-lg p-4 text-sm text-green-800">
+        ✅ Your message has been sent. We'll get back to you within 24 hours.
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-xs leading-relaxed">
+      <p class="mb-2"><strong class="text-white">Global Travel Center is not a government website.</strong> Operated by M2Agency Inc., 4-8-25 Nakameguro, Meguro-ku, Tokyo 153-0061, Japan. OMARA-supervised (MARN: 1465274).</p>
+    </div>
+  </footer>
+
+  <script>
+    // Show sent banner if redirected back with ?sent=1
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      document.getElementById('sentBanner').classList.remove('hidden');
+      document.getElementById('contactForm').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
