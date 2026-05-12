@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review &amp; Payment | ESTA Application</title>
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .step.done { background-color: #16a34a; color: white; }
+    .step.active { background-color: #1d4ed8; color: white; }
+    .step { background-color: #e2e8f0; color: #475569; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <div class="bg-rose-700 text-white text-center text-[11px] py-1">
+    🧪 /v2/apply/au-eta/confirm/ — Test variant. No real charges.
+  </div>
+  <div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> is a private company assisting with travel visa applications. We are not part of any government or government agency.
+    </div>
+  </div>
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/v2/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <div class="flex items-center gap-1.5 text-xs text-slate-500">
+        <svg class="w-4 h-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+        <span>SSL secured payment</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-white border-b border-slate-200 py-5">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="step done w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+          <span class="text-sm text-slate-700">Application</span>
+        </div>
+        <div class="flex-1 h-[2px] bg-green-600 mx-3"></div>
+        <div class="flex items-center gap-3">
+          <span class="step active w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+          <span class="text-sm font-medium text-slate-900 hidden sm:block">Review &amp; pay</span>
+        </div>
+        <div class="flex-1 h-[2px] bg-slate-200 mx-3"></div>
+        <div class="flex items-center gap-3">
+          <span class="step w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+          <span class="text-sm text-slate-500 hidden sm:block">Confirmation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-2">Review &amp; payment</h1>
+    <p class="text-sm text-slate-600 mb-8">Please confirm your details below and proceed to secure payment.</p>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+
+      <!-- Left: details summary -->
+      <div class="lg:col-span-2 space-y-5">
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="font-bold text-slate-900">Application summary</h2>
+            <a href="/v2/apply/au-eta/" class="text-sm text-blue-700 hover:underline">Edit</a>
+          </div>
+          <dl class="grid sm:grid-cols-2 gap-y-3 gap-x-6 text-sm">
+            <div>
+              <dt class="text-slate-500 text-xs">Destination</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">🇦🇺 Australia — Subclass 601 ETA</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500 text-xs">Applicant name</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">SMITH, JOHN MICHAEL</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500 text-xs">Passport number</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">TR1234567</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500 text-xs">Nationality</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">Japan</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500 text-xs">Purpose of travel</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">Tourism / leisure</dd>
+            </div>
+            <div>
+              <dt class="text-slate-500 text-xs">Planned arrival</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">2026-07-15</dd>
+            </div>
+            <div class="sm:col-span-2">
+              <dt class="text-slate-500 text-xs">Contact email</dt>
+              <dd class="text-slate-900 font-medium mt-0.5">applicant@example.com</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+          <h2 class="font-bold text-slate-900 mb-4">Payment method</h2>
+          <div class="space-y-3">
+            <label class="flex items-center gap-3 border border-blue-200 bg-blue-50 rounded-lg p-4 cursor-pointer">
+              <input type="radio" name="pay" checked class="text-blue-600">
+              <span class="font-medium text-slate-900 text-sm">Credit / Debit card</span>
+              <span class="ml-auto flex gap-1 text-xs text-slate-500">VISA · MC · AMEX</span>
+            </label>
+            <label class="flex items-center gap-3 border border-slate-200 rounded-lg p-4 cursor-pointer opacity-60">
+              <input type="radio" name="pay" disabled class="text-blue-600">
+              <span class="font-medium text-slate-900 text-sm">Apple Pay</span>
+              <span class="ml-auto text-xs text-slate-400">Available at checkout</span>
+            </label>
+            <label class="flex items-center gap-3 border border-slate-200 rounded-lg p-4 cursor-pointer opacity-60">
+              <input type="radio" name="pay" disabled class="text-blue-600">
+              <span class="font-medium text-slate-900 text-sm">Google Pay</span>
+              <span class="ml-auto text-xs text-slate-400">Available at checkout</span>
+            </label>
+          </div>
+          <p class="text-xs text-slate-500 mt-4 flex items-start gap-1.5">
+            <svg class="w-4 h-4 text-green-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+            <span>Payments are securely processed by Stripe. Your card details never reach our servers.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: order summary + pay button -->
+      <div>
+        <div class="bg-white rounded-xl border-2 border-blue-200 p-6 sticky top-24">
+          <h2 class="font-bold text-slate-900 mb-4">Order total</h2>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between">
+              <span class="text-slate-600">Australian government fee</span>
+              <span class="text-slate-900">USD 14.00</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-600">Service fee</span>
+              <span class="text-slate-900">USD 49.00</span>
+            </div>
+            <div class="border-t border-slate-200 pt-2.5 mt-2.5 flex justify-between text-base font-bold">
+              <span class="text-slate-900">Total</span>
+              <span class="text-blue-700">USD 63.00</span>
+            </div>
+          </div>
+          <button onclick="goPay()" class="mt-6 w-full bg-blue-700 hover:bg-blue-600 text-white font-bold py-3.5 rounded-md transition shadow-md flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+            Pay USD 63.00
+          </button>
+          <p class="text-xs text-slate-500 text-center mt-3">
+            By clicking, you authorize the charge.<br>
+            <a href="/v2/refunds/" class="text-blue-700 hover:underline">Refund policy</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-xs leading-relaxed">
+      <p class="mb-2"><strong class="text-white">Global Travel Center is not a government website.</strong> Operated by M2Agency Inc., 4-8-25 Nakameguro, Meguro-ku, Tokyo 153-0061, Japan. OMARA-supervised (MARN: 1465274).</p>
+      <p>ESTA is issued solely by the Australian Department of Home Affairs. Applicants may also apply directly via <a href="https://immi.homeaffairs.gov.au" target="_blank" class="text-blue-400 hover:underline">immi.homeaffairs.gov.au</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    function goPay() {
+      // Stripe Test Mode Payment Link (test card: 4242 4242 4242 4242)
+      window.location.href = 'https://buy.stripe.com/test_28E28reuF20y62z3HZ7Vm00';
+    }
+  </script>
+
+</body>
+</html>
