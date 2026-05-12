@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/america/layout,_N_T_/america/esta/layout,_N_T_/america/esta/page,_N_T_/america/esta"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/america/esta/__PAGE__",
+    "/america/esta",
+    "/america",
+    "/_index",
+    "/_head"
+  ]
+}
