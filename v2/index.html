@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Travel Center | ESTA・K-ETA・UK ETA オンライン申請サービス [v2 試作]</title>
+  <meta name="description" content="米国ESTA、韓国K-ETA、英国ETA、豪州ETAS等の電子渡航認証および短期滞在ビザのオンライン申請サービス。OMARA登録移民エージェント監修。政府機関のウェブサイトではありません。">
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Noto Sans JP', sans-serif; }
+    .font-serif-country { font-family: 'Noto Serif JP', serif; }
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-1.jpg');
+      background-size: cover;
+      background-position: center;
+      animation: heroFade 36s linear infinite;
+    }
+    @keyframes heroFade {
+      0%, 8% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-1.jpg'); }
+      9%, 20% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-2.jpg'); }
+      21%, 33% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-3.jpg'); }
+      34%, 46% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-4.jpg'); }
+      47%, 59% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-5.jpg'); }
+      60%, 72% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-6.jpg'); }
+      73%, 85% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-7.jpg'); }
+      86%, 100% { background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/hero-8.jpg'); }
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Internal test banner -->
+  <div class="bg-red-700 text-white text-center text-xs py-1.5">
+    🧪 これは <code>/v2/</code> 試作版です。Google広告 GODOS 認定取得のための申請サービス型ポジションのテストページ。
+  </div>
+
+  <!-- Top disclaimer banner -->
+  <div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> は政府機関のウェブサイトではありません。民間企業として電子渡航認証およびビザの申請サポートを提供しています。
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-8 w-auto">
+        <span class="text-lg font-bold text-gray-800">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#apply-countries" class="text-gray-600 hover:text-gray-900">申請する国</a>
+        <a href="#how" class="text-gray-600 hover:text-gray-900">申請の流れ</a>
+        <a href="#why" class="text-gray-600 hover:text-gray-900">特徴</a>
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900">料金</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative hero-bg min-h-[480px] md:min-h-[560px] flex items-center justify-center">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center text-white py-16">
+      <p class="text-xs md:text-sm text-gray-200 mb-3 tracking-wider uppercase">Online Visa &amp; eTA Application Service</p>
+      <h1 class="text-3xl md:text-5xl font-bold mb-5 leading-tight">
+        世界の電子渡航認証を、<br class="hidden md:block">
+        オンラインで申請。
+      </h1>
+      <p class="text-gray-100 text-base md:text-lg mt-2 mb-8 max-w-2xl mx-auto">
+        ESTA・K-ETA・UK ETA・ETAS。各国の電子渡航認証および短期滞在ビザの申請を、フォーム入力から決済までオンラインで完結。
+      </p>
+      <a href="#apply-countries" class="inline-block bg-blue-700 hover:bg-blue-600 transition text-white font-semibold px-8 py-3 rounded-md text-base md:text-lg shadow-lg">
+        申請する国を選択 →
+      </a>
+      <p class="text-xs text-gray-300 mt-6">
+        政府手数料＋当社サービス料金は申請プロセス内で明示されます
+      </p>
+    </div>
+  </section>
+
+  <!-- OMARA Badge -->
+  <section class="bg-white border-b">
+    <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center text-white text-lg font-bold shrink-0">✓</div>
+        <div class="text-sm md:text-base text-gray-800">
+          <span class="font-bold">OMARA登録移民エージェント監修</span>
+          <span class="text-gray-500 ml-2 text-xs">No. 1465274</span>
+        </div>
+      </div>
+      <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-green-700 text-xs md:text-sm hover:underline">公式登録情報を確認 →</a>
+    </div>
+  </section>
+
+  <!-- Country selection -->
+  <section id="apply-countries" class="py-16 bg-gray-50 scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 text-center">申請する国を選択</h2>
+      <p class="text-gray-600 text-center mb-10 text-sm md:text-base">
+        渡航先の国を選択し、オンラインで電子渡航認証を申請できます。
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <a href="#" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden block">
+          <div class="h-40 overflow-hidden bg-gray-200">
+            <img src="/images/usa-card.jpg" alt="United States" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-2xl">🇺🇸</span>
+              <span class="font-serif-country text-base font-bold text-gray-800">United States</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-3">アメリカ合衆国 ・ 米国電子渡航認証</p>
+            <div class="bg-blue-900 hover:bg-blue-800 text-white text-center font-semibold py-2 rounded text-sm transition">
+              ESTAを申請する →
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden block">
+          <div class="h-40 overflow-hidden bg-gray-200">
+            <img src="/images/korea-card.jpg" alt="South Korea" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-2xl">🇰🇷</span>
+              <span class="font-serif-country text-base font-bold text-gray-800">South Korea</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-3">大韓民国 ・ 韓国電子渡航認証</p>
+            <div class="bg-red-700 hover:bg-red-600 text-white text-center font-semibold py-2 rounded text-sm transition">
+              K-ETAを申請する →
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden block">
+          <div class="h-40 overflow-hidden bg-gray-200">
+            <img src="/images/uk-card.jpg" alt="United Kingdom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-2xl">🇬🇧</span>
+              <span class="font-serif-country text-base font-bold text-gray-800">United Kingdom</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-3">イギリス ・ 英国電子渡航認証</p>
+            <div class="bg-blue-700 hover:bg-blue-600 text-white text-center font-semibold py-2 rounded text-sm transition">
+              UK ETAを申請する →
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="group bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden block">
+          <div class="h-40 overflow-hidden bg-gray-200">
+            <img src="/images/australia-card.jpg" alt="Australia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-2xl">🇦🇺</span>
+              <span class="font-serif-country text-base font-bold text-gray-800">Australia</span>
+            </div>
+            <p class="text-xs text-gray-500 mb-3">オーストラリア ・ 豪州電子渡航認証</p>
+            <div class="bg-green-700 hover:bg-green-600 text-white text-center font-semibold py-2 rounded text-sm transition">
+              Subclass 601 ETAを申請する →
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16 bg-white scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-3 text-center">申請の流れ</h2>
+      <p class="text-gray-600 text-center mb-12 text-sm md:text-base">最短数分でオンライン申請が完了します</p>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
+          <h3 class="font-bold text-gray-800 mb-2">国を選択</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">渡航先の電子渡航認証を選択</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">2</div>
+          <h3 class="font-bold text-gray-800 mb-2">フォーム入力</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">パスポート情報・渡航目的等を入力</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">3</div>
+          <h3 class="font-bold text-gray-800 mb-2">お支払い</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">政府手数料＋当社サービス料金を決済</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 mx-auto bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">4</div>
+          <h3 class="font-bold text-gray-800 mb-2">結果通知</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">メールで申請結果を受領（通常24時間以内）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section id="why" class="py-16 bg-gray-50 scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-12 text-center">当社申請サービスの特徴</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">料金の透明性</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            政府手数料と当社サービス料金を申請プロセス内で明示。お支払い前に総額を確認できます。
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">24時間サポート</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            申請内容の確認・修正サポートを24時間365日提供。緊急の渡航にも対応します。
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">OMARA登録監修</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            オーストラリア政府公認のOMARA登録移民エージェント（No. 1465274）の監修のもと運営しています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Refund -->
+  <section id="pricing" class="py-12 bg-white border-y scroll-mt-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <h3 class="font-bold text-gray-800 mb-3 text-lg">料金・返金ポリシーについて</h3>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex gap-2"><span class="text-blue-700">▸</span><span>当社申請ページでは、政府手数料と当社サービス料金を <strong>分けて表示</strong> します。</span></li>
+          <li class="flex gap-2"><span class="text-blue-700">▸</span><span>政府機関のウェブサイトから直接申請することも可能です（料金は政府手数料のみ）。</span></li>
+          <li class="flex gap-2"><span class="text-blue-700">▸</span><span>申請が政府により拒否された場合のサービス料金返金については、利用規約をご確認ください。</span></li>
+          <li class="flex gap-2"><span class="text-blue-700">▸</span><span>キャンセル・修正依頼はサポート窓口までご連絡ください。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final disclaimer -->
+  <section class="py-10 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-sm text-gray-700 leading-relaxed">
+        <strong class="text-gray-900">Global Travel Center は政府機関のウェブサイトではありません。</strong><br>
+        当社は民間企業として、米国DHS（ESTA）、韓国法務部（K-ETA）、英国Home Office（UK ETA）、豪州内務省（ETAS）の各政府機関への申請を代行するサービスを提供しています。<br>
+        電子渡航認証は、各国政府の公式サイトから直接申請することも可能です。<br>
+        運営会社: M2Agency Inc.（東京都目黒区中目黒4-8-25）
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1a1a1a] text-white py-10">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <img src="/images/footer-logo.png" alt="" class="h-10 w-auto" onerror="this.style.display='none'">
+        <h3 class="font-bold text-xl">Global Travel Center</h3>
+      </div>
+      <p class="text-gray-400 text-sm mb-2">OMARA登録移民エージェント Kotaro Mizoguchi（Registration No. 1465274）監修</p>
+      <p class="text-gray-500 text-xs">© Global Travel Center / M2Agency Inc.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
