@@ -19,7 +19,9 @@
   .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
   .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
   .gtc-chrome [class*="border-"] { border-style: solid; }
-  .gtc-chrome img { display: inline-block; max-width: 100%; height: auto; }
+  /* height は指定しない。指定すると Tailwind の h-7 / h-8（ロゴの高さ）を
+     打ち消してしまい、ロゴが元画像の大きさで表示される。 */
+  .gtc-chrome img { display: inline-block; max-width: 100%; }
   .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
   .gtc-chrome a { text-decoration: none; }
   .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
