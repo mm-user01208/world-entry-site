@@ -11,10 +11,6 @@
   <style>body { font-family: 'Inter', system-ui, sans-serif; }</style>
 </head>
 <body class="bg-slate-50 text-slate-800">
-
-  <div class="bg-rose-700 text-white text-center text-[11px] py-1">
-    🧪 /refunds/ — Test variant.
-  </div>
   <div class="bg-amber-50 border-b border-amber-200">
     <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
       <strong>Global Travel Center</strong> is a private company assisting with travel visa applications. We are not part of any government or government agency.
@@ -30,7 +26,9 @@
       <nav class="hidden md:flex items-center gap-7 text-sm text-slate-700">
         <a href="/" class="hover:text-blue-700">Home</a>
         <a href="/contact/" class="hover:text-blue-700">Contact</a>
-      </nav>
+      
+          <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white ml-2"><option value="">🌐 English</option><option value="/ja/refunds/">🇯🇵 日本語</option></select>
+        </nav>
     </div>
   </header>
 
