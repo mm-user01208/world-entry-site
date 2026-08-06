@@ -64,6 +64,11 @@
       <!-- Formspree integration: replace YOUR_FORMSPREE_ID with the actual form endpoint
            Sign up at https://formspree.io with notification email info@m2-agency.net -->
       <form id="contactForm" action="https://formspree.io/f/xaqvvboo" method="POST" class="space-y-5">
+        <!-- 迷惑メール対策1: 人には見えない入力欄。
+             自動送信プログラムは全項目を埋めようとするので、ここに何か入っていたら
+             機械による送信と判断してFormspree側が破棄する（Formspree標準の仕組み）。 -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+               style="position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;">
         <input type="hidden" name="_subject" value="[world-entry.com] New contact form submission">
         <input type="hidden" name="_next" value="https://world-entry.com/contact/?sent=1">
 
@@ -187,8 +192,20 @@
   var btn = form.querySelector('button[type="submit"], button:not([type])');
   var btnText = btn ? btn.innerHTML : '';
 
+  /* 迷惑メール対策2: ページを開いてから送信までが極端に短い場合は機械とみなす。
+     人が入力すれば数秒はかかる。 */
+  var openedAt = Date.now();
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (Date.now() - openedAt < 3000) {
+      var tooFast = document.getElementById('sendError');
+      if (tooFast) {
+        tooFast.textContent = 'Sorry, this form cannot be submitted that quickly. Please take a moment and try again.';
+        tooFast.classList.remove('hidden');
+      }
+      return;
+    }
     if (btn) { btn.disabled = true; btn.innerHTML = 'Sending…'; }
     fetch(form.action, {
       method: 'POST',
