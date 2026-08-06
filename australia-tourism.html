@@ -19,9 +19,12 @@
   .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
   .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
   .gtc-chrome [class*="border-"] { border-style: solid; }
-  /* height は指定しない。指定すると Tailwind の h-7 / h-8（ロゴの高さ）を
-     打ち消してしまい、ロゴが元画像の大きさで表示される。 */
   .gtc-chrome img { display: inline-block; max-width: 100%; }
+  /* このページの styles.css は「レイヤーなし」で書かれているため、
+     Tailwind の h-7 / h-8 より優先されてしまい、ロゴが元画像の大きさ(100px)で
+     表示される。トップと同じ高さをここで直接指定して打ち消す。 */
+  header.gtc-chrome img { height: 1.75rem; width: auto; }   /* トップの h-7 と同じ */
+  footer.gtc-chrome img { height: 2rem;    width: auto; }   /* トップの h-8 と同じ */
   .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
   .gtc-chrome a { text-decoration: none; }
   .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
