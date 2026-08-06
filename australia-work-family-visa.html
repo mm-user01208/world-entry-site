@@ -18,7 +18,13 @@
      Tailwindのリセット(preflight)は切り、指定もこの2ブロック配下に限定する。 */
   .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
   .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
-  .gtc-chrome [class*="border-"] { border-style: solid; }
+  /* Tailwind のリセットを切っているため border 幅の初期値が無く、
+     border-style だけ付けると四辺すべてに線が出てしまう。
+     幅を0に戻したうえで、使っている面だけ1pxにする。 */
+  .gtc-chrome [class*="border"] { border-style: solid; border-width: 0; }
+  .gtc-chrome .border   { border-width: 1px; }
+  .gtc-chrome .border-t { border-top-width: 1px; }
+  .gtc-chrome .border-b { border-bottom-width: 1px; }
   .gtc-chrome img { display: inline-block; max-width: 100%; }
   /* このページの styles.css は「レイヤーなし」で書かれているため、
      Tailwind の h-7 / h-8 より優先されてしまい、ロゴが元画像の大きさ(100px)で
@@ -153,10 +159,10 @@
         <div>
           <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-white">アメリカ — ESTA</a></li>
-            <li><a href="#" class="hover:text-white">韓国 — K-ETA</a></li>
-            <li><a href="#" class="hover:text-white">イギリス — UK ETA</a></li>
-            <li><a href="#" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+            <li><a href="/america.html" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="/south-korea.html" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="/united-kingdom.html" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="/australia.html" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
           </ul>
         </div>
         <div>
