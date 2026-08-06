@@ -8,31 +8,49 @@
   <link rel="icon" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+<style>
+  /* ヘッダー・フッターだけをトップページと同じ見た目にする。
+     このページ本来のCSS(styles.css)には手を入れないよう、
+     Tailwindのリセット(preflight)は切り、指定もこの2ブロック配下に限定する。 */
+  .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+  .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
+  .gtc-chrome [class*="border-"] { border-style: solid; }
+  .gtc-chrome img { display: inline-block; max-width: 100%; height: auto; }
+  .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
+  .gtc-chrome a { text-decoration: none; }
+  .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
+  .gtc-chrome select { font-family: inherit; }
+</style>
 </head>
 <body>
 
 <!-- Header -->
-<header class="site-header" id="top">
-  <div class="header-inner">
-    <a href="index.html" class="logo"><img src="images/logo.png" alt="Global Travel Center"><span>Global Travel Center</span></a>
-    <button class="mobile-toggle" onclick="document.getElementById('mobileNav').classList.toggle('open')">☰</button>
-    <nav class="desktop">
-      <a href="index.html">HOME</a>
-      <a href="index.html#australia">Australia</a>
-      <a href="index.html#america">America</a>
-      <a href="index.html#korea">Korea</a>
-      <a href="index.html#united-kingdom">United Kingdom</a>
-    </nav>
-  </div>
-  <nav id="mobileNav" class="mobile-nav">
-    <a href="index.html">HOME</a>
-    <a href="index.html#australia">Australia</a>
-    <a href="index.html#america">America</a>
-    <a href="index.html#korea">Korea</a>
-    <a href="index.html#united-kingdom">United Kingdom</a>
-  </nav>
-  <div class="header-banner"><p>Global Travel Centerは公認移民エージェントによる監修と信頼できる情報で、渡航前の不安を解消するサイトです。</p></div>
-</header>
+<div class="gtc-chrome"><div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> は、ビザ申請をサポートする民間企業です。政府または政府機関には属していません。
+    </div>
+  </div></div>
+<header class="gtc-chrome bg-white sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/ja/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="/ja/#destinations" class="hover:text-blue-700 transition">渡航先</a>
+        <a href="/ja/#how" class="hover:text-blue-700 transition">申請の流れ</a>
+        <a href="/ja/#why" class="hover:text-blue-700 transition">特徴</a>
+        <a href="/ja/#contact" class="hover:text-blue-700 transition">お問い合わせ</a>
+        <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white">
+          <option value="">🇯🇵 日本語</option>
+          <option value="/">🌐 English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
 
 <main>
 
@@ -145,20 +163,61 @@
 </main>
 
 <!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div style="text-align:center;margin-bottom:2.5rem;">
-      <div class="footer-logo"><img src="images/logo.png" alt=""><h3>Global Travel Center</h3></div>
-      <p class="footer-desc">本サイトは、各国のビザや電子渡航認証（ETA・ESTA・K-ETA）に関する制度を分かりやすく解説する情報提供サイトです。本サイトは情報提供を目的としており、ビザや電子渡航認証の申請代行業務は行っていません。外部サービスへのリンクは、利用を推奨または保証するものではありません。</p>
-      <p class="footer-note">Global Travel Centerは民間企業による運営であり、いかなる政府機関とも提携または関係はありません。<br>電子渡航認証やビザは、本サービスを利用せず公式サイトから直接申請することも可能です。</p>
-      <p class="footer-note">This site is supervised by a registered Australian Migration Agent<br>Kotaro Mizoguchi（OMARA Registration <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank">No. 1465274</a>）</p>    </div>
-    <div class="footer-links">
-      <div class="link-group"><a href="terms-of-service.html">Terms of Service</a><a href="privacy-policy.html">Privacy Policy</a><a href="legal-information.html">Legal Information (Act on Specified Commercial Transactions)</a></div>
-      <div class="link-group"><a href="index.html#top">TOP</a><a href="australia.html">Australia</a><a href="america.html">United States of America</a><a href="south-korea.html">South Korea</a><a href="united-kingdom.html">United Kingdom</a></div>
+<footer class="gtc-chrome bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/images/logo.png" alt="" class="h-8 w-auto" onerror="this.style.display='none'">
+            <span class="font-bold text-white text-lg">Global Travel Center</span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            電子渡航認証オンライン申請サービス。<br>
+            オーストラリア・ニュージーランドについてはOMARA監修。<br>SSL暗号化対応。
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="#" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="#" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="#" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">情報</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/terms/" class="hover:text-white">利用規約</a></li>
+            <li><a href="/ja/privacy/" class="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/ja/refunds/" class="hover:text-white">返金ポリシー</a></li>
+            <li><a href="/ja/contact/" class="hover:text-white">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-8 text-xs text-slate-400 leading-relaxed">
+        <p class="mb-3">
+          <strong class="text-white">Global Travel Center は政府機関のウェブサイトではありません。</strong>
+          当社は民間企業として、ビザおよび電子渡航認証申請の準備・送信をサポートします。ビザ・ETA等の公式渡航文書を発行する権限は持ちません。これらは各国政府機関（ESTA: 米国国土安全保障省、K-ETA: 大韓民国法務部、UK ETA: 英国Home Office、Subclass 601 ETA: 豪州内務省）のみが発行します。
+        </p>
+        <p class="mb-3">
+          各国政府の公式ポータルから直接申請することも可能です（その場合は当社サービス料金は発生しません）。
+        </p>
+        <p>
+          <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
+          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
+            <option value="">🇯🇵 日本語</option>
+            <option value="/">🌐 English</option>
+          </select>
+          <span class="text-slate-500">© 2026 Global Travel Center / M2Agency Inc.</span>
+        </div>
+      </div>
     </div>
-    <div class="footer-copy"><p>Copyright© – All rights reserved by Global Travel Center</p></div>
-  </div>
-</footer>
+  </footer>
 
 <script>
 document.querySelectorAll('.faq-item button').forEach(function(btn) {

@@ -112,22 +112,48 @@ ul{list-style:disc;padding-left:1.5em}ol{padding-left:1.5em}
 .sec h2{font-size:19px}
 }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+<style>
+  /* ヘッダー・フッターだけをトップページと同じ見た目にする。
+     このページ本来のCSS(styles.css)には手を入れないよう、
+     Tailwindのリセット(preflight)は切り、指定もこの2ブロック配下に限定する。 */
+  .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+  .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
+  .gtc-chrome [class*="border-"] { border-style: solid; }
+  .gtc-chrome img { display: inline-block; max-width: 100%; height: auto; }
+  .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
+  .gtc-chrome a { text-decoration: none; }
+  .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
+  .gtc-chrome select { font-family: inherit; }
+</style>
 </head>
 <body>
 
-<header class="site-header">
-<div class="header-top">
-<a href="https://esta-usapply.com/" class="header-logo"><img src="images/esta-logo.svg" alt="ESTA(エスタ)申請代行サイト" height="40"></a>
-<nav class="header-nav">
-<a href="https://apply.esta-usapply.com/form/entry">ESTA申請</a>
-<a href="https://esta-usapply.com/service/index.html">ESTA基本情報</a>
-<a href="https://esta-usapply.com/flow/index.html">ESTA申請ガイド</a>
-<a href="https://esta-usapply.com/contact/index.html">お問い合わせ</a>
-<a href="https://esta-usapply.com/faq/index.html">FAQ</a>
-</nav>
-<button class="mob-btn" onclick="var n=document.querySelector('.header-nav');n.style.display=n.style.display==='flex'?'none':'flex'">☰</button>
-</div>
-</header>
+<div class="gtc-chrome"><div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> は、ビザ申請をサポートする民間企業です。政府または政府機関には属していません。
+    </div>
+  </div></div>
+<header class="gtc-chrome bg-white sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/ja/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="/ja/#destinations" class="hover:text-blue-700 transition">渡航先</a>
+        <a href="/ja/#how" class="hover:text-blue-700 transition">申請の流れ</a>
+        <a href="/ja/#why" class="hover:text-blue-700 transition">特徴</a>
+        <a href="/ja/#contact" class="hover:text-blue-700 transition">お問い合わせ</a>
+        <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white">
+          <option value="">🇯🇵 日本語</option>
+          <option value="/">🌐 English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
 
 <section class="hero">
 <img class="hero-bg" src="images/kv-hero.jpg" alt="アメリカ合衆国議事堂と国旗">
@@ -440,64 +466,61 @@ ul{list-style:disc;padding-left:1.5em}ol{padding-left:1.5em}
 </div>
 </section>
 
-<footer class="site-footer">
-<div class="inner">
-<div class="ft-grid">
-<div class="ft-col">
-<h3>ESTA基本情報</h3>
-<a href="https://esta-usapply.com/service/index.html">ESTA(エスタ)とは</a>
-<a href="https://esta-usapply.com/lengthofstay/index.html">ESTA(エスタ)とビザの違いについて</a>
-<a href="https://esta-usapply.com/vwp/index.html">ビザ免除プログラム(VWP)とは</a>
-<a href="https://esta-usapply.com/reapplication/index.html">ESTA(エスタ)の再申請と有効期限</a>
-<a href="https://esta-usapply.com/faq/index.html">ESTA(電子渡航認証システム)と渡米に関するQ&amp;A</a>
-</div>
-<div class="ft-col">
-<h3>ESTA申請ガイド</h3>
-<a href="https://esta-usapply.com/flow/index.html">ESTA(エスタ)の申請方法・記入例</a>
-<a href="https://esta-usapply.com/smartphone/index.html">スマホでのESTA(エスタ)申請</a>
-<a href="https://esta-usapply.com/esta-application/index.html">アプリでのESTA(エスタ)申請方法を解説</a>
-<a href="https://esta-usapply.com/group/index.html">グループ・家族でのESTA(エスタ)申請方法</a>
-<a href="https://esta-usapply.com/deadline/index.html">ESTA(エスタ)はいつまでに申請が必要？</a>
-<a href="https://esta-usapply.com/merit/index.html">ESTA申請サービスのメリット</a>
-<a href="https://esta-usapply.com/fee/index.html">ESTA(エスタ)申請料金</a>
-<a href="https://esta-usapply.com/status-check/index.html">ESTA申請状況の確認方法</a>
-<a href="https://esta-usapply.com/status-check-failed/index.html">ESTAの申請状況が確認できない場合の対処法</a>
-<a href="https://esta-usapply.com/employer/index.html">ESTA(エスタ)勤務先情報の記入方法を解説</a>
-<a href="https://esta-usapply.com/birthplace-address/index.html">ESTA(エスタ)申請時の出生地や住所の書き方</a>
-<a href="https://esta-usapply.com/transit/index.html">乗り継ぎ(トランジット)時のESTA申請</a>
-<a href="https://esta-usapply.com/contact/index.html">お問い合わせ方法</a>
-</div>
-<div class="ft-col">
-<h3>渡航先別の情報</h3>
-<a href="https://esta-usapply.com/news/">アメリカ入国・渡航に関する最新情報</a>
-<a href="https://esta-usapply.com/news/hawaii/">ハワイ入国・渡航に関する最新情報</a>
-<a href="https://esta-usapply.com/los-angeles/index.html">ロサンゼルス入国審査とESTA(エスタ)申請</a>
-<a href="https://esta-usapply.com/guam/index.html">グアム渡航とESTA(エスタ)申請</a>
-<a href="https://esta-usapply.com/saipan/index.html">サイパン渡航とESTA(エスタ)申請</a>
-<a href="https://esta-usapply.com/cuba/index.html">キューバ渡航とESTA(エスタ)申請</a>
-<a href="https://esta-usapply.com/mexico/index.html">メキシコ渡航とESTA(エスタ)申請</a>
-<h3 style="margin-top:16px">その他リンク集</h3>
-<a href="https://esta-usapply.com/links/index.html">ESTA(エスタ)申請時の情報サイト一覧</a>
-<a href="https://esta-usapply.com/embassy/index.html">大使館・領事館サイト一覧</a>
-<a href="https://www.dhs.gov/" target="_blank" rel="noreferrer noopener">Official Website of the Department of Homeland Security</a>
-<a href="https://esta-usapply.com/us-basic-info/index.html">アメリカ基本情報</a>
-<a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener">アメリカ移民局(USCIS)</a>
-</div>
-<div class="ft-col">
-<h3>運営会社・方針</h3>
-<a href="https://esta-usapply.com/privacy/index.html">個人情報保護に関する基本方針</a>
-<a href="https://esta-usapply.com/content-policy/index.html">コンテンツポリシー</a>
-<a href="https://esta-usapply.com/aboutus/index.html">特定商取引法に基づく表記と会社概要</a>
-<a href="https://esta-usapply.com/terms/index.html">利用規約</a>
-<a href="https://esta-usapply.com/recommended/index.html">推奨ブラウザについて</a>
-<a href="https://esta-usapply.com/contact/index.html">お問い合わせ</a>
-<a href="https://esta-usapply.com/sitemap/index.html">サイトマップ</a>
-<a href="https://esta-usapply.com/en/top/index.html">英語TOP</a>
-</div>
-</div>
-<div class="ft-copy">©2024-2026 US ESTA Online Site. All Rights Reserved.</div>
-</div>
-</footer>
+<footer class="gtc-chrome bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/images/logo.png" alt="" class="h-8 w-auto" onerror="this.style.display='none'">
+            <span class="font-bold text-white text-lg">Global Travel Center</span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            電子渡航認証オンライン申請サービス。<br>
+            オーストラリア・ニュージーランドについてはOMARA監修。<br>SSL暗号化対応。
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="#" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="#" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="#" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">情報</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/terms/" class="hover:text-white">利用規約</a></li>
+            <li><a href="/ja/privacy/" class="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/ja/refunds/" class="hover:text-white">返金ポリシー</a></li>
+            <li><a href="/ja/contact/" class="hover:text-white">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-8 text-xs text-slate-400 leading-relaxed">
+        <p class="mb-3">
+          <strong class="text-white">Global Travel Center は政府機関のウェブサイトではありません。</strong>
+          当社は民間企業として、ビザおよび電子渡航認証申請の準備・送信をサポートします。ビザ・ETA等の公式渡航文書を発行する権限は持ちません。これらは各国政府機関（ESTA: 米国国土安全保障省、K-ETA: 大韓民国法務部、UK ETA: 英国Home Office、Subclass 601 ETA: 豪州内務省）のみが発行します。
+        </p>
+        <p class="mb-3">
+          各国政府の公式ポータルから直接申請することも可能です（その場合は当社サービス料金は発生しません）。
+        </p>
+        <p>
+          <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
+          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
+            <option value="">🇯🇵 日本語</option>
+            <option value="/">🌐 English</option>
+          </select>
+          <span class="text-slate-500">© 2026 Global Travel Center / M2Agency Inc.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 <div class="float-cta">
 <a href="https://apply.esta-usapply.com/form/entry" class="cta"><img src="images/icon-entry.svg" alt="">ESTA申請はこちら</a>
