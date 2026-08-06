@@ -1,13 +1,13 @@
 /* ===== Reset & Base ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Noto Serif JP', serif; color: #333; line-height: 1.5; }
-h1,h2,h3,h4,h5,h6 { font-family: 'Noto Serif JP', serif; }
+body { font-family: 'Noto Sans JP', system-ui, sans-serif; color: #333; line-height: 1.5; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Noto Sans JP', system-ui, sans-serif; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font: inherit; }
 
-.font-serif-country { font-family: Georgia, 'Times New Roman', serif; }
+.font-serif-country { font-family: 'Noto Sans JP', system-ui, sans-serif; }
 
 /* ===== Layout ===== */
 .max-w-3xl { max-width: 48rem; margin-left: auto; margin-right: auto; }
@@ -25,7 +25,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .site-header .logo img { height: 2rem; width: auto; }
 .site-header .logo span { font-size: 1.125rem; font-weight: 700; color: #1f2937; }
 .site-header nav.desktop { display: none; gap: 2rem; }
-.site-header nav.desktop a { color: #6b7280; font-size: .875rem; font-weight: 500; font-family: Georgia, 'Times New Roman', serif; }
+.site-header nav.desktop a { color: #6b7280; font-size: .875rem; font-weight: 500; font-family: 'Noto Sans JP', system-ui, sans-serif; }
 .site-header nav.desktop a:hover { color: #1f2937; }
 .mobile-toggle { display: block; color: #4b5563; font-size: 1.5rem; background: none; border: none; cursor: pointer; }
 .mobile-nav { display: none; border-top: 1px solid #e5e7eb; padding: .75rem 1rem; background: #fff; }
@@ -52,7 +52,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .country-card .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .country-card:hover .card-img img { transform: scale(1.05); }
 .country-card .card-body { padding: 1rem; }
-.country-card .card-body h3 { font-family: Georgia, 'Times New Roman', serif; font-size: 1.125rem; font-weight: 700; color: #1f2937; }
+.country-card .card-body h3 { font-family: 'Noto Sans JP', system-ui, sans-serif; font-size: 1.125rem; font-weight: 700; color: #1f2937; }
 
 /* Section heading with accent */
 .section-title { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: .5rem; }
@@ -69,7 +69,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .country-section .section-img { min-height: 16rem; }
 .country-section .section-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .country-section .section-text { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
-.section-text h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem; }
+.section-text h2 { font-family: 'Noto Sans JP', system-ui, sans-serif; font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem; }
 .section-text p { color: #374151; line-height: 1.625; font-size: 15px; margin-bottom: 0; }
 .section-text .btn { display: inline-block; color: #fff; padding: .625rem 1.5rem; border-radius: .25rem; font-size: .875rem; margin-top: 1.5rem; transition: filter .2s; width: fit-content; }
 .section-text .btn:hover { filter: brightness(1.15); }
@@ -79,12 +79,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .country-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .country-hero .overlay { position: absolute; inset: 0; background: rgba(0,0,0,.4); }
 .country-hero .hero-text { position: relative; z-index: 10; text-align: center; color: #fff; }
-.country-hero .hero-text h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 2.25rem; font-weight: 700; letter-spacing: .05em; }
+.country-hero .hero-text h1 { font-family: 'Noto Sans JP', system-ui, sans-serif; font-size: 2.25rem; font-weight: 700; letter-spacing: .05em; }
 .country-hero .hero-text p { margin-top: .75rem; color: #e5e7eb; font-size: .875rem; }
 
 /* Gradient hero (USA, Korea, UK pages) */
 .gradient-hero { padding: 4rem 1rem; text-align: center; color: #fff; }
-.gradient-hero h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem; }
+.gradient-hero h1 { font-family: 'Noto Sans JP', system-ui, sans-serif; font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem; }
 .gradient-hero p { font-size: .875rem; }
 .gradient-usa { background: linear-gradient(135deg, #b91c1c, #7f1d1d); }
 .gradient-korea { background: linear-gradient(135deg, #15803d, #14532d); }
