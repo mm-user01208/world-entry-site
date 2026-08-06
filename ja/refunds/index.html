@@ -17,18 +17,19 @@
     </div>
   </div>
 
-  <header class="bg-white border-b border-slate-200">
+  <header class="bg-white sticky top-0 z-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/ja/" class="flex items-center gap-2">
         <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
         <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
       </a>
-      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-700">
-        <a href="/ja/" class="hover:text-blue-700">ホーム</a>
-        <a href="/contact/" class="hover:text-blue-700">お問い合わせ</a>
-      
-          <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white ml-2"><option value="">🇯🇵 日本語</option><option value="/refunds/">🌐 English</option></select>
-        </nav>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="/ja/#destinations" class="hover:text-blue-700 transition">渡航先</a>
+        <a href="/ja/#how" class="hover:text-blue-700 transition">申請の流れ</a>
+        <a href="/ja/#why" class="hover:text-blue-700 transition">特徴</a>
+        <a href="/ja/#contact" class="hover:text-blue-700 transition">お問い合わせ</a>
+        <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white"><option value="">🇯🇵 日本語</option><option value="/refunds/">🌐 English</option></select>
+      </nav>
     </div>
   </header>
 
@@ -89,6 +90,17 @@
       </ul>
 
     
+      
+      <div class="bg-green-50 border border-green-200 rounded-lg p-5 mt-8">
+        <h3 class="font-bold text-slate-900 text-base mb-2">オーストラリア・ニュージーランドのビザ申請について</h3>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          当社の運営は、OMARA登録移民エージェントの<strong>Kotaro Mizoguchi</strong>（登録番号:
+          <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-green-700 hover:underline">1465274</a>）の監修のもとで行っています。
+          <strong>オーストラリアおよびニュージーランド</strong>へのビザ申請については、
+          <a href="https://jskconsulting.net/" target="_blank" rel="noopener noreferrer" class="text-green-700 font-medium hover:underline">jskconsulting.net</a>
+          より直接ご相談ください。
+        </p>
+      </div>
       <p class="text-xs text-slate-500 mt-8 pt-6 border-t border-slate-200">
         本ページは英語版を翻訳したものです。日本語版と英語版で内容に相違がある場合は、
         <a href="/refunds/" class="text-blue-700 hover:underline">英語版（/refunds/）</a>が優先します。
@@ -96,9 +108,59 @@
 </div>
   </main>
 
-  <footer class="bg-slate-900 text-slate-400 py-10 mt-12">
-    <div class="max-w-6xl mx-auto px-4 text-xs leading-relaxed">
-      <p class="mb-2"><strong class="text-white">Global Travel Center は政府のウェブサイトではありません。</strong> 運営: M2Agency Inc.（〒153-0061 東京都目黒区中目黒4-8-25）。 オーストラリア・ニュージーランドについてはOMARA監修（MARN: 1465274）.</p>
+  <footer class="bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/images/logo.png" alt="" class="h-8 w-auto" onerror="this.style.display='none'">
+            <span class="font-bold text-white text-lg">Global Travel Center</span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            電子渡航認証オンライン申請サービス。<br>
+            OMARA監修・SSL暗号化対応。
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="#" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="#" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="#" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">情報</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/terms/" class="hover:text-white">利用規約</a></li>
+            <li><a href="/ja/privacy/" class="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/ja/refunds/" class="hover:text-white">返金ポリシー</a></li>
+            <li><a href="/ja/contact/" class="hover:text-white">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-8 text-xs text-slate-400 leading-relaxed">
+        <p class="mb-3">
+          <strong class="text-white">Global Travel Center は政府機関のウェブサイトではありません。</strong>
+          当社は民間企業として、ビザおよび電子渡航認証申請の準備・送信をサポートします。ビザ・ETA等の公式渡航文書を発行する権限は持ちません。これらは各国政府機関（ESTA: 米国国土安全保障省、K-ETA: 大韓民国法務部、UK ETA: 英国Home Office、Subclass 601 ETA: 豪州内務省）のみが発行します。
+        </p>
+        <p class="mb-3">
+          各国政府の公式ポータルから直接申請することも可能です（その場合は当社サービス料金は発生しません）。
+        </p>
+        <p>
+          <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
+          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
+            <option value="">🇯🇵 日本語</option>
+            <option value="/">🌐 English</option>
+          </select>
+          <span class="text-slate-500">© 2026 Global Travel Center / M2Agency Inc.</span>
+        </div>
+      </div>
     </div>
   </footer>
 
