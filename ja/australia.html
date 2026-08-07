@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australia | Global Travel Center</title>
+  <meta name="description" content="オーストラリア渡航に必要なビザやETA（電子渡航認証）の申請方法、取得条件、必要書類をわかりやすく解説。観光・留学・就労など目的別に最新情報をまとめています。">
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+<style>
+  /* ヘッダー・フッターだけをトップページと同じ見た目にする。
+     このページ本来のCSS(styles.css)には手を入れないよう、
+     Tailwindのリセット(preflight)は切り、指定もこの2ブロック配下に限定する。 */
+  .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+  .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
+  /* Tailwind のリセットを切っているため border 幅の初期値が無く、
+     border-style だけ付けると四辺すべてに線が出てしまう。
+     幅を0に戻したうえで、使っている面だけ1pxにする。 */
+  .gtc-chrome [class*="border"] { border-style: solid; border-width: 0; }
+  .gtc-chrome .border   { border-width: 1px; }
+  .gtc-chrome .border-t { border-top-width: 1px; }
+  .gtc-chrome .border-b { border-bottom-width: 1px; }
+  .gtc-chrome img { display: inline-block; max-width: 100%; }
+  /* このページの styles.css は「レイヤーなし」で書かれているため、
+     Tailwind の h-7 / h-8 より優先されてしまい、ロゴが元画像の大きさ(100px)で
+     表示される。トップと同じ高さをここで直接指定して打ち消す。 */
+  header.gtc-chrome img { height: 1.75rem; width: auto; }   /* トップの h-7 と同じ */
+  footer.gtc-chrome img { height: 2rem;    width: auto; }   /* トップの h-8 と同じ */
+  .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
+  .gtc-chrome a { text-decoration: none; }
+  .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
+  .gtc-chrome select { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="gtc-chrome"><div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> は、ビザ申請をサポートする民間企業です。政府または政府機関には属していません。
+    </div>
+  </div></div>
+<header class="gtc-chrome bg-white sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/ja/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="/ja/#destinations" class="hover:text-blue-700 transition">渡航先</a>
+        <a href="/ja/#how" class="hover:text-blue-700 transition">申請の流れ</a>
+        <a href="/ja/#why" class="hover:text-blue-700 transition">特徴</a>
+        <a href="/ja/contact/" class="hover:text-blue-700 transition">お問い合わせ</a>
+        <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white">
+          <option value="">🇯🇵 日本語</option>
+          <option value="/australia.html">🌐 English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+<!-- Hero -->
+<section class="country-hero">
+  <img src="/images/sydney-harbour.jpg" alt="シドニーハーバー">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h1 class="font-serif-country">AUSTRALIA</h1>
+    <p>オーストラリアのビザ・電子渡航認証（ETA）情報</p>
+  </div>
+</section>
+
+<!-- Intro -->
+<article class="article-content" style="padding-top:3.5rem;padding-bottom:3.5rem;">
+  <p>オーストラリアへ渡航する際は、渡航者のパスポート発行国、渡航目的、滞在期間に応じて、事前にビザの取得が必要です。観光目的で渡航する場合でも、事前手続きなしでの入国は認められていません。必要となるビザの手続きは渡航者の条件によって異なるため、渡航計画を立てる段階で、どの手続きが求められるかを確認することが重要です。</p>
+</article>
+
+<!-- オーストラリアのビザとは -->
+<section class="bg-section-gray">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">オーストラリアのビザとは</h2>
+    <div class="accent-line"></div>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアのビザは、滞在中に認められる活動内容や条件を明確に定めるための制度であり、渡航者は取得したビザに記載された条件でのみ滞在・活動することが求められます。ビザごとに、就労の可否、就学の可否、滞在可能日数、入国回数などが細かく設定されており、これらの条件を超えた行為は認められていません。</p>
+      <p>オーストラリアのビザは、観光や友人訪問を目的とした短期滞在向けのものから、就労、留学、家族との同居や長期滞在を目的としたものまで、目的別に多くの種類が存在します。</p>
+      <p>また、近年は手続きの簡素化が進み、オンラインや公式アプリを通じて申請・発給されるビザも増えています。これらは一般的に電子的に管理され、パスポート情報と紐づけて管理されます。紙のビザの代わりに発給条件を記載した承認通知（Grant Notificaton）がメールで送付されます。一方で、追加書類の提出や詳細な審査が行われる場合もあります。</p>
+      <p>このように、オーストラリアのビザは「滞在中に何ができるか」を定める重要な要素であり、制度の違いを理解したうえで、自身の渡航目的に合ったビザを選択することが大切です。</p>
+    </div>
+    <div class="notice-box">
+      <p class="notice-title">注意事項</p>
+      <p>オーストラリアのビザは、制度や要件、運用ルールが頻繁に変更される傾向があります。本ページでは、制度の概要や一般的な考え方について情報提供を目的として掲載しており、最新の要件や個別ケースへの適用を保証するものではありません。最新情報はオーストラリア政府の<a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-finder" target="_blank" rel="noopener noreferrer">公式ウェブサイト</a>をご確認ください。</p>
+      <p>正確かつ最新の情報の確認や、ご自身の状況に応じた判断については、本サイト監修者<a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer">Kotaro Mizoguchi</a>を含むオーストラリア政府の登録移民エージェント（Registered Migration Agent, RMA）にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 短期滞在向けビザ -->
+<section class="bg-section-white">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">短期滞在向けビザ（観光・訪問）</h2>
+    <div class="accent-line"></div>
+    <h3 style="font-size:1.125rem;font-weight:700;color:#1f2937;margin-bottom:.75rem;">電子的に申請できる短期ビザ</h3>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアでは、観光や家族訪問を目的とする一部の渡航者に対し、オンラインや公式アプリを通じて申請・発給される短期滞在向けビザが用意されています。代表的なものとして ETA（Electronic Travel Authority / Subclass 601） と eVisitor（Subclass 651） があります。いずれも紙のビザは発行されず、承認後はパスポート情報と電子的に紐づけて管理されます。</p>
+      <p>ETAは、主に日本を含む対象国・地域の渡航者が利用でき、観光や短期の非就労商用活動を目的とした滞在が認められています。一方、eVisitorは主に欧州の一部の国籍を対象とした短期滞在用ビザで、ETAと同様に観光や短期商用を目的とした利用が可能です。申請方法や対象国籍は異なりますが、いずれも短期滞在を前提としており、就労や長期滞在を目的とした利用は認められていません。</p>
+      <p>これらの電子的に申請できる短期ビザは、渡航目的や国籍に応じて選択する必要があり、自身の条件に適したビザを確認したうえで申請することが重要です。</p>
+    </div>
+    <h3 style="font-size:1.125rem;font-weight:700;color:#1f2937;margin-top:2.5rem;margin-bottom:.75rem;">観光ビザ（Visitor visa / Subclass 600）</h3>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>観光ビザ（Visitor visa / Subclass 600）は、観光、知人・家族訪問、短期の非就労活動などを目的として利用される短期滞在向けビザです。電子的に申請可能な短期ビザの対象外となる国籍の方や、より長い滞在期間を希望する場合に選択されることがあります。滞在可能期間や入国回数は申請内容や審査結果によって異なり、ETAと比べて審査に時間を要する場合があります。また、このビザでも原則として就労は認められておらず、滞在条件を超えた活動は制限されます。渡航条件に応じて、ETAとの違いを理解したうえで選択することが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ETA -->
+<section class="bg-section-gray">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">ETA（Electronic Travel Authority / Subclass 601）</h2>
+    <div class="accent-line"></div>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアの ETAは、観光や家族訪問などを目的とする渡航者向けに設けられた短期滞在用のビザです。一般的に「電子渡航認証」と呼ばれることもありますが、制度上はビザの一種として位置づけられており、入国や滞在の条件が明確に定められています。ETAは、オーストラリア政府が提供する公式アプリを通じて申請・発給され、承認後はパスポート情報と電子的に紐づけられます。紙のビザは発行されず、渡航時に別途書類を携帯する必要はありません。主に観光、知人・家族訪問、短期の商用活動が認められますが、就労や長期滞在、留学を目的とした利用は認められていません。また、ETAには有効期間や1回あたりの滞在可能日数が設定されており、条件を超えた滞在や活動はビザ違反となる可能性があります。申請手続きが比較的簡素である一方、対象となる国籍や利用条件が限定されているため、自身の渡航目的や状況に適しているかを事前に確認することが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- パスポート画像 -->
+<section style="padding:2rem 0;background:#f9fafb;text-align:center;">
+  <img src="/images/passport-stamps.jpg" alt="パスポートとスタンプ" style="width:100%;max-width:700px;margin:0 auto;border-radius:0.5rem;">
+</section>
+<!-- 学生ビザ -->
+<section class="bg-section-white">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">学生ビザ（Student visa）</h2>
+    <div class="accent-line"></div>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアの学生ビザ（Student visa）は、大学や専門学校、語学学校など、政府に認可された教育機関で就学することを目的としたビザです。主な目的は学業であり、就労や長期滞在を主目的とするビザとは制度上明確に区別されています。</p>
+      <p>学生ビザでは、在学期間中の滞在が認められるほか、一定の条件下で就労が許可される場合があります。ただし、就労時間や内容には制限が設けられており、学業に支障が出ない範囲でのみ認められる点に注意が必要です。また、ビザの有効期間は在籍するコースの期間に連動しており、修了後は原則として別のビザへの切り替えが必要となります。</p>
+      <p>このビザは「学ぶこと」を前提とした制度であるため、観光や短期商用、就労を主目的とする渡航には適していません。進学や留学を検討する場合は、入学予定の教育機関や就学期間に応じて、学生ビザの条件を正しく理解したうえで準備を進めることが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 就労・家族支援タイプ -->
+<section class="bg-section-gray">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">就労・家族支援タイプの長期ビザ</h2>
+    <div class="accent-line"></div>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアには、一定期間以上の滞在や、将来的な永住を視野に入れた中長期滞在向けのビザが複数用意されています。これらのビザは、単純に「就労」「家族」といった区分だけで整理されているわけではなく、滞在の目的や背景、申請者の立場によって制度が設計されています。</p>
+      <p>たとえば、雇用主の支援を受けて就労を行うことを前提としたビザの中には、一定の条件を満たすことで永住権につながるものも存在します。また、家族との同居や扶養関係を理由として申請されるビザであっても、滞在期間が長期に及び、結果として永住を目的とするケースもあります。このように、中長期滞在向けのビザは「一時的な滞在」と「永住」を明確に切り分けるのではなく、段階的な制度として位置づけられている点が特徴です。</p>
+      <p>そのため、これらのビザを検討する際には、現在の滞在目的だけでなく、将来的な居住計画や就労形態、家族構成なども踏まえたうえで、制度全体を理解することが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ビザ利用時の注意点 -->
+<section class="bg-section-white">
+  <div class="max-w-4xl px-4">
+    <h2 class="section-title">ビザ利用時の注意点</h2>
+    <div class="accent-line"></div>
+    <div class="space-y-4" style="color:#374151;line-height:1.625;font-size:15px;">
+      <p>オーストラリアのビザを取得していても、入国が保証されるわけではありません。最終的な入国の可否は、到着時に行われる入国審査において、入国審査官の判断に委ねられます。ビザはあくまで「滞在や活動を行う資格」を示すものであり、入国審査時には渡航目的や滞在計画について確認される場合があります。</p>
+      <p>また、取得したビザには、認められる滞在期間や活動内容が明確に定められており、その条件を超えた行為は認められていません。たとえば、就労が許可されていないビザで働くことや、滞在期間を超えて滞在することは、ビザ条件違反となる可能性があります。トラブルを避けるためにも、渡航前にビザの条件を十分に理解し、遵守することが重要です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-section-gray">
+  <div class="max-w-4xl px-4">
+    <div class="faq-section">
+      <h2 class="faq-title">ビザ・ETAに関するよくある質問</h2>
+      <div class="max-w-3xl">
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">01</span><span class="q-label">ETAはビザですか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">はい。ETA（Electronic Travel Authority / Subclass 601）は、観光や短期商用を目的とした短期滞在用のビザです。一般に電子渡航認証と呼ばれることもありますが、オーストラリアではビザとして扱われています。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">02</span><span class="q-label">観光ビザ（Visitor visa）はどのような場合に必要ですか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">ETAの対象国籍でない方や、より長期間の滞在を希望する場合は観光ビザ（Visitor visa / Subclass 600）が必要です。滞在目的や条件に応じて適切なビザを選択する必要があります。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">03</span><span class="q-label">観光目的でも就労することはできますか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">いいえ。観光ビザやETAでは原則として就労は認められていません。オーストラリアで働く場合は、就労可能なビザ（就労ビザやワーキングホリデービザなど）を取得する必要があります。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">04</span><span class="q-label">学生ビザでは働くことができますか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">はい。学生ビザでは、学期中は就労時間に制限がありますが、一定の条件のもとでアルバイトが認められています。具体的な労働時間の上限は政府の規定に従う必要があります。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">05</span><span class="q-label">家族をオーストラリアに呼ぶことはできますか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">ビザの種類によっては家族を同行させたり、後から呼び寄せたりすることが可能です。家族向けのビザや扶養家族としての申請など、目的に応じた手続きが必要になります。事前に条件を確認することが重要です。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">06</span><span class="q-label">ワーキングホリデービザと就労ビザの違いは何ですか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">ワーキングホリデービザは若年層向けの制度で、旅行を主目的としながら一定期間働くことが認められています。一方、就労ビザは特定の職種や雇用主のもとで働くことを目的としたビザです。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">07</span><span class="q-label">ビザの有効期間と滞在可能期間は同じですか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">いいえ。ビザの有効期間は入国できる期間を示し、滞在可能期間は1回の入国で滞在できる日数を示します。ビザごとに条件が異なるため、必ず確認が必要です。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">08</span><span class="q-label">ビザを取得していれば必ず入国できますか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">いいえ。ビザを取得していても、最終的な入国の可否は到着時の入国審査官の判断によります。ビザは入国を保証するものではありません。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">09</span><span class="q-label">複数の目的がある場合、どのビザを選べばよいですか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">主な渡航目的に基づいてビザを選択する必要があります。観光、就労、留学など目的ごとに適したビザが異なるため、条件に合ったものを申請することが重要です。</div></div>
+        <div class="faq-item"><button onclick="var a=this.nextElementSibling;var t=this.querySelector('.toggle');if(a.style.display==='block'){a.style.display='none';t.textContent='+';}else{a.style.display='block';t.textContent='-';}"><span class="q-text"><span class="q-num">10</span><span class="q-label">ビザの条件に違反するとどうなりますか？</span></span><span class="toggle">+</span></button><div class="answer" style="display:none">ビザ条件に違反した場合、滞在資格の取り消しや将来のビザ申請への影響が生じる可能性があります。滞在期間や活動内容は必ず許可された範囲内で行う必要があります。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Country Nav -->
+<section class="country-nav">
+  <div class="max-w-6xl px-4">
+    <h2 style="font-size:1.5rem;font-weight:700;color:#1f2937;margin-bottom:2rem;text-align:center;">国別のビザ・電子渡航認証</h2>
+    <div class="country-cards">
+      <a href="/ja/australia.html" class="country-card"><div class="card-img"><img src="/images/australia-card.jpg" alt="Australia"></div><div class="card-body"><h3 class="font-serif-country">Australia</h3></div></a>
+      <a href="/ja/america.html" class="country-card"><div class="card-img"><img src="/images/usa-card.jpg" alt="United States of America"></div><div class="card-body"><h3 class="font-serif-country">United States of America</h3></div></a>
+      <a href="/ja/south-korea.html" class="country-card"><div class="card-img"><img src="/images/korea-card.jpg" alt="South Korea"></div><div class="card-body"><h3 class="font-serif-country">South Korea</h3></div></a>
+      <a href="/ja/united-kingdom.html" class="country-card"><div class="card-img"><img src="/images/uk-card.jpg" alt="United Kingdom"></div><div class="card-body"><h3 class="font-serif-country">United Kingdom</h3></div></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="gtc-chrome bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/images/logo.png" alt="" class="h-8 w-auto" onerror="this.style.display='none'">
+            <span class="font-bold text-white text-lg">Global Travel Center</span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            電子渡航認証オンライン申請サービス。<br>
+            オーストラリア・ニュージーランドについてはOMARA監修。<br>SSL暗号化対応。
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/america.html" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="/ja/south-korea.html" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="/ja/united-kingdom.html" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="/ja/australia.html" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">情報</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/terms/" class="hover:text-white">利用規約</a></li>
+            <li><a href="/ja/privacy/" class="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/ja/refunds/" class="hover:text-white">返金ポリシー</a></li>
+            <li><a href="/ja/contact/" class="hover:text-white">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-8 text-xs text-slate-400 leading-relaxed">
+        <p class="mb-3">
+          <strong class="text-white">Global Travel Center は政府機関のウェブサイトではありません。</strong>
+          当社は民間企業として、ビザおよび電子渡航認証申請の準備・送信をサポートします。ビザ・ETA等の公式渡航文書を発行する権限は持ちません。これらは各国政府機関（ESTA: 米国国土安全保障省、K-ETA: 大韓民国法務部、UK ETA: 英国Home Office、Subclass 601 ETA: 豪州内務省）のみが発行します。
+        </p>
+        <p class="mb-3">
+          各国政府の公式ポータルから直接申請することも可能です（その場合は当社サービス料金は発生しません）。
+        </p>
+        <p>
+          <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
+          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
+            <option value="">🇯🇵 日本語</option>
+            <option value="/australia.html">🌐 English</option>
+          </select>
+          <span class="text-slate-500">© 2026 Global Travel Center / M2Agency Inc.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// FAQ toggle
+document.querySelectorAll('.faq-item button').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.parentElement;
+    var wasOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+    // Update toggle text
+    document.querySelectorAll('.faq-item').forEach(function(el) {
+      el.querySelector('.toggle').textContent = el.classList.contains('open') ? '−' : '+';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

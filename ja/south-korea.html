@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Korea | Global Travel Center</title>
+  <link rel="icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+<style>
+  /* ヘッダー・フッターだけをトップページと同じ見た目にする。
+     このページ本来のCSS(styles.css)には手を入れないよう、
+     Tailwindのリセット(preflight)は切り、指定もこの2ブロック配下に限定する。 */
+  .gtc-chrome { font-family: 'Noto Sans JP', system-ui, sans-serif; }
+  .gtc-chrome, .gtc-chrome * { box-sizing: border-box; }
+  /* Tailwind のリセットを切っているため border 幅の初期値が無く、
+     border-style だけ付けると四辺すべてに線が出てしまう。
+     幅を0に戻したうえで、使っている面だけ1pxにする。 */
+  .gtc-chrome [class*="border"] { border-style: solid; border-width: 0; }
+  .gtc-chrome .border   { border-width: 1px; }
+  .gtc-chrome .border-t { border-top-width: 1px; }
+  .gtc-chrome .border-b { border-bottom-width: 1px; }
+  .gtc-chrome img { display: inline-block; max-width: 100%; }
+  /* このページの styles.css は「レイヤーなし」で書かれているため、
+     Tailwind の h-7 / h-8 より優先されてしまい、ロゴが元画像の大きさ(100px)で
+     表示される。トップと同じ高さをここで直接指定して打ち消す。 */
+  header.gtc-chrome img { height: 1.75rem; width: auto; }   /* トップの h-7 と同じ */
+  footer.gtc-chrome img { height: 2rem;    width: auto; }   /* トップの h-8 と同じ */
+  .gtc-chrome ul { list-style: none; margin: 0; padding: 0; }
+  .gtc-chrome a { text-decoration: none; }
+  .gtc-chrome p, .gtc-chrome h3, .gtc-chrome h4 { margin: 0; }
+  .gtc-chrome select { font-family: inherit; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="gtc-chrome"><div class="bg-amber-50 border-b border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 text-center text-amber-900 text-xs md:text-sm">
+      <strong>Global Travel Center</strong> は、ビザ申請をサポートする民間企業です。政府または政府機関には属していません。
+    </div>
+  </div></div>
+<header class="gtc-chrome bg-white sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/ja/" class="flex items-center gap-2">
+        <img src="/images/logo.png" alt="Global Travel Center" class="h-7 w-auto">
+        <span class="font-bold text-slate-900 text-base md:text-lg">Global Travel Center</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-700">
+        <a href="/ja/#destinations" class="hover:text-blue-700 transition">渡航先</a>
+        <a href="/ja/#how" class="hover:text-blue-700 transition">申請の流れ</a>
+        <a href="/ja/#why" class="hover:text-blue-700 transition">特徴</a>
+        <a href="/ja/contact/" class="hover:text-blue-700 transition">お問い合わせ</a>
+        <select onchange="if(this.value) location.href=this.value" class="text-xs border border-slate-300 rounded px-2 py-1 bg-white">
+          <option value="">🇯🇵 日本語</option>
+          <option value="/south-korea.html">🌐 English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+<main>
+
+<!-- Hero -->
+<section class="country-hero">
+        <img src="/images/hero-south-korea.jpg" alt="韓国">
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1 class="font-serif-country">South Korea</h1>
+          <p>韓国のビザ・電子渡航認証（K-ETA）情報</p>
+        </div>
+      </section>
+
+<article class="article-content">
+  <p style="color:#374151;line-height:1.625;">韓国へ渡航する際は、渡航者の国籍、渡航目的、滞在期間に応じて、事前にビザまたは電子渡航認証（K-ETA）の取得が必要です。観光や短期商用などの目的で渡航する場合であっても、原則として事前手続きなしでの入国は認められていません。必要な制度は個々の条件によって異なるため、渡航計画を立てる段階で、どの手続きが求められるかを確認することが重要です。</p>
+
+  <div style="margin-top:2.5rem;" class="space-y-4">
+    <div class="article-section">
+      <h2>ビザと電子渡航認証の比較</h2>
+      <div class="content"><p>韓国渡航にあたり、ビザと電子渡航認証（K-ETA）のどちらが適しているかは、主に以下の点で判断されます。</p>
+        <ul>
+          <li>渡航目的が観光・短期商用か、就労・留学・長期滞在か</li>
+          <li>予定している滞在期間</li>
+          <li>渡航者の国籍がK-ETA（ビザ免除）の対象であるか</li>
+        </ul></div>
+    </div>
+
+    <div class="article-section">
+      <h2>ビザ</h2>
+      <div class="content"><p>韓国のビザは、就労、留学、家族滞在、長期滞在など、渡航目的に応じて複数の種類が用意されています。ビザの種類によって、申請条件、必要書類、審査期間、滞在可能期間は大きく異なります。</p></div>
+    </div>
+
+    <div class="article-section">
+      <h2>電子渡航認証"K-ETA"</h2>
+      <div class="content"><p>電子渡航認証（K-ETA）は、観光や短期商用などの目的で韓国へ短期間渡航する一部の国・地域の渡航者を対象とした制度です。K-ETAは事前渡航認証であり、承認されるとパスポート情報と電子的に紐づけられます。K-ETAは韓国政府が提供する公式ウェブサイトを通じて申請します。</p></div>
+    </div>
+
+    <div class="article-section">
+      <h2>ビザとは</h2>
+      <div class="content"><p>韓国のビザには多くの種類があり、渡航目的や滞在条件によって求められる内容が異なります。以下では、代表的なビザについて概要を紹介します。</p>
+        <div style="margin-top:1rem;">
+        <div class="visa-type"><h4>観光ビザ / Tourist Visa（C-3）</h4><p>観光、休暇、親族・知人の訪問、短期の非就労活動などを目的とする場合に利用されるビザです。滞在可能期間は最長90日程度が一般的で、原則として就労は認められていません。</p></div>
+        <div class="visa-type"><h4>留学ビザ / Student Visa（D-2）</h4><p>韓国の大学や大学院などの教育機関で正規に就学することを目的としたビザです。一定の条件を満たす場合には、制限付きで就労が認められることがあります。</p></div>
+        <div class="visa-type"><h4>商用ビザ / Business Visa（C-2）</h4><p>商談、会議出席、市場調査、取引先訪問など、報酬を伴わない短期の商用活動を目的とする場合に利用されるビザです。</p></div>
+        <div class="visa-type"><h4>就労ビザ / Work Visa（E-7）</h4><p>専門的な知識や技術を活かし、韓国の企業や機関で就労する場合に利用されるビザです。雇用先の要件や職種ごとに申請条件が定められています。</p></div>
+        </div></div>
+    </div>
+
+    <div class="article-section">
+      <h2>ビザ利用に関する注意点</h2>
+      <div class="content"><p>韓国のビザ制度は細分化されており、同じ名称でも滞在資格や条件が異なる場合があります。制度は随時変更・改定されることがあるため、申請前には必ず最新の公式情報を確認する必要があります。なお、いずれのビザやK-ETAを取得していても、入国の最終判断は入国時にMinistry of Justice, Republic of Koreaおよび入国審査当局によって行われます。</p></div>
+    </div>
+
+    <div class="article-section">
+      <h2>電子渡航認証"K-ETA"とは</h2>
+      <div class="content"><p>電子渡航認証（K-ETA：Korea Electronic Travel Authorization）は、韓国へ渡航する一部の国・地域の渡航者を対象とした事前渡航認証制度です。K-ETAはビザそのものではありませんが、観光や短期商用などの目的でビザ免除対象として渡航する場合に必要となる制度です。</p></div>
+    </div>
+
+    <div class="article-section">
+      <h2>K-ETAで認められる滞在内容・認められない内容</h2>
+      <div class="content"><p>K-ETAで認められる主な渡航目的は、観光、休暇、知人・家族の訪問、短期の商用活動（会議出席、商談、視察など、報酬を伴わないもの）です。</p>
+        <p style="margin-top:.75rem;">一方で、以下に該当する活動はK-ETAでは認められていません。</p>
+        <ul>
+          <li>韓国国内での就労（有償・無償を問わない）</li>
+          <li>長期の就学・留学</li>
+          <li>インターンシップや研修（就労とみなされるもの）</li>
+          <li>芸能活動・スポーツ活動で報酬が発生するもの</li>
+          <li>永住や長期滞在を目的とした渡航</li>
+          <li>医療目的での長期滞在</li>
+        </ul></div>
+    </div>
+
+    <div class="article-section">
+      <h2>K-ETAの申請方法・有効性・注意点</h2>
+      <div class="content"><p>K-ETAの申請は、韓国政府が提供する公式ウェブサイトから行います。K-ETAは一定期間有効とされ、その期間内で複数回の短期渡航が認められる場合がありますが、1回あたりの滞在可能期間は原則90日以内とされています。</p>
+        <p>なお、K-ETAを取得していても入国が保証されるわけではなく、入国の最終判断は到着時にMinistry of Justice, Republic of Korea（韓国法務部）および入国審査当局によって行われます。</p></div>
+    </div>
+  </div>
+</article>
+
+<div style="max-width:56rem;margin:0 auto;padding:0 1rem;">
+  <div class="faq-section">
+    <h2 class="faq-title">ビザ・電子渡航認証に関するよくある質問</h2>
+    <div class="max-w-3xl">
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">01</span><span class="q-label">K-ETAとは何ですか？</span></span><span class="toggle">+</span></button><div class="answer">K-ETAは、ビザ免除対象国の渡航者が、観光や短期商用目的で韓国へ渡航する際に必要となる事前渡航認証制度です。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">02</span><span class="q-label">K-ETAとビザの違いは何ですか？</span></span><span class="toggle">+</span></button><div class="answer">K-ETAは短期滞在向けの渡航認証で、就労や留学、長期滞在はできません。これらの目的ではビザが必要です。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">03</span><span class="q-label">K-ETAがあれば必ず入国できますか？</span></span><span class="toggle">+</span></button><div class="answer">いいえ。K-ETAは渡航前の認証であり、入国の最終判断は到着時に入国審査当局が行います。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">04</span><span class="q-label">K-ETAで認められる滞在期間はどのくらいですか？</span></span><span class="toggle">+</span></button><div class="answer">1回の渡航につき、原則として90日以内の短期滞在が認められます。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">05</span><span class="q-label">K-ETAで仕事やアルバイトはできますか？</span></span><span class="toggle">+</span></button><div class="answer">できません。有償・無償を問わず、韓国国内での就労はK-ETAでは認められていません。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">06</span><span class="q-label">K-ETAの有効期間はどのくらいですか？</span></span><span class="toggle">+</span></button><div class="answer">通常、K-ETAは最長3年間有効とされ、その期間内で複数回の渡航が可能です。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">07</span><span class="q-label">K-ETAは何歳から申請が必要ですか？</span></span><span class="toggle">+</span></button><div class="answer">年齢にかかわらず、原則としてすべての渡航者がK-ETAの対象となります。未成年者の場合も、個別に申請が必要です。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">08</span><span class="q-label">家族やグループでまとめてK-ETAを申請できますか？</span></span><span class="toggle">+</span></button><div class="answer">いいえ。K-ETAは1人ずつ個別に申請する必要があります。家族旅行や団体旅行であっても、申請は個人単位で行います。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">09</span><span class="q-label">パスポートを更新した場合、K-ETAはそのまま使えますか？</span></span><span class="toggle">+</span></button><div class="answer">いいえ。K-ETAはパスポート情報と紐づけられているため、パスポートを更新した場合は再度K-ETAの申請が必要です。</div></div>
+        <div class="faq-item"><button><span class="q-text"><span class="q-num">10</span><span class="q-label">K-ETAで入国した後、韓国国内で滞在資格を変更できますか？</span></span><span class="toggle">+</span></button><div class="answer">原則としてできません。K-ETAは短期滞在を前提とした制度であり、就労や留学などへの資格変更は認められていないため、必要な場合は出国後に適切なビザを申請する必要があります。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Country Nav -->
+<section class="country-nav">
+  <div class="max-w-6xl px-4">
+    <h2 style="font-size:1.5rem;font-weight:700;color:#1f2937;margin-bottom:2rem;text-align:center;">国別のビザ・電子渡航認証</h2>
+    <div class="country-cards">
+      <a href="/ja/australia.html" class="country-card"><div class="card-img"><img src="/images/australia-card.jpg" alt="Australia"></div><div class="card-body"><h3 class="font-serif-country">Australia</h3></div></a>
+      <a href="/ja/america.html" class="country-card"><div class="card-img"><img src="/images/usa-card.jpg" alt="United States of America"></div><div class="card-body"><h3 class="font-serif-country">United States of America</h3></div></a>
+      <a href="/ja/south-korea.html" class="country-card"><div class="card-img"><img src="/images/korea-card.jpg" alt="South Korea"></div><div class="card-body"><h3 class="font-serif-country">South Korea</h3></div></a>
+      <a href="/ja/united-kingdom.html" class="country-card"><div class="card-img"><img src="/images/uk-card.jpg" alt="United Kingdom"></div><div class="card-body"><h3 class="font-serif-country">United Kingdom</h3></div></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="gtc-chrome bg-slate-900 text-slate-300 py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/images/logo.png" alt="" class="h-8 w-auto" onerror="this.style.display='none'">
+            <span class="font-bold text-white text-lg">Global Travel Center</span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            電子渡航認証オンライン申請サービス。<br>
+            オーストラリア・ニュージーランドについてはOMARA監修。<br>SSL暗号化対応。
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">渡航先</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/america.html" class="hover:text-white">アメリカ — ESTA</a></li>
+            <li><a href="/ja/south-korea.html" class="hover:text-white">韓国 — K-ETA</a></li>
+            <li><a href="/ja/united-kingdom.html" class="hover:text-white">イギリス — UK ETA</a></li>
+            <li><a href="/ja/australia.html" class="hover:text-white">オーストラリア — Subclass 601 ETA</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 text-sm">情報</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/ja/terms/" class="hover:text-white">利用規約</a></li>
+            <li><a href="/ja/privacy/" class="hover:text-white">プライバシーポリシー</a></li>
+            <li><a href="/ja/refunds/" class="hover:text-white">返金ポリシー</a></li>
+            <li><a href="/ja/contact/" class="hover:text-white">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-700 pt-8 text-xs text-slate-400 leading-relaxed">
+        <p class="mb-3">
+          <strong class="text-white">Global Travel Center は政府機関のウェブサイトではありません。</strong>
+          当社は民間企業として、ビザおよび電子渡航認証申請の準備・送信をサポートします。ビザ・ETA等の公式渡航文書を発行する権限は持ちません。これらは各国政府機関（ESTA: 米国国土安全保障省、K-ETA: 大韓民国法務部、UK ETA: 英国Home Office、Subclass 601 ETA: 豪州内務省）のみが発行します。
+        </p>
+        <p class="mb-3">
+          各国政府の公式ポータルから直接申請することも可能です（その場合は当社サービス料金は発生しません）。
+        </p>
+        <p>
+          <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
+          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
+            <option value="">🇯🇵 日本語</option>
+            <option value="/south-korea.html">🌐 English</option>
+          </select>
+          <span class="text-slate-500">© 2026 Global Travel Center / M2Agency Inc.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+document.querySelectorAll('.faq-item button').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = this.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(el) { el.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+    document.querySelectorAll('.faq-item').forEach(function(el) {
+      el.querySelector('.toggle').textContent = el.classList.contains('open') ? '\u2212' : '+';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
