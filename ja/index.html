@@ -127,7 +127,7 @@
           </div>
         </a>
 
-        <a href="https://jskconsulting.net/" data-external-consult target="_blank" rel="noopener noreferrer" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-200">
+        <a href="https://www.immigration.govt.nz/process-to-apply/find-a-visa-tool/" data-external-consult target="_blank" rel="noopener noreferrer" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-200">
           <div class="h-44 overflow-hidden bg-slate-100">
             <img src="/images/nz-card.jpg" alt="New Zealand Visa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -142,7 +142,7 @@
               <li class="flex justify-between"><span class="text-slate-500">審査時間</span><span class="font-medium">案件次第</span></li>
             </ul>
             <div class="bg-emerald-700 group-hover:bg-emerald-600 text-white text-center font-semibold py-2.5 rounded-md text-sm transition">
-              相談する →
+              ビザ情報 →
             </div>
           </div>
         </a>
@@ -341,7 +341,7 @@
             <div>
               <h3 class="font-bold text-slate-900 mb-1">OMARA登録移民エージェント監修</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                オーストラリア・ニュージーランドについては、豪州内務省 OMARA（移民エージェント登録機関）登録の Kotaro Mizoguchi（登録番号: <strong>1465274</strong>）の監修のもと運営しています。
+                オーストラリアについては、豪州内務省 OMARA（移民エージェント登録機関）登録の Kotaro Mizoguchi（登録番号: <strong>1465274</strong>）の監修のもと運営しています。
               </p>
               <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-green-700 text-sm font-medium hover:underline">OMARA公式登録情報を確認する →</a>
             </div>
@@ -389,7 +389,7 @@
           </div>
           <p class="text-xs leading-relaxed text-slate-400">
             電子渡航認証オンライン申請サービス。<br>
-            オーストラリア・ニュージーランドについてはOMARA監修。<br>SSL暗号化対応。
+            オーストラリアについてはOMARA監修。<br>SSL暗号化対応。
           </p>
         </div>
         <div>
@@ -422,7 +422,7 @@
         </p>
         <p>
           <strong class="text-white">運営会社:</strong> M2Agency Inc. — 〒153-0061 東京都目黒区中目黒4-8-25<br>
-          <strong class="text-white">監修（豪州・NZ）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
+          <strong class="text-white">監修（豪州）:</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA登録移民エージェント Kotaro Mizoguchi（MARN: 1465274）</a>
         </p>
         <div class="mt-6 flex flex-wrap items-center gap-4">
           <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
@@ -446,12 +446,12 @@
       </svg>
     </div>
     <h3 id="external-notice-title" class="text-lg font-bold text-slate-900 mb-2">外部サイトへ移動します</h3>
-    <p class="text-sm text-slate-600 leading-relaxed mb-1">
+    <p id="external-notice-desc" class="text-sm text-slate-600 leading-relaxed mb-1">
       ビザ申請は提携エージェンシーが承っております。
     </p>
     <p class="text-sm text-slate-600 leading-relaxed mb-5">
       下記のサイトへ移動します
-      <span class="block mt-2 font-semibold text-slate-900 break-all">jskconsulting.net</span>
+      <span id="external-notice-domain" class="block mt-2 font-semibold text-slate-900 break-all">jskconsulting.net</span>
     </p>
     <div class="flex gap-3">
       <button type="button" data-external-close
@@ -470,6 +470,14 @@
   var lastFocus = null;
   function open(href) {
     document.getElementById('external-notice-go').href = href;
+    /* 行き先に応じて案内文を切り替える（政府サイト or 提携エージェント） */
+    var isGov = href.indexOf('immigration.govt.nz') !== -1;
+    document.getElementById('external-notice-desc').textContent = isGov
+      ? 'ニュージーランド政府の公式サイト（Immigration New Zealand）へ移動します。'
+      : 'ビザ申請は提携エージェンシーが承っております。';
+    try {
+      document.getElementById('external-notice-domain').textContent = new URL(href).hostname.replace(/^www\./, '');
+    } catch (e) {}
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';

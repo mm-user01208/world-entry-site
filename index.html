@@ -127,7 +127,7 @@
           </div>
         </a>
 
-        <a href="https://jskconsulting.net/" data-external-consult target="_blank" rel="noopener noreferrer" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-200">
+        <a href="https://www.immigration.govt.nz/process-to-apply/find-a-visa-tool/" data-external-consult target="_blank" rel="noopener noreferrer" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition overflow-hidden border border-slate-200">
           <div class="h-44 overflow-hidden bg-slate-100">
             <img src="/images/nz-card.jpg" alt="New Zealand Visa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           </div>
@@ -142,7 +142,7 @@
               <li class="flex justify-between"><span class="text-slate-500">Processing</span><span class="font-medium">Case-by-case</span></li>
             </ul>
             <div class="bg-emerald-700 group-hover:bg-emerald-600 text-white text-center font-semibold py-2.5 rounded-md text-sm transition">
-              Consult now →
+              Visa information →
             </div>
           </div>
         </a>
@@ -341,7 +341,7 @@
             <div>
               <h3 class="font-bold text-slate-900 mb-1">OMARA Registered Migration Agent</h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                For Australia and New Zealand, operations are supervised by Kotaro Mizoguchi, registered with the Office of the Migration Agents Registration Authority of Australia (MARN: <strong>1465274</strong>).
+                For Australia, operations are supervised by Kotaro Mizoguchi, registered with the Office of the Migration Agents Registration Authority of Australia (MARN: <strong>1465274</strong>).
               </p>
               <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-green-700 text-sm font-medium hover:underline">Verify on official OMARA register →</a>
             </div>
@@ -389,7 +389,7 @@
           </div>
           <p class="text-xs leading-relaxed text-slate-400">
             Online travel visa &amp; eTA application service.<br>
-            Australia &amp; New Zealand: OMARA-supervised.<br>GDPR-compliant.
+            Australia: OMARA-supervised.<br>GDPR-compliant.
           </p>
         </div>
         <div>
@@ -422,7 +422,7 @@
         </p>
         <p>
           <strong class="text-white">Operating company:</strong> M2Agency Inc. — 4-8-25 Nakameguro, Meguro-ku, Tokyo 153-0061, Japan<br>
-          <strong class="text-white">Supervision (Australia &amp; New Zealand):</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA Registered Migration Agent Kotaro Mizoguchi (MARN: 1465274)</a>
+          <strong class="text-white">Supervision (Australia):</strong> <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=ea2695e4-fc73-e311-9402-005056ab0eca" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">OMARA Registered Migration Agent Kotaro Mizoguchi (MARN: 1465274)</a>
         </p>
         <div class="mt-6 flex flex-wrap items-center gap-4">
           <select onchange="if(this.value) location.href=this.value" class="text-xs bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-slate-200">
@@ -446,12 +446,12 @@
       </svg>
     </div>
     <h3 id="external-notice-title" class="text-lg font-bold text-slate-900 mb-2">You are leaving this site</h3>
-    <p class="text-sm text-slate-600 leading-relaxed mb-1">
+    <p id="external-notice-desc" class="text-sm text-slate-600 leading-relaxed mb-1">
       Visa applications are handled by our partner agency.
     </p>
     <p class="text-sm text-slate-600 leading-relaxed mb-5">
       You will be taken to
-      <span class="block mt-2 font-semibold text-slate-900 break-all">jskconsulting.net</span>
+      <span id="external-notice-domain" class="block mt-2 font-semibold text-slate-900 break-all">jskconsulting.net</span>
     </p>
     <div class="flex gap-3">
       <button type="button" data-external-close
@@ -470,6 +470,14 @@
   var lastFocus = null;
   function open(href) {
     document.getElementById('external-notice-go').href = href;
+    /* 行き先に応じて案内文を切り替える（政府サイト or 提携エージェント） */
+    var isGov = href.indexOf('immigration.govt.nz') !== -1;
+    document.getElementById('external-notice-desc').textContent = isGov
+      ? 'You are being redirected to the official website of Immigration New Zealand (New Zealand Government).'
+      : 'Visa applications are handled by our partner agency.';
+    try {
+      document.getElementById('external-notice-domain').textContent = new URL(href).hostname.replace(/^www\./, '');
+    } catch (e) {}
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
